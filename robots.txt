@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://5best2buy.com/sitemap.xml
