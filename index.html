@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!--
+/* ===== WORKFLOW STACK =====
+File:    index.html
+Brand:   5Best2Buy | Top Reviews. Smart Decisions.
+Version: v3.0.0
+Date:    2026-04-28
+LAST STABLE: v2.0.0 — 2026-03-21 — navy/blue/gold editorial
+BOOT ORDER: CSS > Fonts > Header > Disclosure > Hero > Lists > Categories > Footer > JS
+SECTION MAP:
+  Header         → #site-header
+  Disclosure     → #disc-bar
+  Hero/search    → #hero
+  Featured lists → #featured
+  Categories     → #categories
+  Footer         → #site-footer
+EXTERNAL DEPS:
+  https://fonts.googleapis.com — Rajdhani, IBM Plex Mono
+  /logo.png — logo asset (CSS "5B2B" fallback on 404)
+===== END WORKFLOW STACK ===== */
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5Best2Buy — Top Reviews. Smart Decisions.</title>
+  <meta name="description" content="Expert-ranked Top 5 product lists. Every category narrowed to five picks. No sponsored rankings." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.5best2buy.com/" />
+  <meta property="og:title" content="5Best2Buy — Top Reviews. Smart Decisions." />
+  <meta property="og:description" content="Expert-ranked Top 5 product lists. Every category narrowed to five picks." />
+  <meta property="og:url" content="https://www.5best2buy.com/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── VARIABLES ─── */
+    :root {
+      --chrome-1:#dde4ed;--chrome-2:#b8c4d0;--chrome-3:#8898aa;
+      --chrome-4:#5a6a7a;--chrome-5:#3a4a5c;
+      --bg:#080c12;--surface:#0d1520;--card:#111a28;--card-hover:#162030;
+      --border-f:rgba(160,190,220,0.07);--border-m:rgba(160,190,220,0.13);--border-h:rgba(160,190,220,0.22);
+      --gold:#c8a84b;--gold-b:#e8c96a;--gold-d:#8c7030;
+      --green:#3de87a;--text:#c8d4e0;--muted:#5a6a7a;--faint:#222d3a;
+      --fd:'Rajdhani','Arial Narrow',sans-serif;
+      --fm:'IBM Plex Mono','Courier New',monospace;
+      --mw:1000px;--tr:0.18s ease;--r:2px;
+    }
+    /* ─── RESET ─── */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--fd);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+    a{color:var(--chrome-3);text-decoration:none;transition:color var(--tr);}
+    a:hover{color:var(--chrome-1);}
+    .container{width:100%;max-width:var(--mw);margin:0 auto;padding:0 20px;}
+    /* scan line texture */
+    body::before{content:'';position:fixed;inset:0;z-index:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(160,190,220,0.008) 3px,rgba(160,190,220,0.008) 4px);pointer-events:none;}
+
+    /* ─── LOGO FALLBACK ─── */
+    .logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-img{height:36px;width:auto;display:block;}
+    .logo-fb{display:none;font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;}
+    .logo-fb span{color:var(--chrome-2);}
+
+    /* ─── HEADER ─── */
+    #site-header{position:sticky;top:0;z-index:100;background:rgba(8,12,18,0.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-f);transition:border-color var(--tr),box-shadow var(--tr);}
+    #site-header.scrolled{border-bottom-color:var(--border-m);box-shadow:0 1px 24px rgba(0,0,0,.5);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px;}
+    .header-nav{display:flex;align-items:center;}
+    .header-nav a{font-family:var(--fm);font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);padding:7px 12px;border-radius:var(--r);transition:color var(--tr),background var(--tr);}
+    .header-nav a:hover{color:var(--chrome-2);background:rgba(160,190,220,0.04);}
+    .header-nav a.nav-cta{border:1px solid var(--border-m);color:var(--chrome-3);margin-left:6px;}
+    .header-nav a.nav-cta:hover{border-color:var(--border-h);color:var(--chrome-1);background:rgba(160,190,220,0.05);}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer;padding:6px;}
+    .hamburger span{display:block;width:20px;height:1.5px;background:var(--muted);border-radius:1px;transition:transform .2s,opacity .2s;}
+    .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+    .mobile-nav{display:none;flex-direction:column;border-top:1px solid var(--border-f);padding:10px 20px 14px;gap:0;}
+    .mobile-nav.open{display:flex;}
+    .mobile-nav a{font-family:var(--fm);font-size:11px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;padding:10px 0;border-bottom:1px solid var(--border-f);transition:color var(--tr);}
+    .mobile-nav a:last-child{border-bottom:none;}
+    .mobile-nav a:hover{color:var(--chrome-2);}
+
+    /* ─── DISCLOSURE BAR — FTC §255.5, above fold ─── */
+    #disc-bar{background:linear-gradient(90deg,transparent,rgba(200,168,75,0.03),transparent);border-bottom:1px solid rgba(200,168,75,0.1);padding:6px 0;}
+    .disc-text{font-family:var(--fm);font-size:10px;letter-spacing:.7px;color:var(--muted);text-align:center;}
+    .disc-text a{color:var(--gold-d);text-decoration:underline;text-underline-offset:2px;}
+    .disc-text a:hover{color:var(--gold);}
+
+    /* ─── HERO ─── */
+    #hero{padding:72px 0 60px;border-bottom:1px solid var(--border-f);position:relative;overflow:hidden;}
+    #hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 60% 50%,rgba(200,168,75,0.03),transparent 70%);pointer-events:none;}
+    .hero-ghost{position:absolute;right:-0.02em;top:50%;transform:translateY(-54%);font-family:var(--fd);font-size:clamp(260px,28vw,420px);font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(160,190,220,0.04);user-select:none;pointer-events:none;}
+    .hero-eyebrow{font-family:var(--fm);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+    .hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--gold);}
+    .hero-headline{font-family:var(--fd);font-size:clamp(42px,7vw,80px);font-weight:700;letter-spacing:-.5px;line-height:.95;text-transform:uppercase;color:var(--chrome-1);margin-bottom:14px;}
+    .hero-headline em{color:transparent;-webkit-text-stroke:1.5px var(--gold);font-style:normal;}
+    .hero-sub{font-size:15px;color:var(--chrome-4);max-width:420px;line-height:1.6;font-weight:500;margin-bottom:32px;}
+    .hero-search{display:flex;max-width:520px;border:1px solid var(--border-m);border-radius:var(--r);overflow:hidden;background:var(--surface);transition:border-color var(--tr),box-shadow var(--tr);}
+    .hero-search:focus-within{border-color:var(--border-h);box-shadow:0 0 0 3px rgba(200,168,75,0.06);}
+    .hero-search input{flex:1;background:transparent;border:none;outline:none;font-family:var(--fd);font-size:15px;font-weight:500;color:var(--chrome-1);padding:14px 16px;letter-spacing:.3px;}
+    .hero-search input::placeholder{color:var(--muted);}
+    .hero-search button{background:linear-gradient(135deg,var(--gold-b),var(--gold));border:none;cursor:pointer;font-family:var(--fd);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#080c12;padding:14px 24px;white-space:nowrap;transition:background var(--tr);}
+    .hero-search button:hover{background:linear-gradient(135deg,#f5d870,var(--gold-b));}
+    .hero-hint{margin-top:12px;font-family:var(--fm);font-size:10px;letter-spacing:1px;color:var(--faint);}
+    .hero-hint a{color:var(--chrome-5);transition:color var(--tr);}
+    .hero-hint a:hover{color:var(--chrome-3);}
+
+    /* ─── SECTION ROWS ─── */
+    .sec-row{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;}
+    .sec-label{font-family:var(--fm);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+    .sec-title{font-family:var(--fd);font-size:22px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--chrome-1);}
+    .sec-rule{flex:1;height:1px;background:var(--border-f);}
+    .sec-link{font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--chrome-5);white-space:nowrap;transition:color var(--tr);}
+    .sec-link:hover{color:var(--chrome-3);}
+
+    /* ─── FEATURED LISTS ─── */
+    #featured{padding:60px 0 48px;}
+    .list-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border-f);border:1px solid var(--border-f);border-radius:var(--r);overflow:hidden;}
+    .list-card{background:var(--card);padding:22px 20px 18px;display:flex;flex-direction:column;gap:8px;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;transition:background var(--tr);}
+    .list-card:hover{background:var(--card-hover);}
+    .list-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity var(--tr);}
+    .list-card:hover::before{opacity:1;}
+    .list-card::after{content:'';position:absolute;bottom:14px;right:14px;width:7px;height:7px;border-right:1px solid var(--gold-d);border-bottom:1px solid var(--gold-d);opacity:.3;transition:opacity var(--tr);}
+    .list-card:hover::after{opacity:.8;}
+    .list-card.wide{grid-column:1 / -1;display:grid;grid-template-columns:1fr auto;align-items:start;gap:20px;padding:28px 24px;}
+    .list-card.wide .card-body{display:flex;flex-direction:column;gap:8px;}
+    .wide-num{font-family:var(--fd);font-size:clamp(56px,7vw,88px);font-weight:700;color:transparent;-webkit-text-stroke:1px rgba(200,168,75,0.18);line-height:1;user-select:none;align-self:center;}
+    .card-cat{font-family:var(--fm);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-d);}
+    .card-title{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--chrome-1);line-height:1.1;}
+    .list-card.wide .card-title{font-size:28px;}
+    .card-desc{font-size:13px;color:var(--chrome-4);line-height:1.5;font-weight:500;}
+    .card-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:12px;border-top:1px solid var(--border-f);}
+    .card-meta-l{font-family:var(--fm);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);}
+    .card-arrow{font-family:var(--fm);font-size:11px;color:var(--gold-d);transition:color var(--tr),transform var(--tr);}
+    .list-card:hover .card-arrow{color:var(--gold);transform:translateX(4px);}
+    .list-card.coming{opacity:.5;cursor:default;pointer-events:none;}
+    .list-card.coming::before,.list-card.coming::after{display:none;}
+    .coming-badge{font-family:var(--fm);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--chrome-5);border:1px solid var(--faint);border-radius:var(--r);padding:2px 7px;display:inline-block;}
+
+    /* ─── CATEGORIES ─── */
+    #categories{padding:56px 0 48px;border-top:1px solid var(--border-f);}
+    .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:1px;background:var(--border-f);border:1px solid var(--border-f);border-radius:var(--r);overflow:hidden;}
+    .cat-card{background:var(--surface);padding:18px 14px;text-align:center;text-decoration:none;display:block;transition:background var(--tr);position:relative;}
+    .cat-card:hover{background:var(--card);}
+    .cat-card.active{background:var(--card);}
+    .cat-card.active::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--gold);opacity:.5;}
+    .cat-icon{font-size:20px;margin-bottom:8px;display:block;}
+    .cat-name{font-family:var(--fd);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--chrome-2);margin-bottom:3px;}
+    .cat-count{font-family:var(--fm);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
+    .cat-count.live{color:var(--green);}
+
+    /* ─── FOOTER ─── */
+    #site-footer{border-top:1px solid var(--border-f);padding:32px 0 28px;position:relative;}
+    #site-footer::before{content:'';position:absolute;top:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,168,75,0.18),transparent);}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+    .footer-logo-wrap{display:flex;align-items:center;gap:8px;}
+    .footer-logo{height:26px;width:auto;opacity:.7;}
+    .footer-logo-fb{display:none;font-family:var(--fd);font-size:14px;font-weight:700;letter-spacing:2px;color:var(--gold-d);text-transform:uppercase;}
+    .footer-copy{font-family:var(--fm);font-size:10px;letter-spacing:.8px;color:var(--faint);}
+    .footer-links{display:flex;gap:14px;flex-wrap:wrap;}
+    .footer-links a{font-family:var(--fm);font-size:10px;letter-spacing:1px;color:var(--faint);transition:color var(--tr);}
+    .footer-links a:hover{color:var(--chrome-3);}
+
+    /* ─── REVEAL ─── */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal.d1{transition-delay:.06s;}
+    .reveal.d2{transition-delay:.12s;}
+    .reveal.d3{transition-delay:.18s;}
+
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:660px){
+      .hero-ghost{display:none;}
+      #hero{padding:48px 0 40px;}
+      .hero-headline{font-size:clamp(38px,12vw,58px);}
+      .header-nav{display:none;}
+      .hamburger{display:flex;}
+      .list-card.wide{grid-template-columns:1fr;}
+      .wide-num{display:none;}
+      .footer-inner{flex-direction:column;align-items:flex-start;gap:12px;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo-wrap" aria-label="5Best2Buy home">
+          <img src="/logo.png" alt="5Best2Buy" class="logo-img"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="logo-fb">5B<span>2</span>B</span>
+        </a>
+        <nav class="header-nav" aria-label="Main navigation">
+          <a href="/5best2buy-categories.html">Categories</a>
+          <a href="/5best2buy-methodology.html">How We Rank</a>
+          <a href="/5best2buy-disclosure.html">Disclosure</a>
+          <a href="/5best2buy-vacuums_v1.0.0.html" class="nav-cta">Best Vacuums →</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="/5best2buy-categories.html">Categories</a>
+      <a href="/5best2buy-methodology.html">How We Rank</a>
+      <a href="/5best2buy-disclosure.html">Disclosure</a>
+      <a href="/5best2buy-vacuums_v1.0.0.html">Best Vacuums 2026</a>
+    </div>
+  </header>
+
+  <!-- DISCLOSURE BAR — FTC §255.5, above fold, non-movable -->
+  <div id="disc-bar" role="note">
+    <div class="container">
+      <p class="disc-text">
+        Some links earn us a commission at no cost to you. Rankings are never influenced by affiliate relationships.
+        <a href="/5best2buy-disclosure.html">Full disclosure →</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main>
+  <section id="hero" aria-label="Site search">
+    <div class="container">
+      <div class="hero-ghost" aria-hidden="true">5</div>
+
+      <p class="hero-eyebrow reveal">Top Reviews. Smart Decisions.</p>
+      <h1 class="hero-headline reveal d1">We Narrowed<br>The World<br>Down To <em>Five.</em></h1>
+      <p class="hero-sub reveal d2">Every category. Five picks — ranked by field experts, verified quarterly.</p>
+
+      <form class="hero-search reveal d3" role="search"
+            action="/5best2buy-categories.html" method="get"
+            onsubmit="return handleSearch(this);">
+        <input type="search" name="q"
+               placeholder="Search: vacuums, air fryers, drills…"
+               autocomplete="off" aria-label="Search product categories" />
+        <button type="submit" aria-label="Search">Find Top 5</button>
+      </form>
+
+      <p class="hero-hint reveal d3">
+        Popular: <a href="/5best2buy-vacuums_v1.0.0.html">Best Vacuums 2026</a> ·
+        <a href="/5best2buy-categories.html">All Categories</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURED LISTS -->
+  <section id="featured" aria-labelledby="featured-h">
+    <div class="container">
+      <div class="sec-row reveal">
+        <span class="sec-label" aria-hidden="true">— Lists</span>
+        <h2 class="sec-title" id="featured-h">Top 5 Lists</h2>
+        <span class="sec-rule" aria-hidden="true"></span>
+        <a href="/5best2buy-categories.html" class="sec-link">All Categories →</a>
+      </div>
+      <div class="list-grid">
+
+        <!-- LIVE -->
+        <a href="/5best2buy-vacuums_v1.0.0.html" class="list-card wide reveal"
+           aria-label="Best Vacuums 2026 — view list">
+          <div class="card-body">
+            <p class="card-cat">Home Cleaning</p>
+            <h3 class="card-title">Best Vacuums 2026</h3>
+            <p class="card-desc">Five machines ranked by real suction data, filter performance, and long-term reliability — not brand spend.</p>
+            <div class="card-meta">
+              <span class="card-meta-l">5 Picks · Verified Apr 2026</span>
+              <span class="card-arrow">View List →</span>
+            </div>
+          </div>
+          <div class="wide-num" aria-hidden="true">5</div>
+        </a>
+
+        <!-- COMING SOON — aria-hidden, no pointer events -->
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Kitchen</p>
+          <h3 class="card-title">Best Air Fryers</h3>
+          <p class="card-desc">Ranked by crispness consistency, preheat speed, and actual basket capacity.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Electronics</p>
+          <h3 class="card-title">Best Wireless Earbuds</h3>
+          <p class="card-desc">ANC that actually cancels. Battery life that actually lasts.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Tools</p>
+          <h3 class="card-title">Best Cordless Drills</h3>
+          <p class="card-desc">Torque under load, chuck grip, battery longevity — ranked by contractors.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Pet</p>
+          <h3 class="card-title">Best Dog Food Brands</h3>
+          <p class="card-desc">AAFCO compliance, ingredient integrity, real palatability data.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Gaming</p>
+          <h3 class="card-title">Best Gaming Headsets</h3>
+          <p class="card-desc">Positional accuracy, mic clarity, build quality that survives actual use.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories" aria-labelledby="categories-h">
+    <div class="container">
+      <div class="sec-row reveal">
+        <span class="sec-label" aria-hidden="true">— Browse</span>
+        <h2 class="sec-title" id="categories-h">Categories</h2>
+        <span class="sec-rule" aria-hidden="true"></span>
+        <a href="/5best2buy-categories.html" class="sec-link">Browse All →</a>
+      </div>
+      <nav class="cat-grid" aria-label="Product categories">
+        <a href="/5best2buy-vacuums_v1.0.0.html" class="cat-card active" aria-label="Home Cleaning — 1 live list">
+          <span class="cat-icon" aria-hidden="true">🏠</span>
+          <p class="cat-name">Home</p>
+          <p class="cat-count live">1 Live</p>
+        </a>
+        <a href="/5best2buy-categories.html" class="cat-card" aria-label="Kitchen — coming soon">
+          <span class="cat-icon" aria-hidden="true">🍳</span>
+          <p class="cat-name">Kitchen</p>
+          <p class="cat-count">Coming Soon</p>
+        </a>
+        <a href="/5best2buy-categories.html" class="cat-card" aria-label="Electronics — coming soon">
+          <span class="cat-icon" aria-hidden="true">⚡</span>
+          <p class="cat-name">Electronics</p>
+          <p class="cat-count">Coming Soon</p>
+        </a>
+        <a href="/5best2buy-categories.html" class="cat-card" aria-label="Tools — coming soon">
+          <span class="cat-icon" aria-hidden="true">🔧</span>
+          <p class="cat-name">Tools</p>
+          <p class="cat-count">Coming Soon</p>
+        </a>
+        <a href="/5best2buy-categories.html" class="cat-card" aria-label="Gaming — coming soon">
+          <span class="cat-icon" aria-hidden="true">🎮</span>
+          <p class="cat-name">Gaming</p>
+          <p class="cat-count">Coming Soon</p>
+        </a>
+        <a href="/5best2buy-categories.html" class="cat-card" aria-label="Pet — coming soon">
+          <span class="cat-icon" aria-hidden="true">🐾</span>
+          <p class="cat-name">Pet</p>
+          <p class="cat-count">Coming Soon</p>
+        </a>
+        <a href="/5best2buy-categories.html" class="cat-card" aria-label="Health — coming soon">
+          <span class="cat-icon" aria-hidden="true">💪</span>
+          <p class="cat-name">Health</p>
+          <p class="cat-count">Coming Soon</p>
+        </a>
+        <a href="/5best2buy-categories.html" class="cat-card" aria-label="Outdoors — coming soon">
+          <span class="cat-icon" aria-hidden="true">🌿</span>
+          <p class="cat-name">Outdoors</p>
+          <p class="cat-count">Coming Soon</p>
+        </a>
+      </nav>
+    </div>
+  </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo-wrap">
+          <img src="/logo.png" alt="5Best2Buy" class="footer-logo"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="footer-logo-fb">5Best2Buy</span>
+        </div>
+        <p class="footer-copy">© 2026 5Best2Buy · Top Reviews. Smart Decisions.</p>
+        <nav class="footer-links" aria-label="Legal navigation">
+          <a href="/5best2buy-disclosure.html">Disclosure</a>
+          <a href="/5best2buy-privacy.html">Privacy</a>
+          <a href="/5best2buy-terms.html">Terms</a>
+          <a href="/5best2buy-methodology.html">How We Rank</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS — var only, STATE object, try/catch on async -->
+  <!-- Cloudflare Analytics handles raw traffic. GA4 pending (affiliate click events). -->
+  <script>
+    var STATE = { scrolled: false, menuOpen: false };
+
+    /* Scroll header state — WRITES: STATE.scrolled */
+    (function() {
+      var hdr = document.getElementById('site-header');
+      if (!hdr) return;
+      window.addEventListener('scroll', function() {
+        var s = window.scrollY > 30;
+        if (s !== STATE.scrolled) {
+          STATE.scrolled = s;
+          hdr.classList.toggle('scrolled', s);
+        }
+      }, { passive: true });
+    }());
+
+    /* Mobile nav toggle — WRITES: STATE.menuOpen */
+    (function() {
+      var btn = document.getElementById('hamburger');
+      var nav = document.getElementById('mobile-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function() {
+        STATE.menuOpen = !STATE.menuOpen;
+        btn.classList.toggle('open', STATE.menuOpen);
+        nav.classList.toggle('open', STATE.menuOpen);
+        btn.setAttribute('aria-expanded', STATE.menuOpen ? 'true' : 'false');
+      });
+    }());
+
+    /* Reveal on scroll */
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.07 });
+      els.forEach(function(el) { obs.observe(el); });
+    }());
+
+    /* Search handler — READS: input[name="q"]
+       Routes to categories page. Swap for live search endpoint when content grows. */
+    function handleSearch(form) {
+      try {
+        var q = form.querySelector('input[name="q"]').value.trim();
+        if (!q) return false;
+        window.location.href = '/5best2buy-categories.html?q=' + encodeURIComponent(q);
+        return false;
+      } catch(err) {
+        console.error('[5B2B] handleSearch:', err);
+        return true;
+      }
+    }
+
+    /* Smooth scroll for hash links */
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          var id = this.getAttribute('href').replace('#', '');
+          if (!id) return;
+          var el = document.getElementById(id);
+          if (el) {
+            e.preventDefault();
+            window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+          }
+        });
+      });
+    }());
+  </script>
+
+</body>
+</html>
