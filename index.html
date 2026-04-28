@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<!--
+/* ===== WORKFLOW STACK =====
+File:    index.html
+Brand:   5Best2Buy | Top Reviews. Smart Decisions.
+Version: v3.2.1
+Date:    2026-04-28
+Author:  Vince Gonzalez
+LAST STABLE: v2.0.0 — 2026-03-21 — navy/blue/gold with base64 logo (REPLACED)
+BOOT ORDER: GA4 > CSS > Fonts > Header > Disclosure > Ad Slot > Hero > Lists > Categories > Email > Footer > JS
+SECTION MAP:
+  GA4            → <head> line ~30
+  Header         → #site-header
+  Disclosure bar → #disc-bar (FTC §255.5, non-movable)
+  Ad slot        → #ad-slot (AdSense-ready, placeholder until approved)
+  Hero           → #hero
+  Featured lists → #featured
+  Categories     → #categories
+  Email capture  → #email-strip (Mailchimp-ready)
+  Footer         → #site-footer
+EXTERNAL DEPS:
+  https://fonts.googleapis.com — Rajdhani 400/500/600/700, IBM Plex Mono 300/400/500
+  https://www.googletagmanager.com — GA4 G-GG5QF6LH0D
+  /logo.png — brand logo (CSS fallback: "5B2B" text if 404)
+  Amazon tag: 5best2buy-20
+FOLDER NAV STRUCTURE:
+  /lists/best-vacuums/  → vacuums list
+  /categories/          → all categories
+  /disclosure/          → affiliate disclosure
+  /methodology/         → how we rank
+  /privacy/             → privacy policy
+  /terms/               → terms
+===== END WORKFLOW STACK ===== */
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5Best2Buy — Top Reviews. Smart Decisions.</title>
+  <meta name="description" content="Expert-ranked Top 5 product lists. Every category narrowed to five picks. No sponsored rankings." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.5best2buy.com/" />
+  <meta property="og:title" content="5Best2Buy — Top Reviews. Smart Decisions." />
+  <meta property="og:description" content="Expert-ranked Top 5 product lists. Every category narrowed to five picks." />
+  <meta property="og:url" content="https://www.5best2buy.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- ═══ GA4 — G-GG5QF6LH0D ═══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GG5QF6LH0D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GG5QF6LH0D');
+  </script>
+
+  <!-- ═══ AdSense — uncomment + replace YOUR_PUB_ID when approved at 25 pages ═══ -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUB_ID" crossorigin="anonymous"></script> -->
+
+  <!-- ═══ Fonts ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── VARIABLES ─────────────────────────────────────────── */
+    :root {
+      --chrome-1: #dde4ed;
+      --chrome-2: #b8c4d0;
+      --chrome-3: #8898aa;
+      --chrome-4: #5a6a7a;
+      --chrome-5: #3a4a5c;
+      --bg:       #080c12;
+      --surface:  #0d1520;
+      --card:     #111a28;
+      --card-h:   #162030;
+      --bdr-f:    rgba(160,190,220,0.07);
+      --bdr-m:    rgba(160,190,220,0.13);
+      --bdr-h:    rgba(160,190,220,0.22);
+      --gold:     #c8a84b;
+      --gold-b:   #e8c96a;
+      --gold-d:   #8c7030;
+      --green:    #3de87a;
+      --text:     #c8d4e0;
+      --muted:    #5a6a7a;
+      --faint:    #222d3a;
+      --fd: 'Rajdhani', 'Arial Narrow', sans-serif;
+      --fm: 'IBM Plex Mono', 'Courier New', monospace;
+      --mw: 960px;
+      --tr: 0.18s ease;
+      --r:  2px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--fd);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--chrome-3); text-decoration: none; transition: color var(--tr); }
+    a:hover { color: var(--chrome-1); }
+    .container { width: 100%; max-width: var(--mw); margin: 0 auto; padding: 0 16px; }
+
+    /* scan-line texture — subtle atmosphere */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: repeating-linear-gradient(
+        0deg, transparent, transparent 3px,
+        rgba(160,190,220,0.007) 3px, rgba(160,190,220,0.007) 4px
+      );
+    }
+
+    /* ─── LOGO FALLBACK ─────────────────────────────────────── */
+    /* /logo.png loads if present; onerror hides img, shows text fallback */
+    .logo-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-img  { height: 34px; width: auto; display: block; }
+    .logo-fb   {
+      display: none; /* shown via JS onerror */
+      font-family: var(--fd); font-size: 18px; font-weight: 700;
+      letter-spacing: 3px; color: var(--gold); text-transform: uppercase;
+    }
+    .logo-fb span { color: var(--chrome-2); }
+
+    /* ─── HEADER ─────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8,12,18,0.96);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--bdr-f);
+      transition: border-color var(--tr), box-shadow var(--tr);
+    }
+    #site-header.scrolled { border-bottom-color: var(--bdr-m); box-shadow: 0 1px 24px rgba(0,0,0,.5); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 54px; }
+
+    .header-nav { display: flex; align-items: center; gap: 2px; }
+    .header-nav a {
+      font-family: var(--fm); font-size: 10px; letter-spacing: 1.6px;
+      text-transform: uppercase; color: var(--muted);
+      padding: 6px 10px; border-radius: var(--r);
+      transition: color var(--tr), background var(--tr); white-space: nowrap;
+    }
+    .header-nav a:hover { color: var(--chrome-2); background: rgba(160,190,220,0.04); }
+    .nav-cta {
+      border: 1px solid var(--bdr-m) !important;
+      color: var(--chrome-3) !important;
+      margin-left: 4px !important;
+    }
+    .nav-cta:hover { border-color: var(--bdr-h) !important; color: var(--chrome-1) !important; }
+
+    /* hamburger */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: transparent; border: none; cursor: pointer;
+      padding: 6px; min-width: 44px; min-height: 44px;
+      align-items: center; justify-content: center;
+    }
+    .hamburger span {
+      display: block; width: 20px; height: 1.5px;
+      background: var(--muted); border-radius: 1px;
+      transition: transform .2s, opacity .2s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .mobile-nav {
+      display: none; flex-direction: column;
+      border-top: 1px solid var(--bdr-f); padding: 8px 16px 12px; gap: 0;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-family: var(--fm); font-size: 12px; letter-spacing: 1.5px;
+      color: var(--muted); text-transform: uppercase;
+      padding: 12px 0; border-bottom: 1px solid var(--bdr-f);
+      transition: color var(--tr); min-height: 44px; display: flex; align-items: center;
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--chrome-2); }
+
+    /* ─── DISCLOSURE BAR — FTC §255.5, above fold, non-movable ── */
+    #disc-bar {
+      background: linear-gradient(90deg, transparent, rgba(200,168,75,0.03), transparent);
+      border-bottom: 1px solid rgba(200,168,75,0.1);
+      padding: 6px 0;
+    }
+    .disc-text {
+      font-family: var(--fm); font-size: 10px; letter-spacing: .6px;
+      color: var(--muted); text-align: center;
+    }
+    .disc-text a { color: var(--gold-d); text-decoration: underline; text-underline-offset: 2px; }
+    .disc-text a:hover { color: var(--gold); }
+
+    /* ─── AD SLOT ─────────────────────────────────────────────── */
+    /* AdSense-ready. Swap placeholder <span> for <ins> tag when approved. */
+    #ad-slot {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--bdr-f);
+      background: var(--surface);
+    }
+    .ad-inner {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 60px;
+      border: 1px dashed var(--bdr-f);
+      border-radius: var(--r);
+    }
+    .ad-placeholder {
+      font-family: var(--fm); font-size: 9px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--faint);
+    }
+
+    /* ─── HERO ───────────────────────────────────────────────── */
+    #hero {
+      padding: 56px 0 48px;
+      border-bottom: 1px solid var(--bdr-f);
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 70% 50% at 60% 50%, rgba(200,168,75,0.025), transparent 70%);
+    }
+    .hero-ghost {
+      position: absolute; right: -0.02em; top: 50%; transform: translateY(-54%);
+      font-family: var(--fd); font-size: clamp(200px,22vw,340px); font-weight: 700;
+      line-height: 1; color: transparent;
+      -webkit-text-stroke: 1px rgba(160,190,220,0.04);
+      user-select: none; pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-family: var(--fm); font-size: 10px; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 20px; height: 1px; background: var(--gold); }
+    h1.hero-headline {
+      font-family: var(--fd); font-size: clamp(36px,7vw,70px); font-weight: 700;
+      letter-spacing: -.5px; line-height: .95; text-transform: uppercase;
+      color: var(--chrome-1); margin-bottom: 12px;
+    }
+    h1.hero-headline em { color: transparent; -webkit-text-stroke: 1.5px var(--gold); font-style: normal; }
+    .hero-sub {
+      font-size: 15px; color: var(--chrome-4); max-width: 400px;
+      line-height: 1.6; font-weight: 500; margin-bottom: 28px;
+    }
+    .hero-search {
+      display: flex; max-width: 480px; width: 100%;
+      border: 1px solid var(--bdr-m); border-radius: var(--r);
+      overflow: hidden; background: var(--surface);
+      transition: border-color var(--tr), box-shadow var(--tr);
+    }
+    .hero-search:focus-within { border-color: var(--bdr-h); box-shadow: 0 0 0 3px rgba(200,168,75,0.06); }
+    .hero-search input {
+      flex: 1; background: transparent; border: none; outline: none;
+      font-family: var(--fd); font-size: 15px; font-weight: 500;
+      color: var(--chrome-1); padding: 13px 14px; letter-spacing: .3px; min-width: 0;
+    }
+    .hero-search input::placeholder { color: var(--muted); }
+    .hero-search button {
+      background: linear-gradient(135deg, var(--gold-b), var(--gold));
+      border: none; cursor: pointer;
+      font-family: var(--fd); font-size: 12px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase; color: #080c12;
+      padding: 13px 18px; white-space: nowrap;
+      transition: background var(--tr); min-height: 48px;
+    }
+    .hero-search button:hover { background: linear-gradient(135deg, #f5d870, var(--gold-b)); }
+    .hero-hint { margin-top: 10px; font-family: var(--fm); font-size: 10px; letter-spacing: 1px; color: var(--faint); }
+    .hero-hint a { color: var(--chrome-5); transition: color var(--tr); }
+    .hero-hint a:hover { color: var(--chrome-3); }
+
+    /* ─── SECTION ROWS ──────────────────────────────────────── */
+    .sec-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+    .sec-label { font-family: var(--fm); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); white-space: nowrap; }
+    .sec-title { font-family: var(--fd); font-size: 20px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--chrome-1); }
+    .sec-rule  { flex: 1; height: 1px; background: var(--bdr-f); min-width: 20px; }
+    .sec-link  { font-family: var(--fm); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--chrome-5); white-space: nowrap; transition: color var(--tr); }
+    .sec-link:hover { color: var(--chrome-3); }
+
+    /* ─── FEATURED LISTS ────────────────────────────────────── */
+    #featured { padding: 52px 0 44px; }
+    .list-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1px; background: var(--bdr-f);
+      border: 1px solid var(--bdr-f); border-radius: var(--r); overflow: hidden;
+    }
+    .list-card {
+      background: var(--card); padding: 20px 18px 16px;
+      display: flex; flex-direction: column; gap: 8px;
+      text-decoration: none; cursor: pointer;
+      position: relative; overflow: hidden;
+      transition: background var(--tr);
+    }
+    .list-card:hover { background: var(--card-h); }
+    .list-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0; transition: opacity var(--tr);
+    }
+    .list-card:hover::before { opacity: 1; }
+    .list-card::after {
+      content: ''; position: absolute; bottom: 12px; right: 12px;
+      width: 7px; height: 7px;
+      border-right: 1px solid var(--gold-d); border-bottom: 1px solid var(--gold-d);
+      opacity: .3; transition: opacity var(--tr);
+    }
+    .list-card:hover::after { opacity: .8; }
+
+    /* wide hero card — full row */
+    .list-card.wide {
+      grid-column: 1 / -1;
+      display: grid; grid-template-columns: 1fr auto;
+      align-items: start; gap: 16px; padding: 24px 20px;
+    }
+    .list-card.wide .card-body { display: flex; flex-direction: column; gap: 8px; }
+    .wide-num {
+      font-family: var(--fd); font-size: clamp(48px, 6vw, 80px); font-weight: 700;
+      color: transparent; -webkit-text-stroke: 1px rgba(200,168,75,0.18);
+      line-height: 1; user-select: none; align-self: center;
+    }
+    .card-cat   { font-family: var(--fm); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-d); }
+    .card-title { font-family: var(--fd); font-size: 19px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--chrome-1); line-height: 1.1; }
+    .list-card.wide .card-title { font-size: 26px; }
+    .card-desc  { font-size: 13px; color: var(--chrome-4); line-height: 1.5; font-weight: 500; }
+    .card-meta  { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--bdr-f); }
+    .card-meta-l { font-family: var(--fm); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--faint); }
+    .card-arrow  { font-family: var(--fm); font-size: 11px; color: var(--gold-d); transition: color var(--tr), transform var(--tr); }
+    .list-card:hover .card-arrow { color: var(--gold); transform: translateX(4px); }
+
+    /* coming-soon state */
+    .list-card.coming { opacity: .45; cursor: default; pointer-events: none; }
+    .list-card.coming::before, .list-card.coming::after { display: none; }
+    .coming-badge {
+      font-family: var(--fm); font-size: 8px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--chrome-5); border: 1px solid var(--faint); border-radius: var(--r);
+      padding: 2px 7px; display: inline-block;
+    }
+
+    /* ─── CATEGORIES ────────────────────────────────────────── */
+    #categories { padding: 48px 0 44px; border-top: 1px solid var(--bdr-f); }
+    .cat-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--bdr-f);
+      border: 1px solid var(--bdr-f); border-radius: var(--r); overflow: hidden;
+    }
+    .cat-card {
+      background: var(--surface); padding: 16px 12px;
+      text-align: center; text-decoration: none; display: block;
+      transition: background var(--tr); position: relative;
+    }
+    .cat-card:hover  { background: var(--card); }
+    .cat-card.active { background: var(--card); }
+    .cat-card.active::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 1px; background: var(--gold); opacity: .5;
+    }
+    .cat-icon  { font-size: 18px; margin-bottom: 6px; display: block; }
+    .cat-name  { font-family: var(--fd); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--chrome-2); margin-bottom: 2px; }
+    .cat-count { font-family: var(--fm); font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+    .cat-count.live { color: var(--green); }
+
+    /* ─── EMAIL STRIP ───────────────────────────────────────── */
+    #email-strip {
+      padding: 40px 0;
+      border-top: 1px solid var(--bdr-f); border-bottom: 1px solid var(--bdr-f);
+      background: var(--surface);
+    }
+    .email-inner {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 14px; max-width: 480px; margin: 0 auto;
+    }
+    .email-label { font-family: var(--fm); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); }
+    .email-title { font-family: var(--fd); font-size: 20px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--chrome-1); }
+    .email-sub   { font-size: 13px; color: var(--muted); font-weight: 500; }
+    .email-form  {
+      display: flex; width: 100%;
+      border: 1px solid var(--bdr-m); border-radius: var(--r);
+      overflow: hidden; background: var(--card);
+      transition: border-color var(--tr);
+    }
+    .email-form:focus-within { border-color: var(--bdr-h); }
+    .email-form input {
+      flex: 1; background: transparent; border: none; outline: none;
+      font-family: var(--fd); font-size: 14px; font-weight: 500;
+      color: var(--chrome-1); padding: 13px 14px; min-width: 0;
+    }
+    .email-form input::placeholder { color: var(--muted); }
+    .email-form button {
+      background: linear-gradient(135deg, var(--gold-b), var(--gold));
+      border: none; cursor: pointer;
+      font-family: var(--fd); font-size: 12px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase; color: #080c12;
+      padding: 13px 18px; white-space: nowrap;
+      transition: background var(--tr); min-height: 48px;
+    }
+    .email-form button:hover { background: linear-gradient(135deg, #f5d870, var(--gold-b)); }
+    .email-note { font-family: var(--fm); font-size: 9px; letter-spacing: 1px; color: var(--faint); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    #site-footer { padding: 28px 0; position: relative; }
+    #site-footer::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,168,75,0.15), transparent);
+    }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+    .footer-logo-wrap { display: flex; align-items: center; gap: 8px; }
+    .footer-logo    { height: 24px; width: auto; opacity: .7; }
+    .footer-logo-fb {
+      display: none;
+      font-family: var(--fd); font-size: 13px; font-weight: 700;
+      letter-spacing: 2px; color: var(--gold-d); text-transform: uppercase;
+    }
+    .footer-copy   { font-family: var(--fm); font-size: 10px; letter-spacing: .8px; color: var(--faint); }
+    .footer-links  { display: flex; gap: 12px; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--fm); font-size: 10px; letter-spacing: 1px; color: var(--faint); transition: color var(--tr); }
+    .footer-links a:hover { color: var(--chrome-3); }
+
+    /* ─── REVEAL ANIMATION ──────────────────────────────────── */
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.d1 { transition-delay: .06s; }
+    .reveal.d2 { transition-delay: .12s; }
+    .reveal.d3 { transition-delay: .18s; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .hero-ghost { display: none; }
+      #hero { padding: 40px 0 36px; }
+      h1.hero-headline { font-size: clamp(34px, 11vw, 52px); }
+      .header-nav { display: none; }
+      .hamburger  { display: flex; }
+      .list-card.wide { grid-template-columns: 1fr; }
+      .wide-num { display: none; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .hero-search { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══════════════════════════════════════════════ -->
+  <header id="site-header">
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Logo — /logo.png with onerror CSS text fallback "5B2B" -->
+        <a href="/" class="logo-wrap" aria-label="5Best2Buy home">
+          <img
+            src="/logo.png"
+            alt="5Best2Buy"
+            class="logo-img"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+          />
+          <span class="logo-fb">5B<span>2</span>B</span>
+        </a>
+
+        <nav class="header-nav" aria-label="Main navigation">
+          <a href="/categories/">Categories</a>
+          <a href="/methodology/">How We Rank</a>
+          <a href="/disclosure/">Disclosure</a>
+          <a href="/lists/best-vacuums/" class="nav-cta">Best Vacuums →</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="/categories/">Categories</a>
+      <a href="/methodology/">How We Rank</a>
+      <a href="/disclosure/">Disclosure</a>
+      <a href="/lists/best-vacuums/">Best Vacuums 2026</a>
+    </div>
+  </header>
+
+  <!-- ═══ DISCLOSURE BAR — FTC §255.5, above fold, non-movable ═ -->
+  <div id="disc-bar" role="note">
+    <div class="container">
+      <p class="disc-text">
+        Some links earn us a commission at no cost to you. Rankings are never influenced by affiliate relationships.
+        <a href="/disclosure/">Full disclosure →</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══ AD SLOT — AdSense ready ══════════════════════════════ -->
+  <!-- Swap the placeholder <span> for an AdSense <ins> tag when you get approval at 25 pages -->
+  <div id="ad-slot" role="complementary" aria-label="Advertisement">
+    <div class="container">
+      <div class="ad-inner">
+        <!--
+        ADSENSE — UNCOMMENT WHEN APPROVED (replace YOUR_PUB_ID and YOUR_SLOT_ID):
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-YOUR_PUB_ID"
+             data-ad-slot="YOUR_SLOT_ID"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+        <span class="ad-placeholder">Advertisement</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Site introduction and search">
+    <div class="container">
+      <div class="hero-ghost" aria-hidden="true">5</div>
+
+      <p class="hero-eyebrow reveal">Top Reviews. Smart Decisions.</p>
+      <h1 class="hero-headline reveal d1">We Narrowed<br>The World<br>Down To <em>Five.</em></h1>
+      <p class="hero-sub reveal d2">Every category. Five picks — ranked by field experts, verified quarterly.</p>
+
+      <!-- Search — routes to /categories/ with ?q= param -->
+      <form class="hero-search reveal d3" role="search"
+            action="/categories/" method="get"
+            onsubmit="return handleSearch(this);">
+        <input type="search" name="q"
+               placeholder="Search: vacuums, air fryers, drills…"
+               autocomplete="off" aria-label="Search product categories" />
+        <button type="submit" aria-label="Search">Find Top 5</button>
+      </form>
+
+      <p class="hero-hint reveal d3">
+        Popular: <a href="/lists/best-vacuums/">Best Vacuums 2026</a> ·
+        <a href="/categories/">All Categories</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED LISTS ════════════════════════════════════════ -->
+  <section id="featured" aria-labelledby="featured-heading">
+    <div class="container">
+
+      <div class="sec-row reveal">
+        <span class="sec-label" aria-hidden="true">— Lists</span>
+        <h2 class="sec-title" id="featured-heading">Top 5 Lists</h2>
+        <span class="sec-rule" aria-hidden="true"></span>
+        <a href="/categories/" class="sec-link">All Categories →</a>
+      </div>
+
+      <div class="list-grid">
+
+        <!-- LIVE: Best Vacuums — hero/wide card -->
+        <a href="/lists/best-vacuums/" class="list-card wide reveal"
+           aria-label="Best Vacuums 2026 — view list">
+          <div class="card-body">
+            <p class="card-cat">Home Cleaning</p>
+            <h3 class="card-title">Best Vacuums 2026</h3>
+            <p class="card-desc">Five machines ranked by real suction data, filter performance, and long-term reliability — not brand spend.</p>
+            <div class="card-meta">
+              <span class="card-meta-l">5 Picks · Verified Apr 2026</span>
+              <span class="card-arrow">View List →</span>
+            </div>
+          </div>
+          <div class="wide-num" aria-hidden="true">5</div>
+        </a>
+
+        <!-- COMING SOON — aria-hidden, pointer-events none -->
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Kitchen</p>
+          <h3 class="card-title">Best Air Fryers</h3>
+          <p class="card-desc">Ranked by crispness consistency, preheat speed, and actual basket capacity.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Electronics</p>
+          <h3 class="card-title">Best Wireless Earbuds</h3>
+          <p class="card-desc">ANC that actually cancels. Battery life that actually lasts.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Tools</p>
+          <h3 class="card-title">Best Cordless Drills</h3>
+          <p class="card-desc">Torque under load, chuck grip, battery longevity — ranked by contractors.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Pet</p>
+          <h3 class="card-title">Best Dog Food Brands</h3>
+          <p class="card-desc">AAFCO compliance, ingredient integrity, real palatability data.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+        <div class="list-card coming" aria-hidden="true">
+          <p class="card-cat">Gaming</p>
+          <h3 class="card-title">Best Gaming Headsets</h3>
+          <p class="card-desc">Positional accuracy, mic clarity, build quality that survives actual use.</p>
+          <div class="card-meta"><span class="coming-badge">Coming Soon</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CATEGORIES ════════════════════════════════════════════ -->
+  <section id="categories" aria-labelledby="categories-heading">
+    <div class="container">
+
+      <div class="sec-row reveal">
+        <span class="sec-label" aria-hidden="true">— Browse</span>
+        <h2 class="sec-title" id="categories-heading">Categories</h2>
+        <span class="sec-rule" aria-hidden="true"></span>
+        <a href="/categories/" class="sec-link">Browse All →</a>
+      </div>
+
+      <nav class="cat-grid" aria-label="Product categories">
+        <a href="/lists/best-vacuums/" class="cat-card active" aria-label="Home — 1 live list">
+          <span class="cat-icon" aria-hidden="true">🏠</span>
+          <p class="cat-name">Home</p>
+          <p class="cat-count live">1 Live</p>
+        </a>
+        <a href="/categories/" class="cat-card" aria-label="Kitchen — coming soon">
+          <span class="cat-icon" aria-hidden="true">🍳</span>
+          <p class="cat-name">Kitchen</p>
+          <p class="cat-count">Soon</p>
+        </a>
+        <a href="/categories/" class="cat-card" aria-label="Electronics — coming soon">
+          <span class="cat-icon" aria-hidden="true">⚡</span>
+          <p class="cat-name">Electronics</p>
+          <p class="cat-count">Soon</p>
+        </a>
+        <a href="/categories/" class="cat-card" aria-label="Tools — coming soon">
+          <span class="cat-icon" aria-hidden="true">🔧</span>
+          <p class="cat-name">Tools</p>
+          <p class="cat-count">Soon</p>
+        </a>
+        <a href="/categories/" class="cat-card" aria-label="Gaming — coming soon">
+          <span class="cat-icon" aria-hidden="true">🎮</span>
+          <p class="cat-name">Gaming</p>
+          <p class="cat-count">Soon</p>
+        </a>
+        <a href="/categories/" class="cat-card" aria-label="Pet — coming soon">
+          <span class="cat-icon" aria-hidden="true">🐾</span>
+          <p class="cat-name">Pet</p>
+          <p class="cat-count">Soon</p>
+        </a>
+        <a href="/categories/" class="cat-card" aria-label="Health — coming soon">
+          <span class="cat-icon" aria-hidden="true">💪</span>
+          <p class="cat-name">Health</p>
+          <p class="cat-count">Soon</p>
+        </a>
+        <a href="/categories/" class="cat-card" aria-label="Outdoors — coming soon">
+          <span class="cat-icon" aria-hidden="true">🌿</span>
+          <p class="cat-name">Outdoors</p>
+          <p class="cat-count">Soon</p>
+        </a>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- ═══ EMAIL CAPTURE ════════════════════════════════════════ -->
+  <!-- Mailchimp: replace action URL after creating account at mailchimp.com -->
+  <!-- mailchimp.com → Audience → Signup forms → Embedded forms → copy action URL -->
+  <section id="email-strip" aria-labelledby="email-heading">
+    <div class="container">
+      <div class="email-inner">
+        <span class="email-label">Stay Updated</span>
+        <h2 class="email-title" id="email-heading">Get the Latest Top 5s</h2>
+        <p class="email-sub">New lists weekly. No ads. No spam.</p>
+
+        <form class="email-form"
+              action="https://YOUR_MAILCHIMP_URL/subscribe/post?u=XXXX&amp;id=XXXX"
+              method="post"
+              target="_blank"
+              onsubmit="return handleEmailSignup(this);">
+          <input
+            type="email" name="EMAIL"
+            placeholder="your@email.com"
+            required autocomplete="email"
+            aria-label="Email address"
+          />
+          <!-- Mailchimp bot trap — do not remove or rename -->
+          <div style="position:absolute;left:-5000px;" aria-hidden="true">
+            <input type="text" name="b_XXXX_XXXX" tabindex="-1" value="" />
+          </div>
+          <button type="submit">Notify Me</button>
+        </form>
+        <p class="email-note">Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <!-- Logo — same fallback pattern as header -->
+        <div class="footer-logo-wrap">
+          <img
+            src="/logo.png"
+            alt="5Best2Buy"
+            class="footer-logo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+          />
+          <span class="footer-logo-fb">5Best2Buy</span>
+        </div>
+
+        <p class="footer-copy">© 2026 5Best2Buy · Top Reviews. Smart Decisions.</p>
+
+        <nav class="footer-links" aria-label="Legal navigation">
+          <a href="/disclosure/">Disclosure</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/methodology/">How We Rank</a>
+        </nav>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ JS — var only, STATE object, try/catch on all async ══ -->
+  <!-- Cloudflare Analytics handles raw infra traffic separately from GA4 -->
+  <script>
+    var STATE = { scrolled: false, menuOpen: false };
+
+    /* ─── Scroll header shadow — WRITES: STATE.scrolled ─── */
+    (function() {
+      var hdr = document.getElementById('site-header');
+      if (!hdr) return;
+      window.addEventListener('scroll', function() {
+        var s = window.scrollY > 30;
+        if (s !== STATE.scrolled) {
+          STATE.scrolled = s;
+          hdr.classList.toggle('scrolled', s);
+        }
+      }, { passive: true });
+    }());
+
+    /* ─── Mobile nav toggle — WRITES: STATE.menuOpen ─── */
+    (function() {
+      var btn = document.getElementById('hamburger');
+      var nav = document.getElementById('mobile-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function() {
+        STATE.menuOpen = !STATE.menuOpen;
+        btn.classList.toggle('open', STATE.menuOpen);
+        nav.classList.toggle('open', STATE.menuOpen);
+        btn.setAttribute('aria-expanded', STATE.menuOpen ? 'true' : 'false');
+      });
+    }());
+
+    /* ─── Reveal on scroll ─── */
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.07 });
+      els.forEach(function(el) { obs.observe(el); });
+    }());
+
+    /* ─── Hero search — READS: input[name="q"] ─── */
+    function handleSearch(form) {
+      try {
+        var q = form.querySelector('input[name="q"]').value.trim();
+        if (!q) return false;
+        window.location.href = '/categories/?q=' + encodeURIComponent(q);
+        return false;
+      } catch(err) {
+        console.error('[5B2B] handleSearch:', err);
+        return true; // fallback: let form submit normally
+      }
+    }
+
+    /* ─── Email signup — GA4 event ─── */
+    function handleEmailSignup(form) {
+      try {
+        var email = form.querySelector('input[type="email"]').value;
+        if (typeof gtag === 'function') {
+          gtag('event', 'email_signup', {
+            email_domain: email.split('@')[1] || 'unknown'
+          });
+        }
+        return true; // let Mailchimp action submit
+      } catch(err) {
+        console.error('[5B2B] handleEmailSignup:', err);
+        return true;
+      }
+    }
+
+    /* ─── Affiliate click tracking — GA4 outbound event ───
+       Fires on any element with [data-affiliate-url].
+       Amazon tag=5best2buy-20 should already be in the URL.
+       READS: data-affiliate-url, data-product */
+    (function() {
+      document.addEventListener('click', function(e) {
+        var btn = e.target.closest('[data-affiliate-url]');
+        if (!btn) return;
+        try {
+          var url = btn.getAttribute('data-affiliate-url');
+          if (typeof gtag === 'function') {
+            gtag('event', 'affiliate_click', {
+              affiliate_url: url,
+              product_name:  btn.getAttribute('data-product') || 'unknown'
+            });
+          }
+          // DECISION: open in new tab, null opener for security
+          var win = window.open(url, '_blank', 'noopener');
+          if (win) win.opener = null;
+        } catch(err) {
+          console.error('[5B2B] affiliateClick:', err);
+        }
+      });
+    }());
+
+    /* ─── Smooth scroll for hash anchors ─── */
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          var id = this.getAttribute('href').replace('#', '');
+          if (!id) return;
+          var el = document.getElementById(id);
+          if (el) {
+            e.preventDefault();
+            window.scrollTo({
+              top: el.getBoundingClientRect().top + window.scrollY - 70,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }());
+  </script>
+
+</body>
+</html>
