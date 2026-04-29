@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  Author: Vince Gonzalez
+  File: 5best2buy-cordless-drills_v1.0.0.html
+  Brand: 5Best2Buy | Top Reviews. Smart Decisions.
+  Version: v1.0.0
+  Date: 2026-04-29
+  BOOT ORDER: CSS vars > Fonts > Header > Disclosure > Hero > Cards > Methodology > Footer > JS
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Cordless Drills 2026 — Top 5 Picks | 5Best2Buy</title>
+  <meta name="description" content="The 5 best cordless drills of 2026 ranked by experts. Milwaukee, DeWalt, Makita tested and ranked. Updated April 2026. No sponsored rankings." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Best Cordless Drills 2026","description":"The 5 best cordless drills ranked by experts for 2026.","numberOfItems":5,"itemListElement":[{"@type":"ListItem","position":1,"name":"Milwaukee M18 FUEL 2904-20"},{"@type":"ListItem","position":2,"name":"DeWalt DCD794B 20V MAX ATOMIC"},{"@type":"ListItem","position":3,"name":"Flex FX1171T-2B 24V"},{"@type":"ListItem","position":4,"name":"Makita FD07R1 12V"},{"@type":"ListItem","position":5,"name":"Kobalt KXDD 24V"}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --c-navy:#1a2f5e; --c-navy-deep:#111e3d; --c-navy-mid:#1f3870;
+      --c-blue:#2b8fd4; --c-blue-bright:#3da8f0; --c-blue-dim:#1a6aaa;
+      --c-gold:#e8b84b; --c-gold-bright:#f5cc6a; --c-gold-dim:#b8922e;
+      --c-bg:#0d1421; --c-surface:#121e30; --c-card:#172235; --c-card-hover:#1c2b42;
+      --c-border:rgba(43,143,212,0.14); --c-border-mid:rgba(43,143,212,0.28);
+      --c-border-gold:rgba(232,184,75,0.3);
+      --c-text:#e4eaf4; --c-muted:#6b84a8; --c-faint:#2a3d5a;
+      --c-green:#4ade80;
+      --c-rank1-bg:rgba(232,184,75,0.06); --c-rank1-border:rgba(232,184,75,0.35);
+      --font-display:'Bebas Neue',Impact,fantasy;
+      --font-body:'Barlow Condensed',Arial Narrow,sans-serif;
+      --font-mono:'Share Tech Mono',Courier New,monospace;
+      --r-sm:6px; --r-md:10px; --r-lg:14px; --max-w:900px; --trans:0.22s ease;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--c-bg);color:var(--c-text);font-family:var(--font-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+    a{color:var(--c-blue);text-decoration:none;} a:hover{color:var(--c-blue-bright);}
+    img{display:block;max-width:100%;}
+    .container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 20px;}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    #site-header{position:sticky;top:0;z-index:100;background:rgba(13,20,33,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--c-border);padding:10px 0;transition:border-color var(--trans);}
+    #site-header.scrolled{border-bottom-color:var(--c-border-mid);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .site-logo{display:flex;align-items:center;text-decoration:none;}
+    .logo-img{height:42px;width:auto;}
+    .header-nav{display:flex;align-items:center;gap:22px;}
+    .header-nav a{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--c-muted);transition:color var(--trans);}
+    .header-nav a:hover{color:var(--c-blue);}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer;padding:4px;}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--c-muted);border-radius:2px;transition:transform .2s,opacity .2s;}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-nav{display:none;flex-direction:column;border-top:1px solid var(--c-border);padding:12px 20px 16px;gap:14px;}
+    .mobile-nav.open{display:flex;}
+    .mobile-nav a{font-size:15px;letter-spacing:1px;color:var(--c-muted);text-transform:uppercase;}
+    #disclosure-bar{background:rgba(43,143,212,0.05);border-bottom:1px solid var(--c-border);padding:8px 0;}
+    .disclosure-text{font-family:var(--font-mono);font-size:11px;color:var(--c-muted);letter-spacing:.5px;text-align:center;}
+    .disclosure-text a{color:var(--c-blue-dim);text-decoration:underline;text-underline-offset:2px;}
+    #list-hero{padding:50px 0 34px;border-bottom:1px solid var(--c-border);}
+    .hero-eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--c-blue-dim);margin-bottom:12px;}
+    .hero-title{font-family:var(--font-display);font-size:clamp(36px,7vw,60px);letter-spacing:2px;line-height:1;color:var(--c-text);margin-bottom:14px;}
+    .hero-title em{color:var(--c-blue);font-style:normal;}
+    .hero-meta{display:flex;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--c-muted);letter-spacing:.5px;}
+    .meta-dot{width:3px;height:3px;border-radius:50%;background:var(--c-faint);}
+    .meta-verified{display:flex;align-items:center;gap:5px;color:var(--c-green);font-family:var(--font-mono);font-size:11px;letter-spacing:1px;}
+    .meta-verified::before{content:'✓';font-size:10px;}
+    #buying-guide{padding:36px 0 28px;border-bottom:1px solid var(--c-border);}
+    .section-label{font-family:var(--font-mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--c-blue-dim);margin-bottom:8px;}
+    .section-title{font-family:var(--font-display);font-size:clamp(22px,4vw,32px);letter-spacing:1px;color:var(--c-text);margin-bottom:16px;}
+    .guide-body{font-size:15px;color:var(--c-muted);line-height:1.7;max-width:720px;}
+    .guide-body p{margin-bottom:14px;}
+    .guide-body strong{color:var(--c-text);}
+    #product-list{padding:36px 0 16px;}
+    .product-cards{display:flex;flex-direction:column;gap:14px;}
+    .product-card{background:var(--c-card);border:1px solid var(--c-border);border-radius:var(--r-lg);display:grid;grid-template-columns:80px 1fr auto;grid-template-rows:auto auto;overflow:hidden;position:relative;transition:border-color var(--trans),background var(--trans),transform var(--trans),box-shadow var(--trans);}
+    .product-card:hover{border-color:var(--c-border-mid);background:var(--c-card-hover);transform:translateY(-2px);box-shadow:0 8px 32px rgba(43,143,212,0.08);}
+    .product-card[data-rank="1"]{background:var(--c-rank1-bg);border-color:var(--c-rank1-border);}
+    .product-card[data-rank="1"]:hover{border-color:var(--c-gold);box-shadow:0 8px 32px rgba(232,184,75,0.12);}
+    .card-rank{grid-column:1;grid-row:1/3;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--c-border);padding:16px 0;}
+    .rank-numeral{font-family:var(--font-display);font-size:48px;line-height:1;color:var(--c-faint);letter-spacing:-2px;user-select:none;transition:color var(--trans);}
+    .product-card[data-rank="1"] .rank-numeral{color:var(--c-gold);}
+    .product-card:hover .rank-numeral{color:var(--c-blue-dim);}
+    .product-card[data-rank="1"]:hover .rank-numeral{color:var(--c-gold-bright);}
+    .card-body{grid-column:2;grid-row:1;padding:16px 18px 8px;}
+    .card-category{font-family:var(--font-mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--c-blue-dim);margin-bottom:4px;}
+    .card-product-name{font-family:var(--font-display);font-size:21px;letter-spacing:1px;color:var(--c-text);line-height:1.1;margin-bottom:7px;}
+    .card-verdict{font-size:14px;color:var(--c-muted);line-height:1.5;}
+    .card-footer{grid-column:2;grid-row:2;padding:0 18px 14px;display:flex;align-items:center;gap:10px;}
+    .card-verified{font-family:var(--font-mono);font-size:10px;letter-spacing:1px;color:var(--c-faint);text-transform:uppercase;}
+    .card-cta{grid-column:3;grid-row:1/3;display:flex;align-items:center;justify-content:center;padding:16px 18px 16px 8px;}
+    .btn-check-price{display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:14px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:var(--c-blue);border:none;border-radius:var(--r-sm);padding:10px 16px;cursor:pointer;min-height:44px;min-width:120px;white-space:nowrap;transition:background var(--trans),transform var(--trans),box-shadow var(--trans);text-decoration:none;}
+    .btn-check-price:hover{background:var(--c-blue-bright);color:#fff;transform:scale(1.03);box-shadow:0 4px 16px rgba(43,143,212,0.35);}
+    .product-card[data-rank="1"] .btn-check-price{background:var(--c-gold);color:var(--c-navy-deep);}
+    .product-card[data-rank="1"] .btn-check-price:hover{background:var(--c-gold-bright);color:var(--c-navy-deep);box-shadow:0 4px 16px rgba(232,184,75,0.35);}
+    .best-pick-badge{display:none;position:absolute;top:10px;right:10px;font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--c-navy-deep);background:var(--c-gold);padding:3px 8px;border-radius:var(--r-sm);}
+    .product-card[data-rank="1"] .best-pick-badge{display:block;}
+    #verdicts{padding:36px 0 28px;border-top:1px solid var(--c-border);}
+    .verdict-list{display:flex;flex-direction:column;gap:22px;margin-top:18px;}
+    .verdict-item{border-left:2px solid var(--c-border);padding-left:18px;}
+    .verdict-item[data-rank="1"]{border-left-color:var(--c-gold);}
+    .verdict-rank{font-family:var(--font-mono);font-size:10px;letter-spacing:2px;color:var(--c-blue-dim);text-transform:uppercase;margin-bottom:4px;}
+    .verdict-name{font-family:var(--font-display);font-size:18px;letter-spacing:1px;color:var(--c-text);margin-bottom:6px;}
+    .verdict-copy{font-size:14px;color:var(--c-muted);line-height:1.7;max-width:680px;}
+    #faq{padding:36px 0 28px;border-top:1px solid var(--c-border);}
+    .faq-list{display:flex;flex-direction:column;gap:0;margin-top:16px;border:1px solid var(--c-border);border-radius:var(--r-md);overflow:hidden;}
+    .faq-item{border-bottom:1px solid var(--c-border);}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{width:100%;background:transparent;border:none;text-align:left;padding:16px 18px;font-family:var(--font-body);font-size:15px;font-weight:600;color:var(--c-text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background var(--trans);}
+    .faq-q:hover{background:var(--c-surface);}
+    .faq-icon{font-family:var(--font-mono);font-size:16px;color:var(--c-blue);flex-shrink:0;transition:transform .2s;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    .faq-a{display:none;padding:0 18px 16px;font-size:14px;color:var(--c-muted);line-height:1.7;}
+    .faq-item.open .faq-a{display:block;}
+    #methodology{padding:44px 0 36px;border-top:1px solid var(--c-border);margin-top:16px;}
+    .method-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:18px;}
+    .method-item{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--r-md);padding:16px;}
+    .method-icon{font-family:var(--font-display);font-size:26px;color:var(--c-blue);margin-bottom:6px;}
+    .method-title{font-family:var(--font-display);font-size:15px;letter-spacing:1px;color:var(--c-text);margin-bottom:4px;}
+    .method-desc{font-size:13px;color:var(--c-muted);line-height:1.5;}
+    #site-footer{border-top:1px solid var(--c-border);padding:26px 0;margin-top:16px;}
+    .footer-inner{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+    .footer-tagline{font-family:var(--font-display);font-size:16px;letter-spacing:1px;color:var(--c-blue);margin-bottom:4px;}
+    .footer-copy{font-size:12px;color:var(--c-muted);}
+    .footer-links{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+    .footer-links a{font-size:12px;color:var(--c-muted);transition:color var(--trans);}
+    .footer-links a:hover{color:var(--c-blue);}
+    @media(max-width:600px){
+      .product-card{grid-template-columns:60px 1fr;grid-template-rows:auto auto auto;}
+      .card-rank{grid-column:1;grid-row:1/2;padding:14px 0;}
+      .rank-numeral{font-size:36px;}
+      .card-body{grid-column:2;grid-row:1;padding:14px 14px 6px;}
+      .card-footer{grid-column:1/3;grid-row:2;padding:0 14px 10px;}
+      .card-cta{grid-column:1/3;grid-row:3;padding:0 14px 14px;justify-content:flex-start;}
+      .btn-check-price{width:100%;}
+      .header-nav{display:none;} .hamburger{display:flex;} .logo-img{height:34px;}
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header">
+    <div class="container"><div class="header-inner">
+      <a class="site-logo" href="/index.html">
+        <img class="logo-img" src="5best2buy-logo.png" alt="5Best2Buy" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-family:var(--font-display);font-size:22px;letter-spacing:2px;color:var(--c-gold)\'>5BEST2BUY</span>';" />
+      </a>
+      <nav class="header-nav">
+        <a href="/categories.html">Categories</a>
+        <a href="/methodology.html">How We Rank</a>
+        <a href="/disclosure.html">Disclosure</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div></div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/categories.html">Categories</a>
+      <a href="/methodology.html">How We Rank</a>
+      <a href="/disclosure.html">Disclosure</a>
+    </div>
+  </header>
+
+  <div id="disclosure-bar"><div class="container">
+    <p class="disclosure-text">Some links are affiliate links — we may earn a commission at no extra cost to you. Rankings are never influenced by affiliate relationships. <a href="/disclosure.html">Full disclosure →</a></p>
+  </div></div>
+
+  <section id="list-hero"><div class="container">
+    <p class="hero-eyebrow reveal">Top 5 Picks · Tools</p>
+    <h1 class="hero-title reveal">Best <em>Cordless Drills</em><br>You Can Buy Today</h1>
+    <div class="hero-meta reveal">
+      <span>Ranked by experts</span><span class="meta-dot"></span>
+      <span>5 picks only</span><span class="meta-dot"></span>
+      <span>No sponsored rankings</span><span class="meta-dot"></span>
+      <span class="meta-verified">Last verified April 2026</span>
+    </div>
+  </div></section>
+
+  <section id="buying-guide"><div class="container">
+    <p class="section-label reveal">Buyer's Guide</p>
+    <h2 class="section-title reveal">What to Know Before You Buy</h2>
+    <div class="guide-body reveal">
+      <p>The most important decision in buying a cordless drill in 2026 is not which drill — it's which platform. Milwaukee M18, DeWalt 20V MAX, and Makita LXT are the three dominant ecosystems, and every battery you buy for one brand is usable across 200+ tools in that lineup. If you're starting fresh, you're choosing a tool family, not just a drill. If you already own batteries from one brand, the correct answer is almost always to stay in that ecosystem.</p>
+      <p><strong>Brushless motors are non-negotiable in 2026.</strong> The price difference between brushed and brushless has effectively disappeared at every tier on this list. Brushless motors deliver more torque per charge, run cooler, and last significantly longer than brushed alternatives. There is no reason to buy a brushed drill in 2026.</p>
+      <p><strong>Torque rating (in-lbs) is the primary performance metric.</strong> For hanging shelves, assembling furniture, and most household tasks, 500+ in-lbs handles everything comfortably. Deck building, framing, and masonry work requires 800+ in-lbs. The Milwaukee M18 FUEL on this list delivers 1,400 in-lbs — that's contractor-grade power that handles full days of hard use. The DeWalt ATOMIC is more modest but more than sufficient for the vast majority of homeowners.</p>
+      <p><strong>Bare tool vs. kit purchasing.</strong> If you already own batteries from the same platform, always buy bare tool — you pay only for the drill, not redundant batteries. If you're starting from zero, a kit (drill + batteries + charger) is better value. The DeWalt DCD794B on this list is listed as a bare tool option, which is why its entry point is lower than its full-kit counterparts.</p>
+      <p><strong>Weight matters more than you expect.</strong> The difference between a 2-lb compact drill and a 4-lb full-size drill is dramatic over an hour of overhead work — mounting ceiling fixtures, installing cabinets, running wire. If your work involves sustained overhead or confined-space drilling, the Makita 12V compact on this list is worth serious consideration even at lower torque.</p>
+    </div>
+  </div></section>
+
+  <section id="product-list"><div class="container"><div class="product-cards">
+
+    <div class="product-card reveal" data-rank="1">
+      <span class="best-pick-badge">Best Pick</span>
+      <div class="card-rank"><span class="rank-numeral">1</span></div>
+      <div class="card-body">
+        <p class="card-category">Best Overall</p>
+        <h2 class="card-product-name">Milwaukee M18 FUEL 2904-20</h2>
+        <p class="card-verdict">1,400 in-lbs of torque, 200+ tool M18 ecosystem, and contractor-grade durability — the standard by which every other drill on this list is measured.</p>
+      </div>
+      <div class="card-footer"><span class="card-verified">Verified Apr 2026</span></div>
+      <div class="card-cta"><a class="btn-check-price" href="#" data-affiliate-url="https://amzn.to/4egIIeW" data-product="Milwaukee M18 FUEL 2904-20" rel="noopener noreferrer sponsored" target="_blank">Check Price</a></div>
+    </div>
+
+    <div class="product-card reveal" data-rank="2">
+      <div class="card-rank"><span class="rank-numeral">2</span></div>
+      <div class="card-body">
+        <p class="card-category">Best Value</p>
+        <h2 class="card-product-name">DeWalt DCD794B 20V MAX ATOMIC</h2>
+        <p class="card-verdict">Brushless motor, compact ATOMIC design, and access to DeWalt's 200+ tool ecosystem — the strongest value-to-performance ratio for homeowners entering the cordless tool market.</p>
+      </div>
+      <div class="card-footer"><span class="card-verified">Verified Apr 2026</span></div>
+      <div class="card-cta"><a class="btn-check-price" href="#" data-affiliate-url="https://amzn.to/4vTNLs9" data-product="DeWalt DCD794B 20V MAX ATOMIC" rel="noopener noreferrer sponsored" target="_blank">Check Price</a></div>
+    </div>
+
+    <div class="product-card reveal" data-rank="3">
+      <div class="card-rank"><span class="rank-numeral">3</span></div>
+      <div class="card-body">
+        <p class="card-category">Best for Power</p>
+        <h2 class="card-product-name">Flex FX1171T-2B 24V</h2>
+        <p class="card-verdict">Consumer Reports gave it top scores across speed, power, runtime, and charge time — the highest-tested performance drill for serious DIYers who need contractor results.</p>
+      </div>
+      <div class="card-footer"><span class="card-verified">Verified Apr 2026</span></div>
+      <div class="card-cta"><a class="btn-check-price" href="#" data-affiliate-url="https://amzn.to/4t5EKcS" data-product="Flex FX1171T-2B 24V" rel="noopener noreferrer sponsored" target="_blank">Check Price</a></div>
+    </div>
+
+    <div class="product-card reveal" data-rank="4">
+      <div class="card-rank"><span class="rank-numeral">4</span></div>
+      <div class="card-body">
+        <p class="card-category">Best Compact</p>
+        <h2 class="card-product-name">Makita FD07R1 12V</h2>
+        <p class="card-verdict">Just over 2 lbs and barely 6 inches tall — the best option for sustained overhead work, tight spaces, and users who prioritize maneuverability over raw torque.</p>
+      </div>
+      <div class="card-footer"><span class="card-verified">Verified Apr 2026</span></div>
+      <div class="card-cta"><a class="btn-check-price" href="#" data-affiliate-url="https://amzn.to/4ufEety" data-product="Makita FD07R1 12V" rel="noopener noreferrer sponsored" target="_blank">Check Price</a></div>
+    </div>
+
+    <div class="product-card reveal" data-rank="5">
+      <div class="card-rank"><span class="rank-numeral">5</span></div>
+      <div class="card-body">
+        <p class="card-category">Best Budget Heavy-Duty</p>
+        <h2 class="card-product-name">Kobalt KXDD 24V</h2>
+        <p class="card-verdict">Strong power and runtime test results at a lower investment than Milwaukee or DeWalt — the best option for buyers who need heavy-duty performance without flagship spend.</p>
+      </div>
+      <div class="card-footer"><span class="card-verified">Verified Apr 2026</span></div>
+      <div class="card-cta"><a class="btn-check-price" href="#" data-affiliate-url="https://amzn.to/4u8uwsQ" data-product="Kobalt KXDD 24V" rel="noopener noreferrer sponsored" target="_blank">Check Price</a></div>
+    </div>
+
+  </div></div></section>
+
+  <section id="verdicts"><div class="container">
+    <p class="section-label reveal">Expert Verdicts</p>
+    <h2 class="section-title reveal">Why Each Pick Made the List</h2>
+    <div class="verdict-list">
+
+      <div class="verdict-item reveal" data-rank="1">
+        <p class="verdict-rank">#1 — Best Overall</p>
+        <p class="verdict-name">Milwaukee M18 FUEL 2904-20</p>
+        <p class="verdict-copy">The Milwaukee M18 FUEL 2904-20 is the consensus best overall cordless drill in 2026, appearing at the top of independent rankings from Consumer Reports, PowerToolInsider, and Under the Hard Hat. Its 1,400 in-lbs of torque ties for the highest available in the category, and the M18 brushless motor delivers consistent power under sustained load without the overheating issues that plague lesser drills during long sessions. The FUEL designation indicates Milwaukee's highest-performance brushless lineup — these are tools designed to run all day on a job site, not occasional weekend use. The M18 ecosystem is the deepest in the industry: 200+ tools share the same batteries, from circular saws to pipe threaders to outdoor power equipment. Buying the 2904-20 as a bare tool is the smart move if you already own M18 batteries; the kit version includes two 5.0Ah batteries and a rapid charger if you're starting fresh.</p>
+      </div>
+
+      <div class="verdict-item reveal" data-rank="2">
+        <p class="verdict-rank">#2 — Best Value</p>
+        <p class="verdict-name">DeWalt DCD794B 20V MAX ATOMIC</p>
+        <p class="verdict-copy">The DCD794B represents the best entry point into a serious cordless tool ecosystem. The ATOMIC series is DeWalt's compact brushless lineup, and the DCD794B delivers brushless efficiency and solid torque in a package that's lighter and shorter than full-size 20V drills — an advantage in tight spaces and overhead applications. The real argument for DeWalt is the ecosystem: 20V MAX batteries power 200+ tools including some of the best circular saws, reciprocating saws, and oscillating multi-tools in the category. Buying this drill as your first DeWalt tool is buying a foundation. Consumer Reports rates its handling as very good and notes above-average speed for its class. The plastic chuck is the primary compromise at this tier — for users who drill regularly into hardwood or masonry, stepping up to the M18 or Flex is worth considering.</p>
+      </div>
+
+      <div class="verdict-item reveal" data-rank="3">
+        <p class="verdict-rank">#3 — Best for Power</p>
+        <p class="verdict-name">Flex FX1171T-2B 24V</p>
+        <p class="verdict-copy">Flex is the underrated choice on this list. Consumer Reports gave the FX1171T-2B top scores in speed, power, runtime, and charge time — an unusual clean sweep that reflects genuine engineering rather than marketing positioning. The 24V platform delivers 1,400 in-lbs of torque matching Milwaukee, and the 5.0Ah battery provides runtime that outlasts most comparable units in heavy-use scenarios. Popular Mechanics named it Best for Power, specifically noting its ability to drill through thick hardwood joists and handle masonry with ease. The 5-year warranty is the longest on this list. The trade-off is ecosystem depth — Flex's tool lineup is smaller than Milwaukee's or DeWalt's, which matters if you plan to expand into a full cordless tool collection. For buyers who want a single high-performance drill without commitment to a larger platform, the Flex is a compelling choice.</p>
+      </div>
+
+      <div class="verdict-item reveal" data-rank="4">
+        <p class="verdict-rank">#4 — Best Compact</p>
+        <p class="verdict-name">Makita FD07R1 12V</p>
+        <p class="verdict-copy">The FD07R1 exists in a category by itself on this list. At just over 2 lbs with battery attached and barely 6 inches tall, it goes places full-size drills cannot — inside cabinet carcasses, in electrical boxes, between wall studs, inside HVAC ducts. Consumer Reports notes that despite its compact 12V profile, it performs strongly in power testing and competes against 18V and 20V drills in many tasks. The kit includes two batteries and a rapid charger that tops off a depleted battery in 60 minutes — faster than most full-size chargers. The limitations are real: the 3/8-inch chuck limits bit shank size, and sustained heavy-duty use — decking, concrete anchoring, large hole saws — is better served by the Milwaukee or Flex on this list. For installers, electricians, and homeowners whose work happens primarily in tight spaces, the FD07R1 is the correct tool.</p>
+      </div>
+
+      <div class="verdict-item reveal" data-rank="5">
+        <p class="verdict-rank">#5 — Best Budget Heavy-Duty</p>
+        <p class="verdict-name">Kobalt KXDD 24V</p>
+        <p class="verdict-copy">Kobalt's 24V Max platform delivers strong power and runtime performance at a lower investment than the Milwaukee or Flex options above. Consumer Reports testing confirmed it aces power, speed, and runtime — the same categories where the Flex earned its spot at rank 3 — at a more accessible entry point. Kobalt tools are exclusively available at Lowe's, which means the ecosystem is more limited than the major brands but also means in-store availability and returns are straightforward for most buyers. For users who need heavy-duty drill performance for a specific project — deck build, shed framing, fence installation — without committing to a premium platform investment, the Kobalt KXDD is the correct budget answer.</p>
+      </div>
+
+    </div>
+  </div></section>
+
+  <section id="faq"><div class="container">
+    <p class="section-label reveal">FAQ</p>
+    <h2 class="section-title reveal">Common Questions</h2>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q">What's the difference between a drill and an impact driver? <span class="faq-icon">+</span></button>
+        <p class="faq-a">A drill rotates continuously and is designed for drilling holes and driving screws in a wide range of materials. An impact driver also rotates but adds rapid concussive blows along the axis of rotation, making it dramatically better at driving long screws and lag bolts into hard materials without cam-out or wrist strain. Most serious DIYers eventually own both. All five picks on this list are drills — for driving heavy fasteners, an impact driver is the correct complementary tool.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Do I need a hammer drill? <span class="faq-icon">+</span></button>
+        <p class="faq-a">Only if you're drilling into concrete, brick, block, or masonry. A hammer drill adds a pulsing forward motion that chips material while rotating, which is necessary for masonry penetration. For wood, drywall, metal, and plastic — the materials covering 95% of home projects — a standard drill is correct. The Milwaukee M18 FUEL 2904-20 on this list is a hammer drill and handles masonry. The DeWalt DCD794B ATOMIC is a standard drill/driver without hammer mode. If you plan to mount anything into concrete or brick, buy the Milwaukee or Flex.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Should I buy a kit or bare tool? <span class="faq-icon">+</span></button>
+        <p class="faq-a">Buy bare tool if you already own compatible batteries from the same platform. Buy a kit if you're starting from zero. The DeWalt DCD794B listed here is a bare tool — you'll need separate batteries and a charger unless you already own 20V MAX batteries. For first-time buyers, the kit version of whichever drill you choose will be better value than buying drill plus batteries separately. Platform compatibility note: Milwaukee M18 batteries work only with Milwaukee M18 tools; DeWalt 20V MAX batteries work only with DeWalt 20V MAX tools. Brands are not cross-compatible.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">How long do cordless drill batteries last? <span class="faq-icon">+</span></button>
+        <p class="faq-a">Modern lithium-ion batteries in the Milwaukee M18 and DeWalt 20V MAX platforms are rated for 500–800 charge cycles before significant capacity degradation. Under typical homeowner use — several projects per year — a quality battery lasts 5–7 years. Under daily contractor use, 2–3 years is more realistic. All five brands on this list sell replacement batteries separately. Store batteries partially charged (40–60%) in a cool, dry location when not in use for extended periods — this significantly extends lithium-ion lifespan.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Is a 12V drill strong enough for home projects? <span class="faq-icon">+</span></button>
+        <p class="faq-a">For the majority of home projects, yes. Hanging pictures, assembling furniture, installing cabinet hardware, running ethernet cable, mounting light fixtures — the Makita FD07R1 handles all of these without limitation. Where 12V falls short: driving 3-inch deck screws into treated lumber, drilling large-diameter holes in hardwood, and any masonry work. If your projects regularly involve outdoor construction or structural work, step up to an 18V or 20V platform. If your projects are primarily indoor installation and assembly, the 12V compact is the better tool.</p>
+      </div>
+
+    </div>
+  </div></section>
+
+  <section id="methodology"><div class="container">
+    <p class="section-label reveal">How We Rank</p>
+    <h2 class="section-title reveal">Why These Five</h2>
+    <p class="reveal" style="font-size:14px;color:var(--c-muted);max-width:580px;line-height:1.6;">Every list on 5Best2Buy is built the same way: verified user sentiment, expert field analysis, current market availability, and value-to-performance ratio. We rank five. Not ten. Not thirty. Five.</p>
+    <div class="method-grid">
+      <div class="method-item reveal"><div class="method-icon">01</div><div class="method-title">Sentiment Analysis</div><p class="method-desc">Thousands of verified purchases analyzed for pattern-consistent complaints and praise.</p></div>
+      <div class="method-item reveal"><div class="method-icon">02</div><div class="method-title">Field Expert Lens</div><p class="method-desc">Verdicts written from the perspective of someone who actually uses this professionally.</p></div>
+      <div class="method-item reveal"><div class="method-icon">03</div><div class="method-title">Value Ratio</div><p class="method-desc">Performance weighed against real-world cost — not MSRP vs spec sheet.</p></div>
+      <div class="method-item reveal"><div class="method-icon">04</div><div class="method-title">Freshness Lock</div><p class="method-desc">Every list is re-verified on a set cadence with a visible date stamp. No stale rankings.</p></div>
+    </div>
+  </div></section>
+
+  <footer id="site-footer"><div class="container"><div class="footer-inner">
+    <div><p class="footer-tagline">Top Reviews. Smart Decisions.</p><p class="footer-copy">© 2026 5Best2Buy · Rankings are independent. No sponsored placements.</p></div>
+    <nav class="footer-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/disclosure.html">Affiliate Disclosure</a>
+      <a href="/methodology.html">How We Rank</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div></div></footer>
+
+  <script>
+    (function(){var els=document.querySelectorAll('.reveal');if(!els.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var rank=e.target.closest?e.target.closest('[data-rank]'):null;var d=rank?(parseInt(rank.getAttribute('data-rank')||0)-1)*70:0;setTimeout(function(){e.target.classList.add('visible');},d);obs.unobserve(e.target);}});},{threshold:0.08});els.forEach(function(el){obs.observe(el);});}());
+    (function(){document.querySelectorAll('.btn-check-price').forEach(function(btn){btn.addEventListener('click',function(e){e.preventDefault();var url=this.getAttribute('data-affiliate-url');if(!url||url.charAt(0)==='#'){console.warn('[5B2B] No affiliate URL: '+this.getAttribute('data-product'));return;}var w=window.open(url,'_blank','noopener,noreferrer');if(w){w.opener=null;}});});}());
+    (function(){var hdr=document.getElementById('site-header');if(!hdr)return;window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>30);},{passive:true});}());
+    (function(){var btn=document.getElementById('hamburger');var nav=document.getElementById('mobile-nav');if(!btn||!nav)return;btn.addEventListener('click',function(){btn.classList.toggle('open');nav.classList.toggle('open');});}());
+    (function(){document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var item=this.closest('.faq-item');item.classList.toggle('open');});});}());
+  </script>
+</body>
+</html>
