@@ -19,8 +19,9 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Worth The Hunt","item":"https://www.5best2buy.com/"},{"@type":"ListItem","position":2,"name":"Who Owns Your Food?","item":"https://www.5best2buy.com/who-owns/"}]},{"@type":"WebApplication","name":"Who Owns Your Food?","url":"https://www.5best2buy.com/who-owns/","applicationCategory":"ReferenceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A search tool that reveals which parent conglomerate owns a given grocery brand, and suggests independent small-maker alternatives."}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GG5QF6LH0D"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GG5QF6LH0D');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8826956454892311" crossorigin="anonymous"></script>
 <style>
-  :root{--navy:#0d1421;--surface:#121e30;--card:#16223a;--card-h:#1d2c47;--blue:#5fb0ef;--gold:#f0c560;--green:#5fe39a;--text:#eef2f8;--soft:#c8d3e6;--meta:#9aabc4;--line:rgba(120,150,190,0.18);--fd:'Rajdhani','Arial Narrow',sans-serif;--fm:'IBM Plex Mono','Courier New',monospace;}
+  :root{--navy:#0d1421;--surface:#121e30;--card:#16223a;--card-h:#1d2c47;--blue:#5fb0ef;--gold:#f0c560;--green:#5fe39a;--text:#eef2f8;--soft:#c8d3e6;--meta:#9aabc4;--line:rgba(120,150,190,0.18);--fd:'Rajdhani','Arial Narrow',sans-serif;--fm:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{background:var(--navy);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.65;font-size:17px;}
   .wrap{max-width:720px;margin:0 auto;padding:20px 18px 70px;}
@@ -117,11 +118,38 @@ var DB = [
  {p:"Mondelez / Nabisco", n:"see Mondelez International", b:[["Nabisco","cookies","Cookies"]]},
  {p:"Post Holdings", n:"a cereal-and-grocery roll-up", b:[["Honey Bunches of Oats","granola","Granola"],["Grape-Nuts","granola","Granola"],["Fruity Pebbles","granola","Granola"],["Bob Evans","bacon","Bacon"]]},
  {p:"Grupo Bimbo", n:"the world's largest bakery company", b:[["Entenmann's","cookies","Cookies"],["Thomas'","no-additive","No-Additive"],["Sara Lee","no-additive","No-Additive"],["Oroweat","no-additive","No-Additive"]]},
- {p:"B&G Foods", n:"a roll-up of dozens of legacy pantry brands", b:[["Green Giant","frozen","Frozen"],["Cream of Wheat","granola","Granola"],["Ortega","no-additive","No-Additive"],["Crisco","olive-oil","Olive Oil"],["Mrs. Dash","spices","Spices"]]}
+ {p:"B&G Foods", n:"a roll-up of dozens of legacy pantry brands", b:[["Green Giant","frozen","Frozen"],["Cream of Wheat","granola","Granola"],["Ortega","no-additive","No-Additive"],["Crisco","olive-oil","Olive Oil"],["Mrs. Dash","spices","Spices"]]},
+ {p:"PepsiCo", n:"snacks-and-soda giant; owns Frito-Lay and Quaker", b:[["Aquafina","craft-soda","Craft Soda"],["Bubly","craft-soda","Craft Soda"],["Rockstar","craft-soda","Craft Soda"],["Propel","craft-soda","Craft Soda"],["Starry","craft-soda","Craft Soda"],["Cracker Jack","popcorn","Popcorn"],["Funyuns","chips","Chips"],["Munchies","chips","Chips"],["Life","granola","Granola"]]},
+ {p:"The Coca-Cola Company", n:"the world's largest beverage company", b:[["BodyArmor","craft-soda","Craft Soda"],["Costa Coffee","coffee","Coffee"],["AHA","craft-soda","Craft Soda"],["Peace Tea","tea","Tea"],["Fuze","tea","Tea"],["Honest Tea","tea","Tea"]]},
+ {p:"Keurig Dr Pepper", n:"the #3 US soft-drink company", b:[["Sunkist Soda","craft-soda","Craft Soda"],["Squirt","craft-soda","Craft Soda"],["Crush","craft-soda","Craft Soda"],["Schweppes","craft-soda","Craft Soda"],["Clamato","craft-soda","Craft Soda"]]},
+ {p:"Mondelez International", n:"the snack-brand spinoff of Kraft (Nabisco)", b:[["Toblerone","chocolate","Chocolate"],["Milka","chocolate","Chocolate"],["Swedish Fish","candy","Candy"],["Clif Bar","granola","Granola"],["Tate's","cookies","Cookies"],["Newtons","cookies","Cookies"]]},
+ {p:"The Hershey Company", n:"America's largest chocolate maker", b:[["Whoppers","candy","Candy"],["Milk Duds","candy","Candy"],["PayDay","candy","Candy"],["Mounds","chocolate","Chocolate"],["York","candy","Candy"],["Rolo","chocolate","Chocolate"],["Good & Plenty","candy","Candy"],["Cadbury (US)","chocolate","Chocolate"]]},
+ {p:"Mars, Incorporated", n:"privately held by the Mars family", b:[["Juicy Fruit","candy","Candy"],["Doublemint","candy","Candy"],["5 Gum","candy","Candy"],["Big Red","candy","Candy"],["Life Savers","candy","Candy"]]},
+ {p:"Kraft Heinz", n:"formed by a 2015 mega-merger backed by 3G Capital and Berkshire", b:[["Cracker Barrel Cheese","cheese","Cheese"],["Claussen","pickles","Pickles"],["Cool Whip","no-additive","No-Additive"],["Crystal Light","craft-soda","Craft Soda"],["A.1.","no-additive","No-Additive"],["Miracle Whip","no-additive","No-Additive"],["Jet-Puffed","candy","Candy"],["Breakstone's","cultured-butter","Cultured Butter"]]},
+ {p:"General Mills", n:"the cereal-aisle giant", b:[["Cinnamon Toast Crunch","granola","Granola"],["Cocoa Puffs","granola","Granola"],["Trix","granola","Granola"],["Wheaties","granola","Granola"],["Fruit Roll-Ups","candy","Candy"],["Gushers","candy","Candy"],["Progresso","bone-broth","Bone Broth"],["Muir Glen","pasta","Pasta"]]},
+ {p:"Conagra Brands", n:"a roll-up of packaged-food brands", b:[["PAM","olive-oil","Olive Oil"],["Wesson","olive-oil","Olive Oil"],["Gardein","plant-only","Plant-Only"],["Frontera","hot-sauce","Hot Sauce"],["Banquet","frozen","Frozen"],["Ro-Tel","no-additive","No-Additive"],["Udi's","no-additive","No-Additive"]]},
+ {p:"Campbell Soup Company", n:"now also owns Sovos (Rao's) and Snyder's-Lance", b:[["Chunky","bone-broth","Bone Broth"],["SpaghettiOs","pasta","Pasta"],["Milano","cookies","Cookies"],["Pop Secret","popcorn","Popcorn"]]},
+ {p:"Hormel Foods", n:"also owns Skippy, Planters, Applegate, and Justin's", b:[["Dinty Moore","bone-broth","Bone Broth"],["Herdez","hot-sauce","Hot Sauce"],["Black Label Bacon","bacon","Bacon"],["Natural Choice","bacon","Bacon"]]},
+ {p:"McCormick & Company", n:"the world's largest spice company", b:[["Thai Kitchen","no-additive","No-Additive"],["Kitchen Basics","bone-broth","Bone Broth"],["Gourmet Garden","spices","Spices"],["Simply Asia","no-additive","No-Additive"],["Cattlemen's","hot-sauce","Hot Sauce"]]},
+ {p:"Danone", n:"French dairy and plant-based giant", b:[["Two Good","cultured-butter","Cultured Butter"],["Light & Fit","cultured-butter","Cultured Butter"],["Wallaby","cultured-butter","Cultured Butter"],["STOK","coffee","Coffee"]]},
+ {p:"Ferrero", n:"the privately-held Nutella maker; bought Nestlé's US candy and Kellogg's cookies", b:[["Nutella","chocolate","Chocolate"],["Ferrero Rocher","chocolate","Chocolate"],["Kinder","chocolate","Chocolate"],["Tic Tac","candy","Candy"],["Butterfinger","chocolate","Chocolate"],["Nestlé Crunch","chocolate","Chocolate"],["Baby Ruth","chocolate","Chocolate"],["Keebler","cookies","Cookies"],["Famous Amos","cookies","Cookies"],["Mother's","cookies","Cookies"],["Fannie May","chocolate","Chocolate"]]},
+ {p:"Ferrara Candy (Ferrero)", n:"Ferrero's US sugar-candy division", b:[["Brach's","candy","Candy"],["Trolli","candy","Candy"],["SweeTarts","candy","Candy"],["Nerds","candy","Candy"],["Laffy Taffy","candy","Candy"],["Lemonhead","candy","Candy"],["Red Hots","candy","Candy"],["Now and Later","candy","Candy"]]},
+ {p:"Lindt and Sprüngli", n:"Swiss chocolate group", b:[["Lindt","chocolate","Chocolate"],["Lindor","chocolate","Chocolate"],["Ghirardelli","chocolate","Chocolate"],["Russell Stover","chocolate","Chocolate"],["Whitman's","chocolate","Chocolate"]]},
+ {p:"Utz Brands", n:"a roll-up of regional snack brands", b:[["Utz","chips","Chips"],["Zapp's","chips","Chips"],["Boulder Canyon","chips","Chips"],["On The Border","chips","Chips"],["Tim's Cascade","chips","Chips"],["Golden Flake","chips","Chips"]]},
+ {p:"Hain Celestial", n:"a holding company for 'natural' brands", b:[["Celestial Seasonings","tea","Tea"],["Terra","chips","Chips"],["Garden of Eatin'","chips","Chips"],["MaraNatha","nut-butter","Nut Butter"],["Spectrum","olive-oil","Olive Oil"],["Imagine","bone-broth","Bone Broth"],["Earth's Best","no-additive","No-Additive"]]},
+ {p:"Lactalis", n:"the world's largest dairy company (French, family-owned)", b:[["Stonyfield","cultured-butter","Cultured Butter"],["Siggi's","cultured-butter","Cultured Butter"],["Président","cheese","Cheese"],["Galbani","cheese","Cheese"],["Black Diamond","cheese","Cheese"]]},
+ {p:"Saputo", n:"a Canadian dairy giant", b:[["Frigo","cheese","Cheese"],["Stella","cheese","Cheese"],["Treasure Cave","cheese","Cheese"],["Montchevre","cheese","Cheese"]]},
+ {p:"Smithfield Foods (WH Group)", n:"owned by China's WH Group; the world's largest pork producer", b:[["Smithfield","bacon","Bacon"],["Eckrich","charcuterie","Charcuterie"],["Farmland","bacon","Bacon"],["Armour","regenerative-meat","Regenerative Meat"]]},
+ {p:"JBS", n:"the world's largest meat-processing company (Brazilian)", b:[["Pilgrim's","regenerative-meat","Regenerative Meat"],["Swift","regenerative-meat","Regenerative Meat"],["Just Bare","regenerative-meat","Regenerative Meat"]]},
+ {p:"Associated British Foods", n:"a British conglomerate", b:[["Twinings","tea","Tea"],["Ovaltine","coffee","Coffee"],["Patak's","no-additive","No-Additive"]]},
+ {p:"Unilever", n:"Anglo-Dutch consumer-goods giant", b:[["Klondike","ice-cream","Ice Cream"],["Popsicle","ice-cream","Ice Cream"],["Good Humor","ice-cream","Ice Cream"]]},
+ {p:"Nestlé", n:"the world's largest food company", b:[["Häagen-Dazs (US)","ice-cream","Ice Cream"],["Buitoni","pasta","Pasta"],["Nesquik","craft-soda","Craft Soda"],["La Lechera","no-additive","No-Additive"]]},
+ {p:"J.M. Smucker", n:"also owns Folgers, Hostess, and Café Bustelo", b:[["R.W. Knudsen","craft-soda","Craft Soda"],["Santa Cruz Organic","nut-butter","Nut Butter"],["Sahale Snacks","granola","Granola"]]},
+ {p:"_ind", n:"", b:[["Tabasco","hot-sauce","Hot Sauce","Still family-owned by the McIlhenny Company on Avery Island, Louisiana — since 1868."],["Bob's Red Mill","granola","Granola","Employee-owned (ESOP) — the founder handed the company to his workers."],["Bigelow Tea","tea","Tea","Still family-owned, now in its third generation."],["Chobani","cultured-butter","Cultured Butter","Independent and founder-controlled."],["Cabot","cheese","Cheese","A farmer-owned cooperative (Agri-Mark)."],["Tillamook","cheese","Cheese","A farmer-owned cooperative since 1909."],["Ocean Spray","craft-soda","Craft Soda","A grower-owned cooperative of cranberry farmers."],["King Arthur","granola","Granola","Employee-owned and a Certified B Corp."],["Huy Fong Sriracha","hot-sauce","Hot Sauce","Still family-owned and fiercely independent."]]}
 ];
 
 var IDX = [];
-DB.forEach(function(g){ g.b.forEach(function(x){ IDX.push({brand:x[0], slug:x[1], shelf:x[2], parent:g.p, note:g.n}); }); });
+DB.forEach(function(g){ g.b.forEach(function(x){ IDX.push({brand:x[0], slug:x[1], shelf:x[2], parent:g.p, note:g.n, ind:x[3]||null}); }); });
 
 var qEl = document.getElementById('q');
 var resEl = document.getElementById('results');
@@ -157,9 +185,15 @@ function render(){
   hits = hits.slice(0,14);
   countEl.textContent = hits.length + (hits.length===1?' brand':' brands');
   resEl.innerHTML = hits.map(function(i){
+    if(i.ind){
+      return '<div class="r"><div class="brand">'+esc(i.brand)+'</div>'+
+        '<div class="owner" style="color:var(--green);font-weight:700;">✓ Still independent</div>'+
+        '<div class="note">'+esc(i.ind)+'</div>'+
+        '<a class="alt" href="/hunt/'+i.slug+'/">More independent '+esc(i.shelf)+' makers →</a></div>';
+    }
     return '<div class="r"><div class="brand">'+esc(i.brand)+'</div>'+
       '<div class="owner">Owned by <b>'+esc(i.parent)+'</b></div>'+
-      '<div class="note">'+esc(i.note)+'</div>'+
+      (i.note?'<div class="note">'+esc(i.note)+'</div>':'')+
       '<a class="alt" href="/hunt/'+i.slug+'/">Find a real '+esc(i.shelf)+' maker →</a></div>';
   }).join('');
 }
