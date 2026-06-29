@@ -7,178 +7,109 @@
 <meta name="description" content="Worth The Hunt finds the small-batch, regional, and hard-to-find foods you can't get on Amazon or Whole Foods — and tells you where to actually buy them." />
 <link rel="canonical" href="https://www.5best2buy.com/" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GG5QF6LH0D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GG5QF6LH0D');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GG5QF6LH0D');</script>
 <style>
-  :root{
-    --navy:#0d1421;--surface:#121e30;--card:#16223a;--card-h:#1d2c47;
-    --blue:#5fb0ef;--gold:#f0c560;--gold-d:#caa23f;--green:#5fe39a;
-    --text:#eef2f8;--soft:#c8d3e6;--meta:#9aabc4;--line:rgba(120,150,190,0.18);
-    --fd:'Rajdhani','Arial Narrow',sans-serif;--fm:'IBM Plex Mono','Courier New',monospace;
-  }
+  :root{--navy:#0d1421;--surface:#121e30;--card:#16223a;--card-h:#1d2c47;--blue:#5fb0ef;--gold:#f0c560;--green:#5fe39a;--text:#eef2f8;--soft:#c8d3e6;--meta:#9aabc4;--line:rgba(120,150,190,0.18);--fd:'Rajdhani','Arial Narrow',sans-serif;--fm:'IBM Plex Mono','Courier New',monospace;}
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--navy);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.72;font-size:17px;}
-  .wrap{max-width:760px;margin:0 auto;padding:28px 18px 64px;}
-  a{color:var(--blue);}
-  .hero{text-align:center;padding:14px 0 8px;}
-  .hero svg{width:150px;height:auto;margin:0 auto;display:block;}
-  .brand-eyebrow{font-family:var(--fm);font-size:11px;letter-spacing:5px;color:var(--meta);margin-top:6px;}
-  h1{font-family:var(--fd);font-size:clamp(42px,9vw,72px);font-weight:700;letter-spacing:1px;line-height:.95;color:var(--text);margin:6px 0 10px;}
-  h1 em{color:var(--gold);font-style:normal;}
-  .tagline{font-size:19px;color:var(--soft);max-width:46ch;margin:0 auto 8px;}
-  .intro{margin:30px 0;color:var(--text);}
-  h2{font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:38px 0 12px;}
-  .creed{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;color:var(--soft);font-size:16px;}
-  .creed b{color:var(--text);}
-  .aisles{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  @media(max-width:560px){.aisles{grid-template-columns:1fr;}}
-  .aisle{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 16px 14px;}
-  .aisle .name{font-family:var(--fd);font-size:21px;font-weight:700;letter-spacing:.5px;color:var(--text);margin-bottom:3px;}
-  .aisle .shelves{font-size:14px;color:var(--meta);line-height:1.5;}
-  .aisle.live{border-color:rgba(240,197,96,.45);background:rgba(240,197,96,.05);}
-  .aisle .go{display:inline-block;margin-top:9px;margin-right:7px;font-family:var(--fd);font-size:15px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#10203a;background:var(--gold);padding:8px 16px;border-radius:5px;text-decoration:none;}
-  .aisle .go:hover{background:#ffd877;}
-  .soon{display:inline-block;margin-top:9px;font-family:var(--fm);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--meta);border:1px solid var(--line);border-radius:20px;padding:3px 10px;}
-  .glass{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;color:var(--soft);}
-  .glass .label{font-family:var(--fm);font-size:11px;letter-spacing:2px;color:var(--green);text-transform:uppercase;margin-bottom:6px;}
-  footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-family:var(--fm);font-size:11px;color:var(--meta);line-height:1.7;}
+  body{background:var(--navy);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.7;font-size:17px;}
+  .wrap{max-width:780px;margin:0 auto;padding:22px 18px 64px;}
+  a{color:var(--blue);text-decoration:none;}
+  .home{font-family:var(--fm);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--meta);}
+  .home:hover{color:var(--gold);}
+  .eyebrow{font-family:var(--fm);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:22px 0 6px;}
+  h1{font-family:var(--fd);font-weight:700;letter-spacing:.5px;line-height:1.02;color:var(--text);}
+  .intro{color:var(--soft);margin:8px 0 26px;}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:560px){.cards{grid-template-columns:1fr;}}
+  .card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 16px 14px;transition:border-color .2s,transform .2s,background .2s;}
+  .card:hover{border-color:rgba(95,176,239,.45);background:var(--card-h);transform:translateY(-2px);}
+  .card .nm{font-family:var(--fd);font-size:21px;font-weight:700;letter-spacing:.4px;color:var(--text);margin-bottom:2px;}
+  .card .ds{font-size:14px;color:var(--meta);line-height:1.5;}
+  .card .go{font-family:var(--fm);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-top:10px;display:inline-block;}
+  .card.glass{border-color:rgba(95,227,154,.3);}
+  .card.glass:hover{border-color:rgba(95,227,154,.6);}
+  .card.glass .go{color:var(--green);}
+  footer{border-top:1px solid var(--line);padding-top:18px;margin-top:40px;font-family:var(--fm);font-size:11px;color:var(--meta);line-height:1.7;}
 </style>
 </head>
 <body>
 <div class="wrap">
-
-  <header class="hero">
-    <svg viewBox="0 0 240 200" role="img" aria-label="Octopus mark" xmlns="http://www.w3.org/2000/svg">
+  <header style="text-align:center;padding:12px 0 8px;">
+    <svg viewBox="0 0 240 200" role="img" aria-label="Octopus mark" xmlns="http://www.w3.org/2000/svg" style="width:140px;height:auto;margin:0 auto;display:block;">
       <g fill="none" stroke="#f0c560" stroke-width="6" stroke-linecap="round" opacity="0.92">
-        <path d="M88,108 C62,128 40,134 32,168 C29,180 43,186 53,176"/>
-        <path d="M152,108 C178,128 200,134 208,168 C211,180 197,186 187,176"/>
-        <path d="M100,118 C82,150 60,170 70,194 C74,206 90,202 96,192"/>
-        <path d="M140,118 C158,150 180,170 170,194 C166,206 150,202 144,192"/>
-        <path d="M112,122 C104,154 88,176 106,198 C115,207 124,202 124,190"/>
-        <path d="M128,122 C136,154 152,176 134,198 C125,207 116,202 116,190"/>
-        <path d="M120,124 C118,158 114,184 128,202"/>
-      </g>
-      <g fill="#caa23f" opacity="0.85">
-        <circle cx="56" cy="150" r="2.6"/><circle cx="44" cy="166" r="2.6"/>
-        <circle cx="184" cy="150" r="2.6"/><circle cx="196" cy="166" r="2.6"/>
-      </g>
-      <path d="M120,26 C84,26 60,56 60,94 C60,122 84,138 120,138 C156,138 180,122 180,94 C180,56 156,26 120,26 Z"
-            fill="#1a2840" stroke="#f0c560" stroke-width="4"/>
-      <ellipse cx="100" cy="86" rx="12" ry="16" fill="#0d1421" stroke="#f0c560" stroke-width="3"/>
-      <ellipse cx="140" cy="86" rx="12" ry="16" fill="#0d1421" stroke="#f0c560" stroke-width="3"/>
-      <circle cx="103" cy="81" r="3" fill="#eef2f8"/>
-      <circle cx="143" cy="81" r="3" fill="#eef2f8"/>
-    </svg>
-    <div class="brand-eyebrow">5 B E S T 2 B U Y</div>
-    <h1>Worth The <em>Hunt</em></h1>
-    <p class="tagline">The good food the big stores won't sell you — and where to actually buy it.</p>
+        <path d="M88,108 C62,128 40,134 32,168 C29,180 43,186 53,176"/><path d="M152,108 C178,128 200,134 208,168 C211,180 197,186 187,176"/>
+        <path d="M100,118 C82,150 60,170 70,194 C74,206 90,202 96,192"/><path d="M140,118 C158,150 180,170 170,194 C166,206 150,202 144,192"/>
+        <path d="M112,122 C104,154 88,176 106,198 C115,207 124,202 124,190"/><path d="M128,122 C136,154 152,176 134,198 C125,207 116,202 116,190"/>
+        <path d="M120,124 C118,158 114,184 128,202"/></g>
+      <g fill="#caa23f" opacity="0.85"><circle cx="56" cy="150" r="2.6"/><circle cx="44" cy="166" r="2.6"/><circle cx="184" cy="150" r="2.6"/><circle cx="196" cy="166" r="2.6"/></g>
+      <path d="M120,26 C84,26 60,56 60,94 C60,122 84,138 120,138 C156,138 180,122 180,94 C180,56 156,26 120,26 Z" fill="#1a2840" stroke="#f0c560" stroke-width="4"/>
+      <ellipse cx="100" cy="86" rx="12" ry="16" fill="#0d1421" stroke="#f0c560" stroke-width="3"/><ellipse cx="140" cy="86" rx="12" ry="16" fill="#0d1421" stroke="#f0c560" stroke-width="3"/>
+      <circle cx="103" cy="81" r="3" fill="#eef2f8"/><circle cx="143" cy="81" r="3" fill="#eef2f8"/></svg>
+    <div style="font-family:var(--fm);font-size:11px;letter-spacing:5px;color:var(--meta);margin-top:6px;">5 B E S T 2 B U Y</div>
+    <h1 style="font-size:clamp(42px,9vw,72px);margin:6px 0 10px;">Worth The <span style="color:var(--gold);">Hunt</span></h1>
+    <p style="font-size:19px;color:var(--soft);max-width:46ch;margin:0 auto;">The good food the big stores won't sell you — and where to actually buy it.</p>
   </header>
-
-  <p class="intro">Amazon and the big grocery chains sell what's easy to ship at scale. That quietly leaves out almost everything good: the small makers, the regional stuff, the things a chain dropped when it "centralized suppliers," the products that exist only because one person cared more about the thing than the margin. This is a map back to all of it — starting with food. Every shelf points you to real small producers and tells you exactly where to order from them.</p>
-
-  <h2>How it works</h2>
-  <div class="creed">
-    Every maker we feature clears four bars: they're <b>small or independent</b>, <b>genuinely hard to get</b> on the big platforms, <b>actually good</b>, and we're <b>honest about why</b> they're hard to find. No one pays for a spot — <b>the list is never for sale.</b> What we're up against isn't a store, it's consolidation: the slow squeeze that buys up the good small brands or pushes them off the shelf. We point you back to them.
+  <p class="intro" style="margin:28px 0;color:var(--text);">Amazon and the big grocery chains sell what's easy to ship at scale. That quietly leaves out almost everything good: the small makers, the regional stuff, the things a chain dropped when it "centralized suppliers," the products that exist only because one person cared more about the thing than the margin. This is a map back to all of it — starting with food. Pick an aisle.</p>
+  <div style="font-family:var(--fm);font-size:12.5px;line-height:1.7;color:var(--soft);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:30px;">Every maker we feature clears four bars: <b style="color:var(--gold);">small or independent</b>, <b style="color:var(--gold);">genuinely hard to get</b> on the big platforms, <b style="color:var(--gold);">actually good</b>, and we're <b style="color:var(--gold);">honest about why</b> they're hard to find. No one pays for a spot — the list is never for sale. What we're up against isn't a store, it's consolidation: the slow squeeze that buys up the good small brands or pushes them off the shelf. We point you back to them.</div>
+  <div class="eyebrow" style="text-align:left;">The Market</div>
+  <div class="cards">
+    <a class="card" href="/aisles/daily-catch/">
+      <div class="nm">⚓ The Daily Catch</div>
+      <div class="ds">Octopus · Tinned Fish</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card" href="/aisles/butcher/">
+      <div class="nm">🔪 The Butcher</div>
+      <div class="ds">Regenerative Meat · Charcuterie</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card" href="/aisles/heat-and-sauce/">
+      <div class="nm">🌶 Heat & Sauce</div>
+      <div class="ds">Hot Sauce · Chili Crisp · Hot Honey</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card" href="/aisles/pantry/">
+      <div class="nm">🫙 The Pantry</div>
+      <div class="ds">Spices · Olive Oil · Maple Syrup · Pasta · Jam</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card" href="/aisles/snacks/">
+      <div class="nm">🍿 Snacks & the Jerky Drawer</div>
+      <div class="ds">Jerky · Popcorn</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card" href="/aisles/sweets/">
+      <div class="nm">🍫 Sweets & Bakery</div>
+      <div class="ds">Chocolate · Candy</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card" href="/aisles/drink-cart/">
+      <div class="nm">☕ The Drink Cart</div>
+      <div class="ds">Coffee · Tea · Matcha · Craft Soda · Kombucha</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card" href="/aisles/cold-case/">
+      <div class="nm">🧀 The Cold Case</div>
+      <div class="ds">Cheese · Cultured Butter</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card" href="/aisles/frozen/">
+      <div class="nm">❄ The Frozen Aisle</div>
+      <div class="ds">Regional Frozen</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card" href="/aisles/garden/">
+      <div class="nm">🌱 The Garden</div>
+      <div class="ds">Mushrooms · Seeds</div>
+      <span class="go">Enter →</span>
+    </a>
+    <a class="card glass" href="/aisles/glass-case/">
+      <div class="nm">🔎 The Glass Case</div>
+      <div class="ds">Plant-Only · No-Additive</div>
+      <span class="go">Enter →</span>
+    </a>
   </div>
-
-  <h2>The Market</h2>
-  <div class="aisles">
-
-    <div class="aisle live">
-      <div class="name">⚓ The Daily Catch</div>
-      <div class="shelves">Seafood from people who can tell you where it came from.</div>
-      <a class="go" href="/hunt/octopus/">Octopus →</a>
-      <a class="go" href="/hunt/tinned-fish/">Tinned Fish →</a>
-    </div>
-
-    <div class="aisle live">
-      <div class="name">🔪 The Butcher</div>
-      <div class="shelves">Regenerative meat, charcuterie, ethical jerky.</div>
-      <a class="go" href="/hunt/regenerative-meat/">Meat →</a>
-      <a class="go" href="/hunt/charcuterie/">Charcuterie →</a>
-    </div>
-
-    <div class="aisle live">
-      <div class="name">🌶 Heat &amp; Sauce</div>
-      <div class="shelves">Habanero, szechuan, chili crisp, hot honey.</div>
-      <a class="go" href="/hunt/chili-crisp/">Chili Crisp →</a>
-      <a class="go" href="/hunt/hot-honey/">Hot Honey →</a>
-      <a class="go" href="/hunt/hot-sauce/">Hot Sauce →</a>
-    </div>
-
-    <div class="aisle live">
-      <div class="name">🫙 The Pantry</div>
-      <div class="shelves">Spices, oil, maple, pasta, jam.</div>
-      <a class="go" href="/hunt/spices/">Spices →</a>
-      <a class="go" href="/hunt/olive-oil/">Olive Oil →</a>
-      <a class="go" href="/hunt/maple-syrup/">Maple →</a>
-      <a class="go" href="/hunt/pasta/">Pasta →</a>
-      <a class="go" href="/hunt/jam/">Jam →</a>
-    </div>
-
-    <div class="aisle live">
-      <div class="name">🍿 Snacks &amp; Jerky</div>
-      <div class="shelves">Small-batch &amp; game jerky, gourmet popcorn.</div>
-      <a class="go" href="/hunt/jerky/">Jerky →</a>
-      <a class="go" href="/hunt/popcorn/">Popcorn →</a>
-    </div>
-
-    <div class="aisle live">
-      <div class="name">🍫 Sweets &amp; Bakery</div>
-      <div class="shelves">Bean-to-bar chocolate, regional candy.</div>
-      <a class="go" href="/hunt/chocolate/">Chocolate →</a>
-      <a class="go" href="/hunt/candy/">Candy →</a>
-    </div>
-
-    <div class="aisle live">
-      <div class="name">☕ The Drink Cart</div>
-      <div class="shelves">Coffee, tea, matcha, craft soda.</div>
-      <a class="go" href="/hunt/coffee/">Coffee →</a>
-      <a class="go" href="/hunt/tea/">Tea →</a>
-      <a class="go" href="/hunt/matcha/">Matcha →</a>
-      <a class="go" href="/hunt/craft-soda/">Craft Soda →</a>
-      <a class="go" href="/hunt/kombucha/">Kombucha →</a>
-    </div>
-
-    <div class="aisle live">
-      <div class="name">🧀 The Cold Case</div>
-      <div class="shelves">Artisan cheese, cultured butter, alt-dairy.</div>
-      <a class="go" href="/hunt/cheese/">Cheese →</a>
-      <a class="go" href="/hunt/cultured-butter/">Cultured Butter →</a>
-    </div>
-
-    <div class="aisle live">
-      <div class="name">❄ The Frozen Aisle</div>
-      <div class="shelves">Tamales, dumplings, regional frozen.</div>
-      <a class="go" href="/hunt/frozen/">Regional Frozen →</a>
-    </div>
-
-    <div class="aisle live">
-      <div class="name">🌱 The Garden</div>
-      <div class="shelves">Dried mushrooms, heirloom seeds, ferments.</div>
-      <a class="go" href="/hunt/mushrooms/">Mushrooms →</a>
-      <a class="go" href="/hunt/seeds/">Seeds →</a>
-    </div>
-
-  </div>
-
-  <h2>The Glass Case</h2>
-  <div class="glass">
-    <div class="label">A store within the store</div>
-    The Glass Case is for the strict stuff: <b>plant-only</b>, <b>no-additive</b>, certified <b>kosher</b> and <b>halal</b>, and <b>provably organic</b>. Same hunt, higher bar — everything in it can show its sourcing.<br>
-    <a href="/hunt/plant-only/" style="display:inline-block;margin-top:12px;margin-right:7px;font-family:var(--fd);font-size:15px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#10203a;background:var(--green);padding:8px 16px;border-radius:5px;text-decoration:none;">Plant-Only →</a>
-    <a href="/hunt/no-additive/" style="display:inline-block;margin-top:12px;font-family:var(--fd);font-size:15px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#10203a;background:var(--green);padding:8px 16px;border-radius:5px;text-decoration:none;">No-Additive →</a>
-  </div>
-
-  <footer>
-    Some links on this site are affiliate links — if you buy through one, 5best2buy may earn a small commission at no extra cost to you. It never costs the maker anything, and it never decides who makes a list. The list is the list.<br>
-    © 2026 5best2buy · Worth The Hunt
-  </footer>
-
+  <footer>Some links on this site are affiliate links — if you buy through one, 5best2buy may earn a small commission at no extra cost to you. It never costs the maker anything, and it never decides who makes a list. The list is the list.<br>© 2026 5best2buy · Worth The Hunt</footer>
 </div>
 </body>
 </html>
