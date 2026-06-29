@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Who Owns Your Food? — Find the conglomerate behind any grocery brand | 5best2buy</title>
+<meta name="description" content="Type any grocery brand and see which conglomerate really owns it — Nestlé, PepsiCo, Kraft Heinz, Unilever and more — then find a small independent maker instead." />
+<link rel="canonical" href="https://www.5best2buy.com/who-owns/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Worth The Hunt" />
+<meta property="og:title" content="Who Owns Your Food?" />
+<meta property="og:description" content="Type any grocery brand and see the conglomerate behind it — then find a small independent maker instead." />
+<meta property="og:url" content="https://www.5best2buy.com/who-owns/" />
+<meta property="og:image" content="https://www.5best2buy.com/logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Who Owns Your Food?" />
+<meta name="twitter:description" content="Type any grocery brand and see the conglomerate behind it — then find a small independent maker instead." />
+<meta name="twitter:image" content="https://www.5best2buy.com/logo.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Worth The Hunt","item":"https://www.5best2buy.com/"},{"@type":"ListItem","position":2,"name":"Who Owns Your Food?","item":"https://www.5best2buy.com/who-owns/"}]},{"@type":"WebApplication","name":"Who Owns Your Food?","url":"https://www.5best2buy.com/who-owns/","applicationCategory":"ReferenceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A search tool that reveals which parent conglomerate owns a given grocery brand, and suggests independent small-maker alternatives."}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG5QF6LH0D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GG5QF6LH0D');</script>
+<style>
+  :root{--navy:#0d1421;--surface:#121e30;--card:#16223a;--card-h:#1d2c47;--blue:#5fb0ef;--gold:#f0c560;--green:#5fe39a;--text:#eef2f8;--soft:#c8d3e6;--meta:#9aabc4;--line:rgba(120,150,190,0.18);--fd:'Rajdhani','Arial Narrow',sans-serif;--fm:'IBM Plex Mono','Courier New',monospace;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--navy);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.65;font-size:17px;}
+  .wrap{max-width:720px;margin:0 auto;padding:20px 18px 70px;}
+  a{color:var(--blue);text-decoration:none;}
+  nav.crumb{font-family:var(--fm);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--meta);}
+  nav.crumb a{color:var(--meta);}
+  nav.crumb a:hover{color:var(--gold);}
+  header{text-align:center;padding:14px 0 4px;}
+  header svg{width:90px;height:auto;margin:0 auto 6px;display:block;}
+  h1{font-family:var(--fd);font-weight:700;font-size:clamp(38px,8vw,64px);letter-spacing:.5px;line-height:1.02;color:var(--text);}
+  .sub{font-size:18px;color:var(--soft);max-width:52ch;margin:10px auto 0;}
+  .searchbox{margin:28px 0 6px;position:relative;}
+  #q{width:100%;font-family:var(--fd);font-size:22px;letter-spacing:.3px;color:var(--text);background:var(--surface);border:1px solid rgba(240,197,96,.45);border-radius:12px;padding:16px 18px;outline:none;}
+  #q::placeholder{color:var(--meta);}
+  #q:focus{border-color:var(--gold);}
+  .count{font-family:var(--fm);font-size:11px;letter-spacing:1px;color:var(--meta);text-transform:uppercase;min-height:16px;margin:8px 2px 0;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 8px;}
+  .chip{font-family:var(--fm);font-size:12px;letter-spacing:.5px;color:var(--soft);background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 13px;cursor:pointer;transition:border-color .15s,color .15s;}
+  .chip:hover{border-color:var(--gold);color:var(--gold);}
+  .results{margin-top:14px;}
+  .r{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:11px;}
+  .r .brand{font-family:var(--fd);font-size:25px;font-weight:700;letter-spacing:.3px;color:var(--text);line-height:1.1;}
+  .r .owner{font-size:15.5px;color:var(--soft);margin-top:3px;}
+  .r .owner b{color:var(--gold);font-weight:700;}
+  .r .note{font-family:var(--fm);font-size:11.5px;color:var(--meta);line-height:1.55;margin-top:6px;}
+  .r .alt{display:inline-block;margin-top:12px;font-family:var(--fd);font-size:14px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#10203a;background:var(--green);padding:9px 16px;border-radius:5px;}
+  .r .alt:hover{background:#8af0bb;}
+  .empty{font-size:16px;color:var(--soft);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:14px;}
+  .empty a{color:var(--gold);}
+  .explain{font-family:var(--fm);font-size:12.5px;line-height:1.7;color:var(--soft);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:34px;}
+  .explain b{color:var(--gold);}
+  footer{border-top:1px solid var(--line);padding-top:18px;margin-top:34px;font-family:var(--fm);font-size:11px;color:var(--meta);line-height:1.7;}
+  footer nav{margin-bottom:10px;letter-spacing:1px;text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="crumb" aria-label="Breadcrumb"><a href="/">Worth The Hunt</a> &rsaquo; Who Owns Your Food?</nav>
+  <header>
+    <svg viewBox="0 0 240 200" role="img" aria-label="Octopus mark" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#f0c560" stroke-width="6" stroke-linecap="round" opacity="0.92">
+        <path d="M88,108 C62,128 40,134 32,168 C29,180 43,186 53,176"/><path d="M152,108 C178,128 200,134 208,168 C211,180 197,186 187,176"/>
+        <path d="M100,118 C82,150 60,170 70,194 C74,206 90,202 96,192"/><path d="M140,118 C158,150 180,170 170,194 C166,206 150,202 144,192"/>
+        <path d="M112,122 C104,154 88,176 106,198 C115,207 124,202 124,190"/><path d="M128,122 C136,154 152,176 134,198 C125,207 116,202 116,190"/>
+        <path d="M120,124 C118,158 114,184 128,202"/></g>
+      <path d="M120,26 C84,26 60,56 60,94 C60,122 84,138 120,138 C156,138 180,122 180,94 C180,56 156,26 120,26 Z" fill="#1a2840" stroke="#f0c560" stroke-width="4"/>
+      <ellipse cx="100" cy="86" rx="12" ry="16" fill="#0d1421" stroke="#f0c560" stroke-width="3"/><ellipse cx="140" cy="86" rx="12" ry="16" fill="#0d1421" stroke="#f0c560" stroke-width="3"/>
+      <circle cx="103" cy="81" r="3" fill="#eef2f8"/><circle cx="143" cy="81" r="3" fill="#eef2f8"/></svg>
+    <h1>Who Owns Your <span style="color:var(--gold);">Food</span>?</h1>
+    <p class="sub">A handful of conglomerates own most of what's on a grocery shelf. Type a brand and see who's behind it — then find an independent maker instead.</p>
+  </header>
+
+  <div class="searchbox">
+    <input id="q" type="text" autocomplete="off" spellcheck="false" placeholder="Type a brand — Doritos, Oreo, Cholula…" aria-label="Search a food brand" />
+  </div>
+  <div class="count" id="count"></div>
+  <div class="chips" id="chips"></div>
+  <div class="results" id="results"></div>
+
+  <div class="explain">
+    <b>Why this exists.</b> Most of the grocery store is an illusion of choice — dozens of "different" brands that roll up to the same few owners. That's <b>consolidation</b>, and it's the exact thing Worth The Hunt is built against. Every result here points you to a small, independent maker who still answers to themselves. Ownership is accurate to our knowledge as of June 2026 and changes often — corporate deals move fast, so treat this as a map, not a contract. Not every brand is listed; we add as we go.
+  </div>
+
+  <footer>
+    <nav><a href="/about/">About</a> &middot; <a href="/contact/">Contact</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/disclosure/">Affiliate Disclosure</a></nav>
+    A free tool from Worth The Hunt. The list is never for sale.<br>
+    Published June 2026 &middot; Updated 29 June 2026 &middot; © 2026 5best2buy · Worth The Hunt
+  </footer>
+</div>
+
+<script>
+// Brand ownership data. Each parent: a note + brands [name, shelfSlug, shelfName].
+// Ownership accurate to our knowledge as of June 2026; corporate ownership changes frequently.
+var DB = [
+ {p:"Nestlé", n:"the world's largest food company", b:[["Stouffer's","frozen","Frozen"],["DiGiorno","frozen","Frozen"],["Hot Pockets","frozen","Frozen"],["Lean Cuisine","frozen","Frozen"],["Coffee mate","coffee","Coffee"],["Nescafé","coffee","Coffee"],["Toll House","cookies","Cookies"],["Perrier","craft-soda","Craft Soda"],["San Pellegrino","craft-soda","Craft Soda"],["Sweet Earth","plant-only","Plant-Only"],["Gerber","no-additive","No-Additive"]]},
+ {p:"PepsiCo", n:"snacks-and-soda giant; owns Frito-Lay and Quaker", b:[["Lay's","chips","Chips"],["Doritos","chips","Chips"],["Tostitos","chips","Chips"],["Cheetos","chips","Chips"],["Fritos","chips","Chips"],["Ruffles","chips","Chips"],["SunChips","chips","Chips"],["Stacy's","crackers","Crackers"],["Smartfood","popcorn","Popcorn"],["Rold Gold","crackers","Crackers"],["Quaker","granola","Granola"],["Cap'n Crunch","granola","Granola"],["Pepsi","craft-soda","Craft Soda"],["Mountain Dew","craft-soda","Craft Soda"],["Gatorade","craft-soda","Craft Soda"],["Sabra","no-additive","No-Additive"]]},
+ {p:"The Coca-Cola Company", n:"the world's largest beverage company", b:[["Coca-Cola","craft-soda","Craft Soda"],["Coke","craft-soda","Craft Soda"],["Sprite","craft-soda","Craft Soda"],["Fanta","craft-soda","Craft Soda"],["Minute Maid","craft-soda","Craft Soda"],["Smartwater","craft-soda","Craft Soda"],["Dasani","craft-soda","Craft Soda"],["Vitaminwater","craft-soda","Craft Soda"],["Topo Chico","craft-soda","Craft Soda"],["Powerade","craft-soda","Craft Soda"],["Gold Peak","tea","Tea"],["Fairlife","no-additive","No-Additive"]]},
+ {p:"Kraft Heinz", n:"formed by a 2015 mega-merger backed by 3G Capital & Berkshire Hathaway", b:[["Heinz","no-additive","No-Additive"],["Kraft Mac & Cheese","cheese","Cheese"],["Oscar Mayer","bacon","Bacon"],["Philadelphia","cheese","Cheese"],["Velveeta","cheese","Cheese"],["Jell-O","candy","Candy"],["Kool-Aid","craft-soda","Craft Soda"],["Capri Sun","craft-soda","Craft Soda"],["Maxwell House","coffee","Coffee"],["Ore-Ida","frozen","Frozen"],["Grey Poupon","no-additive","No-Additive"],["Classico","pasta","Pasta"],["Lea & Perrins","hot-sauce","Hot Sauce"]]},
+ {p:"General Mills", n:"the cereal-aisle giant", b:[["Cheerios","granola","Granola"],["Betty Crocker","cookies","Cookies"],["Nature Valley","granola","Granola"],["Annie's","pasta","Pasta"],["Old El Paso","no-additive","No-Additive"],["Totino's","frozen","Frozen"],["Bisquick","granola","Granola"],["Lucky Charms","granola","Granola"],["Chex","granola","Granola"],["Cascadian Farm","granola","Granola"],["Larabar","granola","Granola"],["Epic Provisions","jerky","Jerky"],["Pillsbury","cookies","Cookies"]]},
+ {p:"Mondelez International", n:"the snack-brand spinoff of Kraft (Nabisco)", b:[["Oreo","cookies","Cookies"],["Chips Ahoy","cookies","Cookies"],["Nutter Butter","cookies","Cookies"],["Nilla","cookies","Cookies"],["Ritz","crackers","Crackers"],["Triscuit","crackers","Crackers"],["Wheat Thins","crackers","Crackers"],["Honey Maid","crackers","Crackers"],["Premium","crackers","Crackers"],["belVita","granola","Granola"],["Sour Patch Kids","candy","Candy"],["Trident","candy","Candy"]]},
+ {p:"Mars, Incorporated", n:"privately held by the Mars family", b:[["M&M's","chocolate","Chocolate"],["Snickers","chocolate","Chocolate"],["Twix","chocolate","Chocolate"],["Milky Way","chocolate","Chocolate"],["3 Musketeers","chocolate","Chocolate"],["Dove Chocolate","chocolate","Chocolate"],["Skittles","candy","Candy"],["Starburst","candy","Candy"],["Altoids","candy","Candy"],["Orbit","candy","Candy"],["Extra","candy","Candy"],["Combos","crackers","Crackers"],["KIND","granola","Granola"]]},
+ {p:"The Hershey Company", n:"America's largest chocolate maker", b:[["Hershey's","chocolate","Chocolate"],["Reese's","chocolate","Chocolate"],["Kit Kat","chocolate","Chocolate"],["Hershey's Kisses","chocolate","Chocolate"],["Heath","chocolate","Chocolate"],["Almond Joy","chocolate","Chocolate"],["Twizzlers","candy","Candy"],["Jolly Rancher","candy","Candy"],["Ice Breakers","candy","Candy"],["Dot's Homestyle Pretzels","crackers","Crackers"],["SkinnyPop","popcorn","Popcorn"],["Pirate's Booty","popcorn","Popcorn"]]},
+ {p:"Conagra Brands", n:"a roll-up of packaged-food brands", b:[["Slim Jim","jerky","Jerky"],["Hunt's","no-additive","No-Additive"],["Chef Boyardee","pasta","Pasta"],["Reddi-wip","no-additive","No-Additive"],["Orville Redenbacher's","popcorn","Popcorn"],["Act II","popcorn","Popcorn"],["Angie's Boomchickapop","popcorn","Popcorn"],["Duncan Hines","cookies","Cookies"],["Birds Eye","frozen","Frozen"],["Marie Callender's","frozen","Frozen"],["Healthy Choice","frozen","Frozen"],["Vlasic","pickles","Pickles"]]},
+ {p:"Unilever", n:"Anglo-Dutch consumer-goods giant", b:[["Hellmann's","no-additive","No-Additive"],["Ben & Jerry's","ice-cream","Ice Cream"],["Breyers","ice-cream","Ice Cream"],["Talenti","ice-cream","Ice Cream"],["Magnum","ice-cream","Ice Cream"],["Knorr","bone-broth","Bone Broth"],["Maille","no-additive","No-Additive"],["Sir Kensington's","no-additive","No-Additive"]]},
+ {p:"Campbell Soup Company", n:"now also owns Sovos (Rao's) and Snyder's-Lance", b:[["Campbell's","bone-broth","Bone Broth"],["Swanson","bone-broth","Bone Broth"],["Pacific Foods","bone-broth","Bone Broth"],["Pepperidge Farm","cookies","Cookies"],["Goldfish","crackers","Crackers"],["Prego","pasta","Pasta"],["Rao's","pasta","Pasta"],["Pace","hot-sauce","Hot Sauce"],["V8","craft-soda","Craft Soda"],["Snyder's of Hanover","crackers","Crackers"],["Kettle Brand","chips","Chips"],["Cape Cod","chips","Chips"],["Late July","chips","Chips"]]},
+ {p:"Kellanova", n:"Kellogg's snack division (Mars agreed to acquire it in 2024)", b:[["Pringles","chips","Chips"],["Cheez-It","crackers","Crackers"],["Club","crackers","Crackers"],["Town House","crackers","Crackers"],["Pop-Tarts","cookies","Cookies"],["Rice Krispies Treats","cookies","Cookies"],["Eggo","frozen","Frozen"],["MorningStar Farms","plant-only","Plant-Only"]]},
+ {p:"WK Kellogg Co", n:"Kellogg's North American cereal business", b:[["Frosted Flakes","granola","Granola"],["Froot Loops","granola","Granola"],["Special K","granola","Granola"],["Rice Krispies","granola","Granola"],["Raisin Bran","granola","Granola"],["Corn Flakes","granola","Granola"]]},
+ {p:"J.M. Smucker", n:"also owns Folgers, Hostess, and Café Bustelo", b:[["Smucker's","jam","Jam"],["Jif","nut-butter","Nut Butter"],["Folgers","coffee","Coffee"],["Café Bustelo","coffee","Coffee"],["Uncrustables","frozen","Frozen"],["Hostess","cookies","Cookies"],["Twinkies","cookies","Cookies"],["Ding Dongs","cookies","Cookies"]]},
+ {p:"Tyson Foods", n:"one of the world's largest meat processors", b:[["Tyson","regenerative-meat","Regenerative Meat"],["Jimmy Dean","bacon","Bacon"],["Hillshire Farm","charcuterie","Charcuterie"],["Ball Park","regenerative-meat","Regenerative Meat"],["Aidells","charcuterie","Charcuterie"]]},
+ {p:"Hormel Foods", n:"also owns Skippy, Planters, Applegate, and Justin's", b:[["Spam","regenerative-meat","Regenerative Meat"],["Skippy","nut-butter","Nut Butter"],["Planters","nut-butter","Nut Butter"],["Justin's","nut-butter","Nut Butter"],["Applegate","bacon","Bacon"],["Jennie-O","regenerative-meat","Regenerative Meat"],["Columbus","charcuterie","Charcuterie"],["Wholly Guacamole","no-additive","No-Additive"]]},
+ {p:"McCormick & Company", n:"the world's largest spice company", b:[["McCormick","spices","Spices"],["Old Bay","spices","Spices"],["Lawry's","spices","Spices"],["Zatarain's","spices","Spices"],["Frank's RedHot","hot-sauce","Hot Sauce"],["Cholula","hot-sauce","Hot Sauce"],["Stubb's","hot-sauce","Hot Sauce"],["French's","no-additive","No-Additive"]]},
+ {p:"Danone", n:"French dairy and plant-based giant", b:[["Dannon","cultured-butter","Cultured Butter"],["Oikos","cultured-butter","Cultured Butter"],["Activia","cultured-butter","Cultured Butter"],["Horizon Organic","cultured-butter","Cultured Butter"],["Silk","plant-only","Plant-Only"],["So Delicious","plant-only","Plant-Only"],["International Delight","coffee","Coffee"],["Evian","craft-soda","Craft Soda"]]},
+ {p:"Keurig Dr Pepper", n:"the #3 US soft-drink company", b:[["Dr Pepper","craft-soda","Craft Soda"],["7UP","craft-soda","Craft Soda"],["Canada Dry","craft-soda","Craft Soda"],["A&W","craft-soda","Craft Soda"],["Mott's","craft-soda","Craft Soda"],["Bai","craft-soda","Craft Soda"],["Hawaiian Punch","craft-soda","Craft Soda"],["Snapple","tea","Tea"],["Green Mountain Coffee","coffee","Coffee"]]},
+ {p:"Mondelez / Nabisco", n:"see Mondelez International", b:[["Nabisco","cookies","Cookies"]]},
+ {p:"Post Holdings", n:"a cereal-and-grocery roll-up", b:[["Honey Bunches of Oats","granola","Granola"],["Grape-Nuts","granola","Granola"],["Fruity Pebbles","granola","Granola"],["Bob Evans","bacon","Bacon"]]},
+ {p:"Grupo Bimbo", n:"the world's largest bakery company", b:[["Entenmann's","cookies","Cookies"],["Thomas'","no-additive","No-Additive"],["Sara Lee","no-additive","No-Additive"],["Oroweat","no-additive","No-Additive"]]},
+ {p:"B&G Foods", n:"a roll-up of dozens of legacy pantry brands", b:[["Green Giant","frozen","Frozen"],["Cream of Wheat","granola","Granola"],["Ortega","no-additive","No-Additive"],["Crisco","olive-oil","Olive Oil"],["Mrs. Dash","spices","Spices"]]}
+];
+
+var IDX = [];
+DB.forEach(function(g){ g.b.forEach(function(x){ IDX.push({brand:x[0], slug:x[1], shelf:x[2], parent:g.p, note:g.n}); }); });
+
+var qEl = document.getElementById('q');
+var resEl = document.getElementById('results');
+var countEl = document.getElementById('count');
+var chipsEl = document.getElementById('chips');
+
+['Doritos','Oreo','Cholula','Ben & Jerry’s','Häagen','Quaker','Spam','Annie’s'].forEach(function(s){
+  // only add chip if it actually matches something
+  var probe = s.replace(/’/g,"'");
+  if(IDX.some(function(i){return i.brand.toLowerCase().indexOf(probe.toLowerCase().split(' ')[0])===0;})){
+    var c=document.createElement('span'); c.className='chip'; c.textContent=probe;
+    c.onclick=function(){ qEl.value=probe; render(); qEl.focus(); };
+    chipsEl.appendChild(c);
+  }
+});
+
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function render(){
+  var q = qEl.value.trim().toLowerCase();
+  if(!q){ resEl.innerHTML=''; countEl.textContent=''; return; }
+  var hits = IDX.filter(function(i){ return i.brand.toLowerCase().indexOf(q) !== -1; });
+  // sort: names that START with the query first
+  hits.sort(function(a,b){
+    var as=a.brand.toLowerCase().indexOf(q)===0?0:1, bs=b.brand.toLowerCase().indexOf(q)===0?0:1;
+    return as-bs || a.brand.localeCompare(b.brand);
+  });
+  if(!hits.length){
+    countEl.textContent='no match';
+    resEl.innerHTML='<div class="empty">We don\'t have <b>'+esc(qEl.value.trim())+'</b> in the database yet. But here\'s the thing: if it\'s a big grocery brand, it\'s almost certainly owned by one of a dozen conglomerates anyway. <a href="/">Browse the shelves →</a> and meet some makers who still answer to themselves.</div>';
+    return;
+  }
+  hits = hits.slice(0,14);
+  countEl.textContent = hits.length + (hits.length===1?' brand':' brands');
+  resEl.innerHTML = hits.map(function(i){
+    return '<div class="r"><div class="brand">'+esc(i.brand)+'</div>'+
+      '<div class="owner">Owned by <b>'+esc(i.parent)+'</b></div>'+
+      '<div class="note">'+esc(i.note)+'</div>'+
+      '<a class="alt" href="/hunt/'+i.slug+'/">Find a real '+esc(i.shelf)+' maker →</a></div>';
+  }).join('');
+}
+
+qEl.addEventListener('input', render);
+</script>
+<script src="https://www.dwin2.com/pub.2961345.min.js" type="text/javascript" defer></script>
+</body>
+</html>
