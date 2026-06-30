@@ -71,11 +71,11 @@
       <ellipse cx="100" cy="86" rx="12" ry="16" fill="#0d1421" stroke="#f0c560" stroke-width="3"/><ellipse cx="140" cy="86" rx="12" ry="16" fill="#0d1421" stroke="#f0c560" stroke-width="3"/>
       <circle cx="103" cy="81" r="3" fill="#eef2f8"/><circle cx="143" cy="81" r="3" fill="#eef2f8"/></svg>
     <h1>Who Owns Your <span style="color:var(--gold);">Food</span>?</h1>
-    <p class="sub">A handful of conglomerates own most of what's on a grocery shelf. Type a brand and see who's behind it — then find an independent maker instead.</p>
+    <p class="sub">Curious who actually owns a grocery brand? Type one in. We'll show you who's behind it — and, if you'd rather buy small, point you to an independent maker who makes something like it.</p>
   </header>
 
   <div class="searchbox">
-    <input id="q" type="text" autocomplete="off" spellcheck="false" placeholder="Type a brand — Doritos, Oreo, Cholula…" aria-label="Search a food brand" />
+    <input id="q" type="text" autocomplete="off" spellcheck="false" placeholder="Type any grocery brand…" aria-label="Search a food brand" />
   </div>
   <div class="count" id="count"></div>
   <div class="chips" id="chips"></div>
@@ -164,15 +164,8 @@ var resEl = document.getElementById('results');
 var countEl = document.getElementById('count');
 var chipsEl = document.getElementById('chips');
 
-['Doritos','Oreo','Cholula','Ben & Jerry’s','Häagen','Quaker','Spam','Annie’s'].forEach(function(s){
-  // only add chip if it actually matches something
-  var probe = s.replace(/’/g,"'");
-  if(IDX.some(function(i){return i.brand.toLowerCase().indexOf(probe.toLowerCase().split(' ')[0])===0;})){
-    var c=document.createElement('span'); c.className='chip'; c.textContent=probe;
-    c.onclick=function(){ qEl.value=probe; render(); qEl.focus(); };
-    chipsEl.appendChild(c);
-  }
-});
+/* Example brand chips intentionally omitted: the tool answers whatever brand a
+   visitor chooses to type, rather than singling any brand out up front. */
 
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
