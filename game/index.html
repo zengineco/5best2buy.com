@@ -167,11 +167,15 @@ function gameOver(answer){
   document.getElementById('overMsg').innerHTML=m;
 }
 
-document.getElementById('shareBtn').onclick=function(){
-  var txt='I got '+streak+' in a row on "Who Wants to Know a Million Brands?" 💅 Beat me: https://www.5best2buy.com/game/';
-  if(navigator.share){ navigator.share({title:'Who Wants to Know a Million Brands?',text:txt,url:'https://www.5best2buy.com/game/'}).catch(function(){}); }
-  else { navigator.clipboard && navigator.clipboard.writeText(txt); this.textContent='Copied! Go paste it'; }
-};
+function wrap(x,t,cx,cy,max,lh){var w=t.split(' '),line='',y=cy;for(var n=0;n<w.length;n++){var test=line+w[n]+' ';if(x.measureText(test).width>max&&n>0){x.fillText(line.trim(),cx,y);line=w[n]+' ';y+=lh;}else line=test;}x.fillText(line.trim(),cx,y);return y;}
+function shareCard(){
+  var cv=document.createElement('canvas');cv.width=1080;cv.height=1080;var x=cv.getContext('2d');
+  function finish(){cv.toBlob(function(blob){var file=new File([blob],'5best2buy-streak.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[file]})){navigator.share({files:[file],text:'I got '+streak+' in a row 💅 5best2buy.com/game'}).catch(function(){});}else{var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='5best2buy-streak.png';a.click();}});}
+  function text(){x.fillStyle='#f0c560';x.font='bold 33px system-ui,Arial';wrap(x,'Who Wants to Know a Million Brands?'.toUpperCase(),540,300,920,40);x.fillStyle='#f0c560';x.font='bold 300px Georgia';x.fillText(String(streak),540,650);x.fillStyle='#eef2f8';x.font='bold 50px system-ui,Arial';x.fillText('IN A ROW',540,740);x.fillStyle='#c8d3e6';x.font='44px Georgia';x.fillText('Think you can beat it?',540,850);x.fillStyle='#9aabc4';x.font='bold 40px system-ui,Arial';x.fillText('5best2buy.com/game',540,960);finish();}
+  x.fillStyle='#0d1421';x.fillRect(0,0,1080,1080);x.strokeStyle='rgba(240,197,96,0.55)';x.lineWidth=10;x.strokeRect(46,46,988,988);x.textAlign='center';
+  var img=new Image();img.onload=function(){x.drawImage(img,475,95,130,70);text();};img.onerror=text;img.src='/logo.png';
+}
+document.getElementById('shareBtn').onclick=shareCard;
 
 function start(){
   streak=0; streakEl.textContent=0;

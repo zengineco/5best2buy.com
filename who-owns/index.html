@@ -55,6 +55,13 @@
   .empty a{color:var(--gold);}
   .explain{font-family:var(--fm);font-size:12.5px;line-height:1.7;color:var(--soft);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:34px;}
   .explain b{color:var(--gold);}
+  .modes{display:flex;gap:8px;justify-content:center;margin-bottom:8px;}
+  .mode{font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.4px;color:var(--meta);background:var(--card);border:1px solid var(--line);border-radius:22px;padding:8px 18px;cursor:pointer;}
+  .mode.on{color:#10203a;background:var(--gold);border-color:var(--gold);}
+  .share{margin-top:12px;margin-left:10px;font-family:var(--fm);font-size:12px;color:var(--soft);background:transparent;border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer;vertical-align:top;}
+  .share:hover{border-color:var(--gold);color:var(--gold);}
+  .tents{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+  .tent{font-family:var(--fm);font-size:12.5px;color:var(--soft);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:5px 10px;}
   footer{border-top:1px solid var(--line);padding-top:18px;margin-top:34px;font-family:var(--fm);font-size:11px;color:var(--meta);line-height:1.7;}
   footer nav{margin-bottom:10px;letter-spacing:1px;text-transform:uppercase;}
 </style>
@@ -76,6 +83,10 @@
     <p class="sub">Curious who actually owns a grocery brand? Type one in. We'll show you who's behind it — and, if you'd rather buy small, point you to an independent maker who makes something like it.</p>
   </header>
 
+  <div class="modes">
+    <button class="mode on" id="mBrand">🔎 Brand</button>
+    <button class="mode" id="mParent">🐙 Parent company</button>
+  </div>
   <div class="searchbox">
     <input id="q" type="text" autocomplete="off" spellcheck="false" placeholder="Type any grocery brand…" aria-label="Search a food brand" />
   </div>
@@ -161,47 +172,96 @@ var DB = [
 var IDX = [];
 DB.forEach(function(g){ g.b.forEach(function(x){ IDX.push({brand:x[0], slug:x[1], shelf:x[2], parent:g.p, note:g.n, ind:x[3]||null}); }); });
 
-var qEl = document.getElementById('q');
-var resEl = document.getElementById('results');
-var countEl = document.getElementById('count');
-var chipsEl = document.getElementById('chips');
+// Parent -> brands map for the "Parent company" reverse view (skip the independents pseudo-group).
+var PARENTS={}, PNOTE={};
+IDX.forEach(function(i){ if(i.parent==='_ind') return; (PARENTS[i.parent]=PARENTS[i.parent]||[]).push(i); PNOTE[i.parent]=i.note; });
+var PNAMES=Object.keys(PARENTS);
 
-/* Example brand chips intentionally omitted: the tool answers whatever brand a
-   visitor chooses to type, rather than singling any brand out up front. */
+var qEl=document.getElementById('q'), resEl=document.getElementById('results'), countEl=document.getElementById('count');
+var mode='brand';
 
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function jsq(s){return String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'");}
 
-function render(){
-  var q = qEl.value.trim().toLowerCase();
-  if(!q){ resEl.innerHTML=''; countEl.textContent=''; return; }
-  var hits = IDX.filter(function(i){ return i.brand.toLowerCase().indexOf(q) !== -1; });
-  // sort: names that START with the query first
-  hits.sort(function(a,b){
-    var as=a.brand.toLowerCase().indexOf(q)===0?0:1, bs=b.brand.toLowerCase().indexOf(q)===0?0:1;
-    return as-bs || a.brand.localeCompare(b.brand);
-  });
+function setMode(m){
+  mode=m;
+  document.getElementById('mBrand').classList.toggle('on', m==='brand');
+  document.getElementById('mParent').classList.toggle('on', m==='parent');
+  qEl.placeholder = (m==='brand') ? 'Type any grocery brand…' : 'Type a parent company — Nestlé, PepsiCo…';
+  render();
+}
+
+function brandResults(q){
+  var hits=IDX.filter(function(i){return i.brand.toLowerCase().indexOf(q)!==-1;});
+  hits.sort(function(a,b){var as=a.brand.toLowerCase().indexOf(q)===0?0:1,bs=b.brand.toLowerCase().indexOf(q)===0?0:1;return as-bs||a.brand.localeCompare(b.brand);});
   if(!hits.length){
     countEl.textContent='no match';
-    resEl.innerHTML='<div class="empty">We don\'t have <b>'+esc(qEl.value.trim())+'</b> in the database yet. But here\'s the thing: if it\'s a big grocery brand, it\'s almost certainly owned by one of a dozen conglomerates anyway. <a href="/">Browse the shelves →</a> and meet some makers who still answer to themselves.</div>';
+    resEl.innerHTML='<div class="empty">We don\'t have <b>'+esc(qEl.value.trim())+'</b> yet. But if it\'s a big grocery brand, it\'s almost certainly owned by one of a dozen conglomerates anyway. <a href="/">Browse the shelves →</a></div>';
     return;
   }
-  hits = hits.slice(0,14);
-  countEl.textContent = hits.length + (hits.length===1?' brand':' brands');
-  resEl.innerHTML = hits.map(function(i){
+  hits=hits.slice(0,14);
+  countEl.textContent=hits.length+(hits.length===1?' brand':' brands');
+  resEl.innerHTML=hits.map(function(i){
     if(i.ind){
       return '<div class="r"><div class="brand">'+esc(i.brand)+'</div>'+
         '<div class="owner" style="color:var(--green);font-weight:700;">✓ Still independent</div>'+
         '<div class="note">'+esc(i.ind)+'</div>'+
-        '<a class="alt" href="/hunt/'+i.slug+'/">More independent '+esc(i.shelf)+' makers →</a></div>';
+        '<a class="alt" href="/hunt/'+i.slug+'/">More independent '+esc(i.shelf)+' makers →</a>'+
+        '<button class="share" onclick="cardBrand(\''+jsq(i.brand)+'\',\'__ind__\')">📸 Share</button></div>';
     }
     return '<div class="r"><div class="brand">'+esc(i.brand)+'</div>'+
       '<div class="owner">Owned by <b>'+esc(i.parent)+'</b></div>'+
       (i.note?'<div class="note">'+esc(i.note)+'</div>':'')+
-      '<a class="alt" href="/hunt/'+i.slug+'/">Find a real '+esc(i.shelf)+' maker →</a></div>';
+      '<a class="alt" href="/hunt/'+i.slug+'/">Find a real '+esc(i.shelf)+' maker →</a>'+
+      '<button class="share" onclick="cardBrand(\''+jsq(i.brand)+'\',\''+jsq(i.parent)+'\')">📸 Share</button></div>';
   }).join('');
 }
 
+function parentResults(q){
+  var hits=PNAMES.filter(function(p){return p.toLowerCase().indexOf(q)!==-1;});
+  hits.sort(function(a,b){var as=a.toLowerCase().indexOf(q)===0?0:1,bs=b.toLowerCase().indexOf(q)===0?0:1;return as-bs||a.localeCompare(b);});
+  if(!hits.length){
+    countEl.textContent='no match';
+    resEl.innerHTML='<div class="empty">No conglomerate by that name yet. Try Nestlé, PepsiCo, Kraft Heinz, Unilever, Mars, Mondelez… <a href="/">or browse the shelves →</a></div>';
+    return;
+  }
+  hits=hits.slice(0,6);
+  countEl.textContent=hits.length+(hits.length===1?' company':' companies');
+  resEl.innerHTML=hits.map(function(p){
+    var brands=PARENTS[p];
+    var tags=brands.map(function(b){return '<span class="tent">'+esc(b.brand)+'</span>';}).join('');
+    return '<div class="r"><div class="brand">'+esc(p)+'</div>'+
+      (PNOTE[p]?'<div class="note">'+esc(PNOTE[p])+'</div>':'')+
+      '<div class="owner">Owns <b>'+brands.length+'</b> grocery brand'+(brands.length===1?'':'s')+' we know of:</div>'+
+      '<div class="tents">'+tags+'</div>'+
+      '<button class="share" onclick="cardParent(\''+jsq(p)+'\','+brands.length+')">📸 Share the octopus</button></div>';
+  }).join('');
+}
+
+function render(){
+  var q=qEl.value.trim().toLowerCase();
+  if(!q){ resEl.innerHTML=''; countEl.textContent=''; return; }
+  if(mode==='parent') parentResults(q); else brandResults(q);
+}
 qEl.addEventListener('input', render);
+document.getElementById('mBrand').onclick=function(){ setMode('brand'); qEl.focus(); };
+document.getElementById('mParent').onclick=function(){ setMode('parent'); qEl.focus(); };
+
+// ---- shareable result cards (canvas → image) ----
+function wrap(x,t,cx,cy,max,lh){var w=t.split(' '),line='',y=cy;for(var n=0;n<w.length;n++){var test=line+w[n]+' ';if(x.measureText(test).width>max&&n>0){x.fillText(line.trim(),cx,y);line=w[n]+' ';y+=lh;}else line=test;}x.fillText(line.trim(),cx,y);return y;}
+function drawCard(eyebrow,big,sub){
+  var cv=document.createElement('canvas');cv.width=1080;cv.height=1080;var x=cv.getContext('2d');
+  function finish(){cv.toBlob(function(blob){var file=new File([blob],'5best2buy.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[file]})){navigator.share({files:[file],text:'5best2buy.com'}).catch(function(){});}else{var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='5best2buy.png';a.click();}});}
+  function text(){x.fillStyle='#f0c560';x.font='bold 38px system-ui,Arial';x.fillText(eyebrow.toUpperCase(),540,315);x.fillStyle='#eef2f8';x.font='bold 88px Georgia';wrap(x,big,540,470,860,100);x.fillStyle='#c8d3e6';x.font='42px Georgia';wrap(x,sub,540,780,860,54);x.fillStyle='#9aabc4';x.font='bold 38px system-ui,Arial';x.fillText('5best2buy.com',540,975);finish();}
+  x.fillStyle='#0d1421';x.fillRect(0,0,1080,1080);
+  x.strokeStyle='rgba(240,197,96,0.55)';x.lineWidth=10;x.strokeRect(46,46,988,988);
+  x.textAlign='center';
+  var img=new Image();img.onload=function(){x.drawImage(img,460,100,160,86);text();};img.onerror=text;img.src='/logo.png';
+}
+function cardBrand(brand,parent){ if(parent==='__ind__') drawCard('Still independent ✓', brand, 'One of the good ones. Find more independent makers at'); else drawCard('Who owns your food?', brand+' = '+parent, 'Find an independent maker instead at'); }
+function cardParent(p,n){ drawCard('The octopus', p+' owns '+n+' brands', 'See who really owns your groceries at'); }
+
+setMode('brand');
 </script>
 <script src="https://www.dwin2.com/pub.2961345.min.js" type="text/javascript" defer></script>
 </body>
