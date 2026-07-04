@@ -331,6 +331,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/hunt/pizza-flour/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/hunt/canned-tomatoes/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/hunt/jerky/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -463,6 +475,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/hunt/butter/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/hunt/mozzarella/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/hunt/frozen/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -518,6 +542,12 @@
   </url>
   <url>
     <loc>https://www.5best2buy.com/recipes/potica/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/recipes/pizza/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
