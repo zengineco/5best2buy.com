@@ -16,8 +16,16 @@
 - [The Pantry](https://www.5best2buy.com/aisles/pantry/) · [The Butcher](https://www.5best2buy.com/aisles/butcher/) · [The Cold Case](https://www.5best2buy.com/aisles/cold-case/) · [Heat & Sauce](https://www.5best2buy.com/aisles/heat-and-sauce/) · [The Daily Catch](https://www.5best2buy.com/aisles/daily-catch/) · [The Asian Pantry](https://www.5best2buy.com/aisles/asian-pantry/) · [Sweets & Bakery](https://www.5best2buy.com/aisles/sweets/) · [The Drink Cart](https://www.5best2buy.com/aisles/drink-cart/) · [Snacks](https://www.5best2buy.com/aisles/snacks/) · [The Garden](https://www.5best2buy.com/aisles/garden/) · [The Menagerie (pet food)](https://www.5best2buy.com/aisles/menagerie/) · [The Coop & Barn (livestock feed)](https://www.5best2buy.com/aisles/coop-barn/) · [The Glass Case (strict-criteria picks)](https://www.5best2buy.com/aisles/glass-case/)
 
 ## Tools
-- [Who Owns Your Food?](https://www.5best2buy.com/who-owns/): trace a grocery brand's ownership and find independent alternatives.
+- [Who Owns Your Food?](https://www.5best2buy.com/who-owns/): trace a grocery brand's ownership — the parent conglomerate, when it was acquired, and the chain above it — then find an independent alternative. 470+ brands across 60 conglomerates.
+- [What to Eat? — meal-idea wheels](https://www.5best2buy.com/what-to-eat/): spin for a breakfast, lunch, dinner, snack, or dessert idea; every result is one of 700+ real recipes. A "spin date night" mode pairs a dinner with a dessert.
 - [My Shopping List](https://www.5best2buy.com/list/): build a buy-list from recipes and shelves, each item linked to where to source it.
+
+## Play (learn the consolidation map, for fun)
+- [Games](https://www.5best2buy.com/games/): the arcade hub.
+- [Who Wants to Know a Million Brands? (streak game)](https://www.5best2buy.com/game/): name the conglomerate that owns each grocery brand; one wrong answer ends the run.
+
+## For machines
+- [Full-text corpus (llms-full.txt)](https://www.5best2buy.com/llms-full.txt): the core narrative pages plus a complete index of every shelf and recipe, in one file.
 
 ## Full index
 - [Sitemap (XML)](https://www.5best2buy.com/sitemap.xml)

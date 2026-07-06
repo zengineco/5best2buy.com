@@ -1,0 +1,5 @@
+# Worth The Hunt (5best2buy.com) — security contact
+Contact: mailto:hello@5best2buy.com
+Preferred-Languages: en
+Canonical: https://www.5best2buy.com/.well-known/security.txt
+Expires: 2027-07-06T00:00:00.000Z

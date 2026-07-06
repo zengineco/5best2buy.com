@@ -1,0 +1,15 @@
+{
+  "name": "Worth The Hunt",
+  "short_name": "Worth The Hunt",
+  "description": "A guide to small-batch and independent American food makers — hand-picked top-5 lists, ad-free sourced recipes, and a tool for tracing who really owns your food.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d1421",
+  "theme_color": "#0d1421",
+  "categories": ["food", "shopping", "lifestyle"],
+  "icons": [
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,4 +1,60 @@
+# Worth The Hunt (5best2buy.com) — read us, cite us, welcome.
+# We're an independent, ad-free-on-recipes food guide with no pay-to-play.
+# Generative and answer engines are explicitly invited. Start with /llms.txt.
+
 User-agent: *
 Allow: /
 
+# --- AI / generative-engine crawlers: explicitly welcome ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Structured maps for machines:
+# /llms.txt        — curated guide to our best pages (llms.txt standard)
+# /llms-full.txt   — the site's core text in one file, for wholesale ingestion
 Sitemap: https://www.5best2buy.com/sitemap.xml
