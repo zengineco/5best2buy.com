@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="/logo.png" />
+<title>My Shopping List | Worth The Hunt</title>
+<meta name="description" content="Your shopping list — ingredients and shelves gathered from Worth The Hunt recipes, each linking to where to buy the best version. Check items off, share the list by link, or print it." />
+<link rel="canonical" href="https://www.5best2buy.com/list/" />
+<meta name="robots" content="noindex" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG5QF6LH0D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GG5QF6LH0D');</script>
+<style>
+  :root{--navy:#0d1421;--surface:#121e30;--card:#16223a;--blue:#5fb0ef;--gold:#f0c560;--green:#5fe39a;--text:#eef2f8;--soft:#c8d3e6;--meta:#9aabc4;--line:rgba(120,150,190,0.18);--fd:'Rajdhani','Arial Narrow',sans-serif;--fm:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--navy);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.7;padding:18px 18px 90px;max-width:720px;margin:0 auto;font-size:17px;}
+  a{color:var(--blue);}
+  nav.crumb{font-family:var(--fm);font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--meta);}
+  nav.crumb a{color:var(--meta);text-decoration:none;}
+  .eyebrow{font-family:var(--fm);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:22px 0 8px;}
+  h1{font-family:var(--fd);font-size:clamp(32px,6.5vw,52px);font-weight:700;letter-spacing:.5px;line-height:1.02;margin-bottom:12px;}
+  .dek{color:var(--soft);max-width:60ch;margin-bottom:24px;}
+  .tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;}
+  .tools button{font-family:var(--fm);font-size:13px;font-weight:600;letter-spacing:.3px;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 15px;cursor:pointer;}
+  .tools button:hover{border-color:var(--gold);color:var(--gold);}
+  #share{color:#10203a!important;background:var(--gold)!important;border-color:var(--gold)!important;}
+  #share:hover{background:#ffd877!important;}
+  ul.items{list-style:none;}
+  .li{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:14px 2px;}
+  .li label{display:flex;align-items:center;gap:12px;cursor:pointer;flex:1;font-family:var(--fm);font-size:16.5px;color:var(--text);}
+  .li input{width:20px;height:20px;accent-color:var(--green);flex:0 0 auto;cursor:pointer;}
+  .li a{color:var(--gold);text-decoration:none;}
+  .li a:hover{text-decoration:underline;}
+  .li.bought label{color:var(--meta);text-decoration:line-through;}
+  .rm{background:none;border:none;color:var(--meta);font-size:22px;line-height:1;cursor:pointer;padding:2px 6px;flex:0 0 auto;}
+  .rm:hover{color:#ff8a8a;}
+  .empty{font-family:var(--fm);color:var(--soft);padding:24px 0;}
+  .empty a{color:var(--gold);}
+  .note{font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-top:26px;line-height:1.7;border-top:1px solid var(--line);padding-top:16px;}
+  .back{font-family:var(--fm);font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:var(--meta);text-decoration:none;display:inline-block;margin-top:18px;}
+  @media print{body{color:#000;background:#fff;}nav,.eyebrow,.dek,.tools,.rm,.back,.note,#wth-cart{display:none!important;}.li input{-webkit-appearance:auto;}.li a,.li label,h1{color:#000!important;}}
+</style>
+</head>
+<body>
+  <nav class="crumb"><a href="/">Worth The Hunt</a> &rsaquo; My List</nav>
+  <div class="eyebrow">Worth The Hunt</div>
+  <h1>My Shopping List</h1>
+  <p class="dek">Everything you&rsquo;ve gathered from the recipes and shelves &mdash; each item links to where to buy the best version. Check things off as you go, share the list with a link, or print it for the store. It lives in this browser; nothing is stored on a server.</p>
+  <div id="listApp"></div>
+  <p class="note">Your list is saved in this browser only &mdash; no account, no server, no tracking of what you buy. The share link carries the list inside the URL, so whoever opens it gets a copy they can edit as their own.</p>
+  <a class="back" href="/recipes/">&larr; Back to the recipes</a>
+<script src="/list.js" defer></script>
+</body>
+</html>
