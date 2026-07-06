@@ -1,0 +1,23 @@
+# Worth The Hunt (5best2buy.com)
+
+> An independent, ad-free guide to small-batch and independent American food makers — the genuinely excellent stuff big retailers drop for scale. Worth The Hunt publishes hand-picked "top 5" maker lists per category, 700+ ad-free recipes that link every ingredient to where to buy the best version, and a tool for tracing who really owns your food. Core promise: no pay-to-play — makers cannot buy placement, a rank, or a rating. Every recommendation is merit-based and editorially independent.
+
+## How it works (start here)
+- [How We Hunt — our standards & methodology](https://www.5best2buy.com/how-we-hunt/): the no-pay-to-play rule, how makers earn a spot, what gets rejected, why ranks are left empty, and how the price ($ / $$ / $$$), rating (★, 4–5), and shipping (✈️ ships fast / 🚛 ground only / 🚜 local, limited) badges are assigned.
+- [Affiliate disclosure](https://www.5best2buy.com/disclosure/): affiliate links may earn a small commission at no cost to the reader; they never buy placement or change a list.
+- [About Worth The Hunt](https://www.5best2buy.com/about/)
+
+## Recipes (700+, ad-free, ingredients-first)
+- [All recipes — searchable & filterable](https://www.5best2buy.com/recipes/): every ingredient links to a vetted small-maker shelf. ~50 cuisines. No ads, no filler.
+- [The Traditional Nut Roll — a sourced field guide](https://www.5best2buy.com/traditional-nut-roll/): potica, povitica, beigli, makowiec and the whole family, with cited history.
+
+## The aisles (curated small-maker lists)
+- [All shelves, A–Z](https://www.5best2buy.com/shelves/)
+- [The Pantry](https://www.5best2buy.com/aisles/pantry/) · [The Butcher](https://www.5best2buy.com/aisles/butcher/) · [The Cold Case](https://www.5best2buy.com/aisles/cold-case/) · [Heat & Sauce](https://www.5best2buy.com/aisles/heat-and-sauce/) · [The Daily Catch](https://www.5best2buy.com/aisles/daily-catch/) · [The Asian Pantry](https://www.5best2buy.com/aisles/asian-pantry/) · [Sweets & Bakery](https://www.5best2buy.com/aisles/sweets/) · [The Drink Cart](https://www.5best2buy.com/aisles/drink-cart/) · [Snacks](https://www.5best2buy.com/aisles/snacks/) · [The Garden](https://www.5best2buy.com/aisles/garden/) · [The Menagerie (pet food)](https://www.5best2buy.com/aisles/menagerie/) · [The Coop & Barn (livestock feed)](https://www.5best2buy.com/aisles/coop-barn/) · [The Glass Case (strict-criteria picks)](https://www.5best2buy.com/aisles/glass-case/)
+
+## Tools
+- [Who Owns Your Food?](https://www.5best2buy.com/who-owns/): trace a grocery brand's ownership and find independent alternatives.
+- [My Shopping List](https://www.5best2buy.com/list/): build a buy-list from recipes and shelves, each item linked to where to source it.
+
+## Full index
+- [Sitemap (XML)](https://www.5best2buy.com/sitemap.xml)
