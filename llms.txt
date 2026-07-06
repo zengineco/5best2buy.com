@@ -17,7 +17,7 @@
 
 ## Tools
 - [Who Owns Your Food?](https://www.5best2buy.com/who-owns/): trace a grocery brand's ownership — the parent conglomerate, when it was acquired, and the chain above it — then find an independent alternative. 470+ brands across 60 conglomerates.
-- [What to Eat? — meal-idea wheels](https://www.5best2buy.com/what-to-eat/): spin for a breakfast, lunch, dinner, snack, or dessert idea; every result is one of 700+ real recipes. A "spin date night" mode pairs a dinner with a dessert.
+- [The Dinner Roll — meal-idea dice](https://www.5best2buy.com/what-to-eat/): roll dice for a meal idea; pick 1–5 courses (starter, main, side, dessert, drink), lock the ones you like, and reroll the rest. Every die lands on one of 700+ real recipes.
 - [My Shopping List](https://www.5best2buy.com/list/): build a buy-list from recipes and shelves, each item linked to where to source it.
 
 ## Play (learn the consolidation map, for fun)
