@@ -72,6 +72,14 @@
     <div><b>Cuisine</b>American</div>
   </div>
 
+  <div class="greed" style="margin:0 0 24px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;">
+    <div style="display:flex;align-items:center;gap:11px;flex-wrap:wrap;">
+      <span style="font-family:var(--fd);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Greedometer</span>
+      <span style="letter-spacing:3px;font-size:15px;"><span style="color:var(--gold);">●</span><span style="color:var(--line);">●●●●</span></span>
+      <span style="font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);">Angel food</span>
+    </div>
+    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-top:5px;">About as virtuous as dinner gets.</div>
+  </div>
   <div class="methods" style="margin:0 0 22px;">
     <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Cook it with</div>
     <div style="display:flex;flex-wrap:wrap;gap:8px;"><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;">Grill</span></div>
@@ -92,29 +100,35 @@
 
   <div class="sechead">Part One</div>
   <div class="sectitle">The Ingredients &mdash; and where to get them</div>
-
+  <div class="scaler" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-family:var(--fm);">
+    <span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--meta);">Cook for</span>
+    <input type="range" min="1" max="8" value="4" step="1" aria-label="number of burgers" style="accent-color:var(--gold);flex:1;min-width:120px;max-width:230px;">
+    <b id="sv" style="color:var(--gold);font-family:var(--fd);font-size:22px;line-height:1;">4</b>
+    <span style="font-size:13.5px;color:var(--soft);">burgers</span>
+    <button type="button" id="sreset" style="font-family:var(--fm);font-size:11px;color:var(--meta);background:none;border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;">reset</button>
+  </div>
   <div class="ing">
-    <div><div class="n">Portobello mushroom caps</div><div class="q">Large firm caps are the patty; wipe them clean and scrape the gills if you want less liquid.</div><div class="amt">4 caps</div></div>
+    <div><div class="n">Portobello mushroom caps</div><div class="q">Large firm caps are the patty; wipe them clean and scrape the gills if you want less liquid.</div><div class="amt" data-amt="4 caps">4 caps</div></div>
     <div class="src"><a class="on" href="/hunt/mushrooms/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Balsamic vinegar</div><div class="q">The acid in the marinade that concentrates into a glaze on the grill.</div><div class="amt">1/4 cup</div></div>
+    <div><div class="n">Balsamic vinegar</div><div class="q">The acid in the marinade that concentrates into a glaze on the grill.</div><div class="amt" data-amt="1/4 cup">1/4 cup</div></div>
     <div class="src"><a class="on" href="/hunt/vinegar/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Olive oil</div><div class="q">Carries the marinade into the mushroom and keeps it from drying out.</div><div class="amt">1/4 cup</div></div>
+    <div><div class="n">Olive oil</div><div class="q">Carries the marinade into the mushroom and keeps it from drying out.</div><div class="amt" data-amt="1/4 cup">1/4 cup</div></div>
     <div class="src"><a class="on" href="/hunt/olive-oil/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Burger buns</div><div class="q">Toast them on the grill so they don't go soggy under the juicy cap.</div><div class="amt">4 buns</div></div>
+    <div><div class="n">Burger buns</div><div class="q">Toast them on the grill so they don't go soggy under the juicy cap.</div><div class="amt" data-amt="4 buns">4 buns</div></div>
     <div class="src"><a class="on" href="/hunt/bread/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Sliced cheese</div><div class="q">Optional; melt provolone or Swiss over the cap in the last minute.</div><div class="amt">4 slices</div></div>
+    <div><div class="n">Sliced cheese</div><div class="q">Optional; melt provolone or Swiss over the cap in the last minute.</div><div class="amt" data-amt="4 slices">4 slices</div></div>
     <div class="src"><a class="on" href="/hunt/cheese/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Garlic and thyme</div><div class="q">Whisked into the marinade for savory depth.</div><div class="amt">2 cloves, 1 tsp</div></div>
+    <div><div class="n">Garlic and thyme</div><div class="q">Whisked into the marinade for savory depth.</div><div class="amt" data-amt="2 cloves, 1 tsp">2 cloves, 1 tsp</div></div>
     <div class="src"><span class="plain">Local / market</span></div>
   </div>
 
@@ -151,6 +165,7 @@
     Some ingredient and tool links are affiliate links &mdash; if you buy through one, 5best2buy may earn a small commission at no extra cost to you. It never costs the maker anything, and it never decides who we recommend. The list is the list.<br>
     &copy; 2026 5best2buy &middot; Worth The Hunt &middot; Recipe No.652
   </p>
+  <script>(function(){var base=4,sl=document.querySelector('.scaler input');if(!sl)return;var out=document.getElementById('sv'),rs=document.getElementById('sreset'),amts=[].slice.call(document.querySelectorAll('.amt[data-amt]'));function fmt(v){if(v<=0)return '0';if(v>=10)return String(Math.round(v));var e=Math.round(v*8),w=Math.floor(e/8),r=e%8,m=['','⅛','¼','⅜','½','⅝','¾','⅞'];if(r===0)return String(w);return (w>0?w:'')+m[r];}function parse(str){var u={'½':0.5,'⅓':0.3333,'⅔':0.6667,'¼':0.25,'¾':0.75,'⅛':0.125,'⅜':0.375,'⅝':0.625,'⅞':0.875},m;if(m=str.match(/^(\d+)?\s*([½⅓⅔¼¾⅛⅜⅝⅞])/))return{v:(m[1]?+m[1]:0)+u[m[2]],n:m[0].length};if(m=str.match(/^(\d+)\s+(\d+)\/(\d+)/))return{v:+m[1]+(+m[2]/+m[3]),n:m[0].length};if(m=str.match(/^(\d+)\/(\d+)/))return{v:+m[1]/+m[2],n:m[0].length};if(m=str.match(/^(\d+(?:\.\d+)?)/))return{v:+m[1],n:m[0].length};return null;}function scale(s,f){if(/to taste|as needed|for |pinch|handful|drizzle|optional|garnish|to serve/i.test(s))return s;var p=parse(s);if(!p)return s;var head=fmt(p.v*f),tail=s.slice(p.n),rm=tail.match(/^\s*[-–]\s*(\d+(?:\.\d+)?|[½⅓⅔¼¾⅛⅜⅝⅞])/);if(rm){var p2=parse(rm[1]);if(p2){head+='–'+fmt(p2.v*f);tail=tail.slice(rm[0].length);}}return head+tail;}function render(n){out.textContent=n;var f=n/base;amts.forEach(function(a){a.textContent=scale(a.getAttribute('data-amt'),f);});}sl.addEventListener('input',function(){render(+sl.value);});if(rs)rs.addEventListener('click',function(){sl.value=base;render(base);});})();</script>
   <script src="/list.js" defer></script>
 <!--BNAV--><style>
 body{padding-bottom:58px!important;}
