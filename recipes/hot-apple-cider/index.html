@@ -127,12 +127,6 @@
     <div class="src"><a class="on" href="/hunt/ginger/">Source it &rarr;</a></div>
   </div>
 
-  <!--LISTW-->
-  <div style="border-top:1px solid var(--line);margin-top:30px;padding-top:22px;">
-    <button data-add-recipe style="display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:14px;font-weight:700;letter-spacing:.4px;color:#10203a;background:var(--gold);border:none;border-radius:6px;padding:11px 18px;cursor:pointer;">🛒 Add all ingredients to my list</button>
-    <span style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-left:12px;">One list, with a link to where to buy each one.</span>
-  </div>
-  <!--/LISTW-->
   <div class="sechead">Part Two</div>
   <div class="sectitle">The Method</div>
   <ol class="method">
@@ -160,7 +154,6 @@
     &copy; 2026 5best2buy &middot; Worth The Hunt &middot; Recipe No.612
   </p>
   <script>(function(){var base=6,sl=document.querySelector('.scaler input');if(!sl)return;var out=document.getElementById('sv'),rs=document.getElementById('sreset'),amts=[].slice.call(document.querySelectorAll('.amt[data-amt]'));function fmt(v){if(v<=0)return '0';if(v>=10)return String(Math.round(v));var e=Math.round(v*8),w=Math.floor(e/8),r=e%8,m=['','⅛','¼','⅜','½','⅝','¾','⅞'];if(r===0)return String(w);return (w>0?w:'')+m[r];}function parse(str){var u={'½':0.5,'⅓':0.3333,'⅔':0.6667,'¼':0.25,'¾':0.75,'⅛':0.125,'⅜':0.375,'⅝':0.625,'⅞':0.875},m;if(m=str.match(/^(\d+)?\s*([½⅓⅔¼¾⅛⅜⅝⅞])/))return{v:(m[1]?+m[1]:0)+u[m[2]],n:m[0].length};if(m=str.match(/^(\d+)\s+(\d+)\/(\d+)/))return{v:+m[1]+(+m[2]/+m[3]),n:m[0].length};if(m=str.match(/^(\d+)\/(\d+)/))return{v:+m[1]/+m[2],n:m[0].length};if(m=str.match(/^(\d+(?:\.\d+)?)/))return{v:+m[1],n:m[0].length};return null;}function scale(s,f){if(/to taste|as needed|for |pinch|handful|drizzle|optional|garnish|to serve/i.test(s))return s;var p=parse(s);if(!p)return s;var head=fmt(p.v*f),tail=s.slice(p.n),rm=tail.match(/^\s*[-–]\s*(\d+(?:\.\d+)?|[½⅓⅔¼¾⅛⅜⅝⅞])/);if(rm){var p2=parse(rm[1]);if(p2){head+='–'+fmt(p2.v*f);tail=tail.slice(rm[0].length);}}return head+tail;}function render(n){out.textContent=n;var f=n/base;amts.forEach(function(a){a.textContent=scale(a.getAttribute('data-amt'),f);});}sl.addEventListener('input',function(){render(+sl.value);});if(rs)rs.addEventListener('click',function(){sl.value=base;render(base);});})();</script>
-  <script src="/list.js" defer></script>
 <!--BNAV--><style>
 body{padding-bottom:58px!important;}
 #bnav{position:fixed;left:0;right:0;bottom:0;z-index:9000;display:flex;background:rgba(13,20,33,.975);border-top:1px solid rgba(120,150,190,.28);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;}
