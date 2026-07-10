@@ -29,6 +29,11 @@
   .ing .n{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:.3px;color:var(--text);}
   .ing .q{font-family:var(--fm);font-size:13px;color:var(--soft);margin-top:2px;max-width:46ch;line-height:1.55;}
   .ing .amt{font-family:var(--fm);font-size:11.5px;letter-spacing:.5px;color:var(--meta);text-transform:uppercase;margin-top:5px;}
+  .tt{display:inline-block;margin-left:8px;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;border-radius:20px;padding:2px 8px;vertical-align:middle;}
+  .tt-taste{color:#10203a;background:var(--gold);font-weight:700;}
+  .tt-rec{color:var(--meta);background:var(--surface);border:1px solid var(--line);}
+  .ratio{font-family:var(--fm);font-size:12.5px;line-height:1.6;color:var(--soft);background:linear-gradient(180deg,rgba(240,197,96,.07),rgba(240,197,96,0));border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:12px 15px;margin:0 0 18px;}
+  .ratio b{color:var(--gold);}
   .src{flex:0 0 auto;align-self:center;}
   .src a{display:inline-block;font-family:var(--fd);font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;white-space:nowrap;padding:8px 14px;border-radius:5px;}
   .src a.on{color:#10203a;background:var(--gold);}
@@ -107,24 +112,25 @@
     <span style="font-size:13.5px;color:var(--soft);">servings</span>
     <button type="button" id="sreset" style="font-family:var(--fm);font-size:11px;color:var(--meta);background:none;border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;">reset</button>
   </div>
+  <div class="ratio"><b>Our ratio, your call.</b> The amounts below are a tested starting point &mdash; <b>a</b> version, not the one and only. Anything tagged <span class="tt tt-taste">to taste</span> is the knob you turn: start there, then make it yours.</div>
   <div class="ing">
-    <div><div class="n">Garlic</div><div class="q">Sliced thin and poached soft in milk so it melts sweet. Fresh, firm heads.</div><div class="amt" data-amt="20 cloves">20 cloves</div></div>
+    <div><div class="n">Garlic</div><div class="q">Sliced thin and poached soft in milk so it melts sweet. Fresh, firm heads.</div><div class="amt" data-amt="20 cloves">20 cloves<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/garlic/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Anchovies</div><div class="q">Salt-cured fillets, rinsed; they melt into the oil for the savory depth.</div><div class="amt" data-amt="12 fillets">12 fillets</div></div>
+    <div><div class="n">Anchovies</div><div class="q">Salt-cured fillets, rinsed; they melt into the oil for the savory depth.</div><div class="amt" data-amt="12 fillets">12 fillets<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/anchovies/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Olive oil</div><div class="q">The body of the dip; a fruity extra-virgin carries it.</div><div class="amt" data-amt="1 cup">1 cup</div></div>
+    <div><div class="n">Olive oil</div><div class="q">The body of the dip; a fruity extra-virgin carries it.</div><div class="amt" data-amt="1 cup">1 cup<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/olive-oil/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Butter</div><div class="q">Beaten in at the end to round and stabilize the dip. A good butter helps.</div><div class="amt" data-amt="4 tbsp">4 tbsp</div></div>
+    <div><div class="n">Butter</div><div class="q">Beaten in at the end to round and stabilize the dip. A good butter helps.</div><div class="amt" data-amt="4 tbsp">4 tbsp<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/butter/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Milk</div><div class="q">Used only to poach the garlic; discarded after. Whole milk is best.</div><div class="amt" data-amt="1 cup">1 cup</div></div>
+    <div><div class="n">Milk</div><div class="q">Used only to poach the garlic; discarded after. Whole milk is best.</div><div class="amt" data-amt="1 cup">1 cup<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/milk/">Source it &rarr;</a></div>
   </div>
 

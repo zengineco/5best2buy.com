@@ -29,6 +29,11 @@
   .ing .n{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:.3px;color:var(--text);}
   .ing .q{font-family:var(--fm);font-size:13px;color:var(--soft);margin-top:2px;max-width:46ch;line-height:1.55;}
   .ing .amt{font-family:var(--fm);font-size:11.5px;letter-spacing:.5px;color:var(--meta);text-transform:uppercase;margin-top:5px;}
+  .tt{display:inline-block;margin-left:8px;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;border-radius:20px;padding:2px 8px;vertical-align:middle;}
+  .tt-taste{color:#10203a;background:var(--gold);font-weight:700;}
+  .tt-rec{color:var(--meta);background:var(--surface);border:1px solid var(--line);}
+  .ratio{font-family:var(--fm);font-size:12.5px;line-height:1.6;color:var(--soft);background:linear-gradient(180deg,rgba(240,197,96,.07),rgba(240,197,96,0));border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:12px 15px;margin:0 0 18px;}
+  .ratio b{color:var(--gold);}
   .src{flex:0 0 auto;align-self:center;}
   .src a{display:inline-block;font-family:var(--fd);font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;white-space:nowrap;padding:8px 14px;border-radius:5px;}
   .src a.on{color:#10203a;background:var(--gold);}
@@ -79,7 +84,7 @@
       <span style="font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);">Angel food</span>
       <span style="margin-left:auto;font-family:var(--fm);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--meta);">Level <b style="color:var(--soft);font-family:var(--fd);font-size:14px;letter-spacing:.3px;">Some doing</b></span>
     </div>
-    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-top:5px;">About as virtuous as dinner gets. &middot; <span style="color:var(--soft);">plan ahead — needs marinating, soaking, or rising time on top of the clock</span></div>
+    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-top:5px;">About as virtuous as dinner gets.</div>
   </div>
   <div class="methods" style="margin:0 0 22px;">
     <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Cook it with</div>
@@ -107,20 +112,21 @@
     <span style="font-size:13.5px;color:var(--soft);">cup</span>
     <button type="button" id="sreset" style="font-family:var(--fm);font-size:11px;color:var(--meta);background:none;border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;">reset</button>
   </div>
+  <div class="ratio"><b>Our ratio, your call.</b> The amounts below are a tested starting point &mdash; <b>a</b> version, not the one and only. Anything tagged <span class="tt tt-taste">to taste</span> is the knob you turn: start there, then make it yours.</div>
   <div class="ing">
-    <div><div class="n">Olive oil</div><div class="q">A robust oil is the body of the sauce.</div><div class="amt" data-amt="3/4 cup">3/4 cup</div></div>
+    <div><div class="n">Olive oil</div><div class="q">A robust oil is the body of the sauce.</div><div class="amt" data-amt="3/4 cup">3/4 cup<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/olive-oil/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Red wine vinegar</div><div class="q">Sharp acid to balance the oil and lift the herbs.</div><div class="amt" data-amt="1/4 cup">1/4 cup</div></div>
+    <div><div class="n">Red wine vinegar</div><div class="q">Sharp acid to balance the oil and lift the herbs.</div><div class="amt" data-amt="1/4 cup">1/4 cup<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/vinegar/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Dried red chile</div><div class="q">Crushed red pepper flakes for a low, steady heat.</div><div class="amt" data-amt="1 tsp">1 tsp</div></div>
+    <div><div class="n">Dried red chile</div><div class="q">Crushed red pepper flakes for a low, steady heat.</div><div class="amt" data-amt="1 tsp">1 tsp<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/dried-chiles/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Parsley, garlic, oregano</div><div class="q">Flat-leaf parsley, plenty of raw garlic, and a little dried oregano.</div><div class="amt" data-amt="1 large bunch parsley">1 large bunch parsley</div></div>
+    <div><div class="n">Parsley, garlic, oregano</div><div class="q">Flat-leaf parsley, plenty of raw garlic, and a little dried oregano.</div><div class="amt" data-amt="1 large bunch parsley">1 large bunch parsley<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><span class="plain">Local / market</span></div>
   </div>
 

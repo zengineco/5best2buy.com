@@ -29,6 +29,11 @@
   .ing .n{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:.3px;color:var(--text);}
   .ing .q{font-family:var(--fm);font-size:13px;color:var(--soft);margin-top:2px;max-width:46ch;line-height:1.55;}
   .ing .amt{font-family:var(--fm);font-size:11.5px;letter-spacing:.5px;color:var(--meta);text-transform:uppercase;margin-top:5px;}
+  .tt{display:inline-block;margin-left:8px;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;border-radius:20px;padding:2px 8px;vertical-align:middle;}
+  .tt-taste{color:#10203a;background:var(--gold);font-weight:700;}
+  .tt-rec{color:var(--meta);background:var(--surface);border:1px solid var(--line);}
+  .ratio{font-family:var(--fm);font-size:12.5px;line-height:1.6;color:var(--soft);background:linear-gradient(180deg,rgba(240,197,96,.07),rgba(240,197,96,0));border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:12px 15px;margin:0 0 18px;}
+  .ratio b{color:var(--gold);}
   .src{flex:0 0 auto;align-self:center;}
   .src a{display:inline-block;font-family:var(--fd);font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;white-space:nowrap;padding:8px 14px;border-radius:5px;}
   .src a.on{color:#10203a;background:var(--gold);}
@@ -107,24 +112,25 @@
     <span style="font-size:13.5px;color:var(--soft);">cups</span>
     <button type="button" id="sreset" style="font-family:var(--fm);font-size:11px;color:var(--meta);background:none;border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;">reset</button>
   </div>
+  <div class="ratio"><b>Our ratio, your call.</b> The amounts below are a tested starting point &mdash; <b>a</b> version, not the one and only. Anything tagged <span class="tt tt-taste">to taste</span> is the knob you turn: start there, then make it yours.</div>
   <div class="ing">
-    <div><div class="n">Ketchup</div><div class="q">The thick, tangy tomato base. A clean, low-additive ketchup is best.</div><div class="amt" data-amt="1 cup">1 cup</div></div>
+    <div><div class="n">Ketchup</div><div class="q">The thick, tangy tomato base. A clean, low-additive ketchup is best.</div><div class="amt" data-amt="1 cup">1 cup<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/ketchup/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Honey</div><div class="q">The sticky, floral sweetness and shine. A raw honey has the most flavor.</div><div class="amt" data-amt="1/3 cup">1/3 cup</div></div>
+    <div><div class="n">Honey</div><div class="q">The sticky, floral sweetness and shine. A raw honey has the most flavor.</div><div class="amt" data-amt="1/3 cup">1/3 cup<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/raw-honey/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Molasses</div><div class="q">A dark, smoky sugar depth that grounds the tang.</div><div class="amt" data-amt="2 tbsp">2 tbsp</div></div>
+    <div><div class="n">Molasses</div><div class="q">A dark, smoky sugar depth that grounds the tang.</div><div class="amt" data-amt="2 tbsp">2 tbsp<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/molasses/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Cider vinegar</div><div class="q">The acid that cuts the heavy sugar. A raw cider vinegar is brightest.</div><div class="amt" data-amt="2 tbsp">2 tbsp</div></div>
+    <div><div class="n">Cider vinegar</div><div class="q">The acid that cuts the heavy sugar. A raw cider vinegar is brightest.</div><div class="amt" data-amt="2 tbsp">2 tbsp<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/vinegar/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Worcestershire and garlic</div><div class="q">A splash of Worcestershire and a little garlic powder for savor.</div><div class="amt" data-amt="to taste">to taste</div></div>
+    <div><div class="n">Worcestershire and garlic</div><div class="q">A splash of Worcestershire and a little garlic powder for savor.</div><div class="amt" data-amt="to taste">to taste<span class="tt tt-taste">to taste</span></div></div>
     <div class="src"><a class="on" href="/hunt/worcestershire/">Source it &rarr;</a></div>
   </div>
 

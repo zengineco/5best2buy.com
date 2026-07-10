@@ -29,6 +29,11 @@
   .ing .n{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:.3px;color:var(--text);}
   .ing .q{font-family:var(--fm);font-size:13px;color:var(--soft);margin-top:2px;max-width:46ch;line-height:1.55;}
   .ing .amt{font-family:var(--fm);font-size:11.5px;letter-spacing:.5px;color:var(--meta);text-transform:uppercase;margin-top:5px;}
+  .tt{display:inline-block;margin-left:8px;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;border-radius:20px;padding:2px 8px;vertical-align:middle;}
+  .tt-taste{color:#10203a;background:var(--gold);font-weight:700;}
+  .tt-rec{color:var(--meta);background:var(--surface);border:1px solid var(--line);}
+  .ratio{font-family:var(--fm);font-size:12.5px;line-height:1.6;color:var(--soft);background:linear-gradient(180deg,rgba(240,197,96,.07),rgba(240,197,96,0));border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:12px 15px;margin:0 0 18px;}
+  .ratio b{color:var(--gold);}
   .src{flex:0 0 auto;align-self:center;}
   .src a{display:inline-block;font-family:var(--fd);font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;white-space:nowrap;padding:8px 14px;border-radius:5px;}
   .src a.on{color:#10203a;background:var(--gold);}
@@ -107,24 +112,25 @@
     <span style="font-size:13.5px;color:var(--soft);">cup</span>
     <button type="button" id="sreset" style="font-family:var(--fm);font-size:11px;color:var(--meta);background:none;border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;">reset</button>
   </div>
+  <div class="ratio"><b>Our ratio, your call.</b> The amounts below are a tested starting point &mdash; <b>a</b> version, not the one and only. Anything tagged <span class="tt tt-taste">to taste</span> is the knob you turn: start there, then make it yours.</div>
   <div class="ing">
-    <div><div class="n">Egg yolk</div><div class="q">The emulsifier that makes real aioli thick and glossy. A fresh pasture-raised yolk is best. (Raw egg — see the swap note for a no-raw-egg shortcut.)</div><div class="amt" data-amt="1 yolk">1 yolk</div></div>
+    <div><div class="n">Egg yolk</div><div class="q">The emulsifier that makes real aioli thick and glossy. A fresh pasture-raised yolk is best. (Raw egg — see the swap note for a no-raw-egg shortcut.)</div><div class="amt" data-amt="1 yolk">1 yolk<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/eggs/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Garlic</div><div class="q">Grated or mashed to a paste with a little salt — fresh is the whole point here.</div><div class="amt" data-amt="1–2 cloves">1–2 cloves</div></div>
+    <div><div class="n">Garlic</div><div class="q">Grated or mashed to a paste with a little salt — fresh is the whole point here.</div><div class="amt" data-amt="1–2 cloves">1–2 cloves<span class="tt tt-rec">recommended</span></div></div>
     <div class="src"><a class="on" href="/hunt/garlic/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Lemon juice</div><div class="q">For acid and to loosen. Fresh, to taste.</div><div class="amt" data-amt="1 tsp">1 tsp</div></div>
+    <div><div class="n">Lemon juice</div><div class="q">For acid and to loosen. Fresh, to taste.</div><div class="amt" data-amt="1 tsp">1 tsp<span class="tt tt-taste">to taste</span></div></div>
     <div class="src"><span class="plain">Local / market</span></div>
   </div>
   <div class="ing">
-    <div><div class="n">Neutral or olive oil</div><div class="q">A neutral oil for a mild aioli, or part good olive oil for a peppery one. To taste.</div><div class="amt" data-amt="3/4 cup">3/4 cup</div></div>
+    <div><div class="n">Neutral or olive oil</div><div class="q">A neutral oil for a mild aioli, or part good olive oil for a peppery one. To taste.</div><div class="amt" data-amt="3/4 cup">3/4 cup<span class="tt tt-taste">to taste</span></div></div>
     <div class="src"><a class="on" href="/hunt/olive-oil/">Source it &rarr;</a></div>
   </div>
   <div class="ing">
-    <div><div class="n">Salt</div><div class="q">Recommended to start; season the finished aioli to taste.</div><div class="amt" data-amt="1/4 tsp">1/4 tsp</div></div>
+    <div><div class="n">Salt</div><div class="q">Recommended to start; season the finished aioli to taste.</div><div class="amt" data-amt="1/4 tsp">1/4 tsp<span class="tt tt-taste">to taste</span></div></div>
     <div class="src"><span class="plain">Local / market</span></div>
   </div>
 
