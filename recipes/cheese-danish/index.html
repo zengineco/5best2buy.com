@@ -41,6 +41,16 @@
   .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
   .badge{font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;}
   .badge.suit{color:#10203a;background:var(--green);border-color:var(--green);}
+  .cmuted{font-family:var(--fm);font-size:13px;color:var(--meta);}
+  .citem{border-top:1px solid var(--line);padding:12px 0;}
+  .citem:first-child{border-top:none;padding-top:0;}
+  .cmeta{font-family:var(--fm);font-size:11px;letter-spacing:.3px;color:var(--meta);}
+  .cmeta b{color:var(--soft);}
+  .ctext{font-family:var(--fm);font-size:14px;color:var(--text);line-height:1.55;margin-top:3px;white-space:pre-wrap;word-break:break-word;}
+  #cname,#cbody{width:100%;font-family:var(--fm);font-size:14px;color:var(--text);background:var(--navy);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-bottom:8px;outline:none;}
+  #cname:focus,#cbody:focus{border-color:var(--gold);}
+  #csend{font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#10203a;background:var(--gold);border:none;border-radius:6px;padding:9px 18px;cursor:pointer;}
+  #csend:disabled{opacity:.55;cursor:default;}
   .tt{display:inline-block;margin-left:8px;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;border-radius:20px;padding:2px 8px;vertical-align:middle;}
   .tt-taste{color:#10203a;background:var(--gold);font-weight:700;}
   .tt-rec{color:var(--meta);background:var(--surface);border:1px solid var(--line);}
@@ -177,6 +187,22 @@
     <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Cheese Danish vegan? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Vegetarian, not vegan</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">It’s vegetarian but not vegan as written — it has dairy and egg. Make it vegan: use plant milk, oil, or a vegan cheese for the dairy, and a flax or aquafaba egg for the egg.</p></details>
   </section>
 
+  <section class="card" id="cbox" data-slug="cheese-danish">
+    <div class="cardlabel">Community Notes</div>
+    <p style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin:-4px 0 14px;">Cooked it? Changed something that worked? Leave a note for the next person &mdash; first-name basis, no account.</p>
+    <div id="clist" style="margin-bottom:16px;"><div class="cmuted">Loading notes&hellip;</div></div>
+    <form id="cform" autocomplete="off">
+      <input id="cname" maxlength="60" placeholder="Name (optional)" />
+      <input id="cweb" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+      <textarea id="cbody" maxlength="1200" rows="3" placeholder="Add a note&hellip;"></textarea>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:2px;">
+        <button type="submit" id="csend">Post note</button>
+        <span id="cmsg" style="font-family:var(--fm);font-size:12px;color:var(--meta);"></span>
+      </div>
+      <p style="font-family:var(--fm);font-size:10.5px;color:var(--meta);margin-top:10px;line-height:1.5;">Notes are public and posted as written. Be kind, no links. Spam and abuse get removed.</p>
+    </form>
+  </section>
+
   <!--LISTW-->
   <div style="border-top:1px solid var(--line);margin-top:30px;padding-top:22px;">
     <button data-add-recipe style="display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:14px;font-weight:700;letter-spacing:.4px;color:#10203a;background:var(--gold);border:none;border-radius:6px;padding:11px 18px;cursor:pointer;">🛒 Add all ingredients to my list</button>
@@ -192,6 +218,7 @@
     &copy; 2026 5best2buy &middot; Worth The Hunt &middot; Recipe No.528
   </p>
   <script>(function(){var base=8,sl=document.querySelector('.scaler input');if(!sl)return;var out=document.getElementById('sv'),rs=document.getElementById('sreset'),amts=[].slice.call(document.querySelectorAll('.amt[data-amt]'));function fmt(v){if(v<=0)return '0';if(v>=10)return String(Math.round(v));var e=Math.round(v*8),w=Math.floor(e/8),r=e%8,m=['','⅛','¼','⅜','½','⅝','¾','⅞'];if(r===0)return String(w);return (w>0?w:'')+m[r];}function parse(str){var u={'½':0.5,'⅓':0.3333,'⅔':0.6667,'¼':0.25,'¾':0.75,'⅛':0.125,'⅜':0.375,'⅝':0.625,'⅞':0.875},m;if(m=str.match(/^(\d+)?\s*([½⅓⅔¼¾⅛⅜⅝⅞])/))return{v:(m[1]?+m[1]:0)+u[m[2]],n:m[0].length};if(m=str.match(/^(\d+)\s+(\d+)\/(\d+)/))return{v:+m[1]+(+m[2]/+m[3]),n:m[0].length};if(m=str.match(/^(\d+)\/(\d+)/))return{v:+m[1]/+m[2],n:m[0].length};if(m=str.match(/^(\d+(?:\.\d+)?)/))return{v:+m[1],n:m[0].length};return null;}function scale(s,f){if(/to taste|as needed|for |pinch|handful|drizzle|optional|garnish|to serve/i.test(s))return s;var p=parse(s);if(!p)return s;var head=fmt(p.v*f),tail=s.slice(p.n),rm=tail.match(/^\s*[-–]\s*(\d+(?:\.\d+)?|[½⅓⅔¼¾⅛⅜⅝⅞])/);if(rm){var p2=parse(rm[1]);if(p2){head+='–'+fmt(p2.v*f);tail=tail.slice(rm[0].length);}}return head+tail;}function render(n){out.textContent=n;var f=n/base;amts.forEach(function(a){a.textContent=scale(a.getAttribute('data-amt'),f);});}sl.addEventListener('input',function(){render(+sl.value);});if(rs)rs.addEventListener('click',function(){sl.value=base;render(base);});})();</script>
+  <script>(function(){var box=document.getElementById('cbox');if(!box)return;var U='https://ihclxurachkewtgnrldc.supabase.co',K='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImloY2x4dXJhY2hrZXd0Z25ybGRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3MjQwNjEsImV4cCI6MjA5MDMwMDA2MX0.pRGhaAjtT1VpghQgoEEl7Yns7yZHMP2KL_UE9oMiigY';var slug=box.getAttribute('data-slug');var list=document.getElementById('clist'),form=document.getElementById('cform'),msg=document.getElementById('cmsg'),send=document.getElementById('csend');function esc(s){var d=document.createElement('div');d.textContent=s==null?'':String(s);return d.innerHTML;}function when(t){try{return new Date(t).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});}catch(e){return '';}}function render(rows){if(!rows||!rows.length){list.innerHTML='<div class="cmuted">No notes yet. Been here, tried it, or recognize the copycat? Leave the first one.</div>';return;}list.innerHTML=rows.map(function(c){return '<div class="citem"><div class="cmeta"><b>'+esc(c.name||'Anonymous')+'</b> &middot; '+when(c.created_at)+'</div><div class="ctext">'+esc(c.body)+'</div></div>';}).join('');}function load(){fetch(U+'/rest/v1/wth_comments?recipe_slug=eq.'+encodeURIComponent(slug)+'&select=name,body,created_at&order=created_at.desc&limit=200',{headers:{apikey:K,Authorization:'Bearer '+K}}).then(function(r){return r.json();}).then(render).catch(function(){list.innerHTML='<div class="cmuted">Couldn\u2019t load notes right now.</div>';});}form.addEventListener('submit',function(e){e.preventDefault();var name=(document.getElementById('cname').value||'').trim().slice(0,60);var body=(document.getElementById('cbody').value||'').trim();var hp=document.getElementById('cweb').value||'';if(body.length<2){msg.textContent='Add a little more.';return;}if(/https?:\/\/|www\./i.test(body)){msg.textContent='Links aren\u2019t allowed here.';return;}var last=+(localStorage.getItem('wthc')||0);if(Date.now()-last<30000){msg.textContent='Easy \u2014 give it a few seconds between notes.';return;}send.disabled=true;msg.textContent='Posting\u2026';fetch(U+'/rest/v1/wth_comments',{method:'POST',headers:{apikey:K,Authorization:'Bearer '+K,'Content-Type':'application/json',Prefer:'return=representation'},body:JSON.stringify({recipe_slug:slug,name:name||'Anonymous',body:body,hp:hp})}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(){document.getElementById('cbody').value='';msg.textContent='Posted \u2014 thanks!';localStorage.setItem('wthc',String(Date.now()));load();}).catch(function(){msg.textContent='Couldn\u2019t post that \u2014 try again, and no links.';}).then(function(){send.disabled=false;});});load();})();</script>
   <script src="/list.js" defer></script>
 <script type="text/javascript" src="https://s.skimresources.com/js/305454X1793659.skimlinks.js"></script>
 <script src="https://www.dwin2.com/pub.2961345.min.js" type="text/javascript" defer></script>
