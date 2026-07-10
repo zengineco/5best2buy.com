@@ -41,6 +41,12 @@
   .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
   .badge{font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;}
   .badge.suit{color:#10203a;background:var(--green);border-color:var(--green);}
+  .topdiet{margin:14px 0 26px;}
+  .topdiet .badges{margin-top:0;}
+  .containsline{font-family:var(--fm);font-size:12.5px;color:var(--soft);margin-top:11px;}
+  .containsline b{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .swapline{font-family:var(--fm);font-size:12px;color:var(--meta);line-height:1.55;margin-top:6px;}
+  .facts .cost{cursor:help;}
   .cmuted{font-family:var(--fm);font-size:13px;color:var(--meta);}
   .citem{border-top:1px solid var(--line);padding:12px 0;}
   .citem:first-child{border-top:none;padding-top:0;}
@@ -96,6 +102,12 @@
     <div><b>Cook</b>40 min</div>
     <div><b>Makes</b>6 servings</div>
     <div><b>Cuisine</b>American</div>
+    <div><b>Cost</b><span class="cost" title="A splurge — premium protein, seafood, or specialty ingredients." style="color:var(--gold);">$$$</span></div>
+  </div>
+  <div class="topdiet">
+    <div class="badges"><span class="badge suit">Gluten-free</span></div>
+    <div class="containsline"><b>Contains</b> &nbsp;dairy</div>
+    
   </div>
 
   <section class="card">
@@ -141,16 +153,10 @@
     <div class="rline"></div>
     <div class="rrow">
       <span class="rk">Effort</span><span class="rv2" style="color:var(--soft);">Some doing</span>
-      <span class="rk" style="margin-left:20px;">Cost</span><span class="rv2" style="color:var(--gold);">$$$</span>
-      <span class="rmeta" style="margin-top:0;">A splurge — premium protein, seafood, or specialty ingredients.</span>
     </div>
     <div class="rline"></div>
     <div class="rk">Cook it with</div>
     <div class="badges"><span class="badge">Instant Pot</span><span class="badge">Slow cooker</span><span class="badge">One-pot</span></div>
-    <div class="rline"></div>
-    <div class="rk">Suits</div><div class="badges"><span class="badge suit">Gluten-free</span></div>
-    <div class="rmeta"><b style="color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-size:10px;">Contains</b> &nbsp;dairy</div>
-    
   </section>
 
   <section class="card">
