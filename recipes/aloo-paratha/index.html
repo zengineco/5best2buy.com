@@ -29,6 +29,18 @@
   .ing .n{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:.3px;color:var(--text);}
   .ing .q{font-family:var(--fm);font-size:13px;color:var(--soft);margin-top:2px;max-width:46ch;line-height:1.55;}
   .ing .amt{font-family:var(--fm);font-size:11.5px;letter-spacing:.5px;color:var(--meta);text-transform:uppercase;margin-top:5px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 14px;}
+  .cardlabel{font-family:var(--fd);font-size:12.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:13px;}
+  .rrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .rk{font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);}
+  .rv{font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);}
+  .rv2{font-family:var(--fd);font-size:15px;font-weight:700;}
+  .pips{letter-spacing:3px;font-size:15px;}
+  .rmeta{font-family:var(--fm);font-size:12px;color:var(--meta);line-height:1.55;margin-top:6px;}
+  .rline{border-top:1px solid var(--line);margin:13px 0;}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+  .badge{font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;}
+  .badge.suit{color:#10203a;background:var(--green);border-color:var(--green);}
   .tt{display:inline-block;margin-left:8px;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;border-radius:20px;padding:2px 8px;vertical-align:middle;}
   .tt-taste{color:#10203a;background:var(--gold);font-weight:700;}
   .tt-rec{color:var(--meta);background:var(--surface);border:1px solid var(--line);}
@@ -68,7 +80,6 @@
   <div class="eyebrow">The Recipe &middot; No.451 &middot; Aloo Paratha</div>
   <h1>Aloo Paratha, and Where to Source It</h1>
   <p class="dek">The trick is a dry, well-seasoned potato filling; wet mash tears the dough and steams instead of crisping. Rest the dough 20 minutes so it rolls thin without springing back, and griddle over medium so the layers set before the outside burns.</p>
-  <p class="promise">Ad-free &middot; ingredients first &middot; no 2,000-word story.</p>
   <p class="dateline">Published July 2026 &middot; Sourcing verified 5 Jul 2026</p>
   <div class="facts">
     <div><b>Prep</b>30 min</div>
@@ -77,43 +88,16 @@
     <div><b>Cuisine</b>Indian</div>
   </div>
 
-  <div class="greed" style="margin:0 0 24px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;">
-    <div style="display:flex;align-items:center;gap:11px;flex-wrap:wrap;">
-      <span style="font-family:var(--fd);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Greedometer</span>
-      <span style="letter-spacing:3px;font-size:15px;"><span style="color:var(--gold);">●●</span><span style="color:var(--line);">●●●</span></span>
-      <span style="font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);">Barely a splurge</span>
-      <span style="margin-left:auto;font-family:var(--fm);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--meta);">Level <b style="color:var(--soft);font-family:var(--fd);font-size:14px;letter-spacing:.3px;">Some doing</b></span>
-    </div>
-    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-top:5px;">A light hand — your arteries say thanks.</div>
-  </div>
-  <div class="methods" style="margin:0 0 22px;">
-    <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Cook it with</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;"><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;">Stovetop</span></div>
-  </div>
-  <div class="diet" style="margin:0 0 24px;">
-    <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Suits</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;"><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:#10203a;background:var(--green);border-radius:20px;padding:5px 14px;">Vegetarian</span></div>
-    <div style="font-family:var(--fm);font-size:13px;color:var(--soft);margin-bottom:8px;"><b style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Contains</b> &nbsp;dairy &middot; gluten</div>
-    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);line-height:1.6;">Make it vegan: use plant milk, oil, or a vegan cheese for the dairy.</div><div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);line-height:1.6;">Make it gluten-free: swap in a gluten-free flour blend (check the other labels too).</div>
-  </div>
-  <div class="rfaq" style="margin:0 0 30px;">
-    <div style="font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:2px;">Straight Answers</div>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Aloo Paratha in an air fryer? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--meta);">&mdash; Sometimes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Sometimes — if the pieces are small and cooked dry, an air fryer can handle it in a single layer; anything saucy or liquid needs a pan. When in doubt, the stovetop or oven is the safe call.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you freeze Aloo Paratha? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — cool it, portion into airtight containers, and freeze; thaw in the fridge and reheat.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Aloo Paratha ahead of time? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — it needs the chill time to set, so making it ahead is the whole point.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Aloo Paratha gluten-free? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Not as written</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Not as written — it contains gluten. Make it gluten-free: swap in a gluten-free flour blend (check the other labels too).</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Aloo Paratha vegan? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Vegetarian, not vegan</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">It’s vegetarian but not vegan as written — it has dairy. Make it vegan: use plant milk, oil, or a vegan cheese for the dairy.</p></details>
-  </div>
-
-  <div class="sechead">Part One</div>
-  <div class="sectitle">The Ingredients &mdash; and where to get them</div>
-  <div class="scaler" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-family:var(--fm);">
+  <section class="card">
+    <div class="cardlabel">The Ingredients &mdash; and where to get them</div>
+    <div class="scaler" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-family:var(--fm);">
     <span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--meta);">Cook for</span>
     <input type="range" min="1" max="8" value="6" step="1" aria-label="number of parathas" style="accent-color:var(--gold);flex:1;min-width:120px;max-width:230px;">
     <b id="sv" style="color:var(--gold);font-family:var(--fd);font-size:22px;line-height:1;">6</b>
     <span style="font-size:13.5px;color:var(--soft);">parathas</span>
     <button type="button" id="sreset" style="font-family:var(--fm);font-size:11px;color:var(--meta);background:none;border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;">reset</button>
   </div>
-  
+    
   <div class="ing">
     <div><div class="n">Whole-wheat flour</div><div class="q">Atta makes a soft pliable dough; rest it so the gluten relaxes and rolls thin.</div><div class="amt" data-amt="3 cups">3 cups</div></div>
     <div class="src"><a class="on" href="/hunt/baking-flour/">Source it &rarr;</a></div>
@@ -134,6 +118,61 @@
     <div><div class="n">Potatoes, onion, cilantro</div><div class="q">Boil the potatoes and mash dry; fold in fine onion and cilantro.</div><div class="amt" data-amt="1 lb + 1/2 onion + handful">1 lb + 1/2 onion + handful</div></div>
     <div class="src"><span class="plain">Local / market</span></div>
   </div>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Rundown</div>
+    <div class="rrow">
+      <span class="rk">Greedometer</span>
+      <span class="pips"><span style="color:var(--gold);">●●</span><span style="color:var(--line);">●●●</span></span>
+      <span class="rv">Barely a splurge</span>
+    </div>
+    <div class="rmeta">A light hand — your arteries say thanks.</div>
+    <div class="rline"></div>
+    <div class="rrow">
+      <span class="rk">Effort</span><span class="rv2" style="color:var(--soft);">Some doing</span>
+      <span class="rk" style="margin-left:20px;">Cost</span><span class="rv2" style="color:var(--gold);">$</span>
+      <span class="rmeta" style="margin-top:0;">Pantry-friendly — everyday, inexpensive ingredients.</span>
+    </div>
+    <div class="rline"></div>
+    <div class="rk">Cook it with</div>
+    <div class="badges"><span class="badge">Stovetop</span></div>
+    <div class="rline"></div>
+    <div class="rk">Suits</div><div class="badges"><span class="badge suit">Vegetarian</span></div>
+    <div class="rmeta"><b style="color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-size:10px;">Contains</b> &nbsp;dairy &middot; gluten</div>
+    <div class="rmeta">Make it vegan: use plant milk, oil, or a vegan cheese for the dairy.</div><div class="rmeta">Make it gluten-free: swap in a gluten-free flour blend (check the other labels too).</div>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Method</div>
+    <ol class="method">
+    <li><b>Dough</b>Mix flour with water and a pinch of salt into a soft dough. Rest covered 20 minutes.</li>
+    <li><b>Filling</b>Boil and mash potatoes dry, then fold in chile, onion, cilantro, and spices. Cool fully.</li>
+    <li><b>Stuff</b>Flatten a dough ball, add filling, seal, and roll gently to a 7-inch round without tearing.</li>
+    <li><b>Griddle</b>Cook on a hot dry tava 90 seconds a side, then brush with ghee and crisp both sides.</li>
+    <li><b>Serve</b>Keep warm under a towel; serve with yogurt or pickle.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Toolkit</div>
+    <p class="tools" style="margin:0;">
+    <a href="https://www.amazon.com/s?k=flat%20cast%20iron%20griddle&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Cast iron tava</a> &middot;
+    <a href="https://www.amazon.com/s?k=wooden%20rolling%20pin&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Rolling pin</a> &middot;
+    <a href="https://www.amazon.com/s?k=potato%20masher&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Potato masher</a> &middot;
+    <a href="https://www.amazon.com/s?k=large%20mixing%20bowl&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Mixing bowl</a> &middot;
+    <a href="https://www.amazon.com/s?k=dough%20bench%20scraper&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Bench scraper</a>
+    </p>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">Straight Answers</div>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Aloo Paratha in an air fryer? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--meta);">&mdash; Sometimes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Sometimes — if the pieces are small and cooked dry, an air fryer can handle it in a single layer; anything saucy or liquid needs a pan. When in doubt, the stovetop or oven is the safe call.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you freeze Aloo Paratha? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — cool it, portion into airtight containers, and freeze; thaw in the fridge and reheat.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Aloo Paratha ahead of time? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — it needs the chill time to set, so making it ahead is the whole point.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Aloo Paratha gluten-free? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Not as written</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Not as written — it contains gluten. Make it gluten-free: swap in a gluten-free flour blend (check the other labels too).</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Aloo Paratha vegan? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Vegetarian, not vegan</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">It’s vegetarian but not vegan as written — it has dairy. Make it vegan: use plant milk, oil, or a vegan cheese for the dairy.</p></details>
+  </section>
 
   <!--LISTW-->
   <div style="border-top:1px solid var(--line);margin-top:30px;padding-top:22px;">
@@ -141,29 +180,8 @@
     <span style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-left:12px;">One list, with a link to where to buy each one.</span>
   </div>
   <!--/LISTW-->
-  <div class="sechead">Part Two</div>
-  <div class="sectitle">The Method</div>
-  <ol class="method">
-    <li><b>Dough</b>Mix flour with water and a pinch of salt into a soft dough. Rest covered 20 minutes.</li>
-    <li><b>Filling</b>Boil and mash potatoes dry, then fold in chile, onion, cilantro, and spices. Cool fully.</li>
-    <li><b>Stuff</b>Flatten a dough ball, add filling, seal, and roll gently to a 7-inch round without tearing.</li>
-    <li><b>Griddle</b>Cook on a hot dry tava 90 seconds a side, then brush with ghee and crisp both sides.</li>
-    <li><b>Serve</b>Keep warm under a towel; serve with yogurt or pickle.</li>
-  </ol>
-
-  <div class="sechead">Part Three</div>
-  <div class="sectitle">The Toolkit</div>
-  <p class="tools">
-    <a href="https://www.amazon.com/s?k=flat%20cast%20iron%20griddle&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Cast iron tava</a> &middot;
-    <a href="https://www.amazon.com/s?k=wooden%20rolling%20pin&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Rolling pin</a> &middot;
-    <a href="https://www.amazon.com/s?k=potato%20masher&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Potato masher</a> &middot;
-    <a href="https://www.amazon.com/s?k=large%20mixing%20bowl&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Mixing bowl</a> &middot;
-    <a href="https://www.amazon.com/s?k=dough%20bench%20scraper&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Bench scraper</a>
-  </p>
-
   <div class="xlink">
-    <b>No ads. No life story. Just dinner.</b><br>
-    This is recipe No.451 &mdash; the real method, ingredients first, and exactly where to buy the best version of every one. <a href="/recipes/">See all the recipes &rarr;</a>
+    Recipe No.451 of the collection. <a href="/recipes/">Browse all the recipes &rarr;</a>
   </div>
 
   <p class="disclosure">

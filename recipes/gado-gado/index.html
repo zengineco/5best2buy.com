@@ -29,6 +29,18 @@
   .ing .n{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:.3px;color:var(--text);}
   .ing .q{font-family:var(--fm);font-size:13px;color:var(--soft);margin-top:2px;max-width:46ch;line-height:1.55;}
   .ing .amt{font-family:var(--fm);font-size:11.5px;letter-spacing:.5px;color:var(--meta);text-transform:uppercase;margin-top:5px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 14px;}
+  .cardlabel{font-family:var(--fd);font-size:12.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:13px;}
+  .rrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .rk{font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);}
+  .rv{font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);}
+  .rv2{font-family:var(--fd);font-size:15px;font-weight:700;}
+  .pips{letter-spacing:3px;font-size:15px;}
+  .rmeta{font-family:var(--fm);font-size:12px;color:var(--meta);line-height:1.55;margin-top:6px;}
+  .rline{border-top:1px solid var(--line);margin:13px 0;}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+  .badge{font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;}
+  .badge.suit{color:#10203a;background:var(--green);border-color:var(--green);}
   .tt{display:inline-block;margin-left:8px;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;border-radius:20px;padding:2px 8px;vertical-align:middle;}
   .tt-taste{color:#10203a;background:var(--gold);font-weight:700;}
   .tt-rec{color:var(--meta);background:var(--surface);border:1px solid var(--line);}
@@ -68,7 +80,6 @@
   <div class="eyebrow">The Recipe &middot; No.721 &middot; Gado-Gado</div>
   <h1>Gado-Gado, and Where to Source It</h1>
   <p class="dek">The dish lives on the sauce, and a real peanut sauce starts from actual roasted peanuts ground with chili, garlic, and tamarind, loosened with a little water to a thick, pourable coat. The jarred peanut butter shortcut goes flat and sweet; grinding your own gives it the roasted, savory edge that makes gado-gado.</p>
-  <p class="promise">Ad-free &middot; ingredients first &middot; no 2,000-word story.</p>
   <p class="dateline">Published July 2026 &middot; Sourcing verified 5 Jul 2026</p>
   <div class="facts">
     <div><b>Prep</b>25 min</div>
@@ -77,43 +88,16 @@
     <div><b>Cuisine</b>Indonesian</div>
   </div>
 
-  <div class="greed" style="margin:0 0 24px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;">
-    <div style="display:flex;align-items:center;gap:11px;flex-wrap:wrap;">
-      <span style="font-family:var(--fd);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Greedometer</span>
-      <span style="letter-spacing:3px;font-size:15px;"><span style="color:var(--gold);">●●</span><span style="color:var(--line);">●●●</span></span>
-      <span style="font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);">Barely a splurge</span>
-      <span style="margin-left:auto;font-family:var(--fm);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--meta);">Level <b style="color:var(--soft);font-family:var(--fd);font-size:14px;letter-spacing:.3px;">Some doing</b></span>
-    </div>
-    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-top:5px;">A light hand — your arteries say thanks.</div>
-  </div>
-  <div class="methods" style="margin:0 0 22px;">
-    <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Cook it with</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;"><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;">Instant Pot</span><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;">Slow cooker</span><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;">No-cook</span></div>
-  </div>
-  <div class="diet" style="margin:0 0 24px;">
-    <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Suits</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;"><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:#10203a;background:var(--green);border-radius:20px;padding:5px 14px;">Vegetarian</span><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:#10203a;background:var(--green);border-radius:20px;padding:5px 14px;">Gluten-free</span><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:#10203a;background:var(--green);border-radius:20px;padding:5px 14px;">Dairy-free</span></div>
-    <div style="font-family:var(--fm);font-size:13px;color:var(--soft);margin-bottom:8px;"><b style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Contains</b> &nbsp;eggs &middot; peanuts &middot; soy</div>
-    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);line-height:1.6;">Make it vegan: a flax or aquafaba egg for the egg.</div>
-  </div>
-  <div class="rfaq" style="margin:0 0 30px;">
-    <div style="font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:2px;">Straight Answers</div>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Gado-Gado in an air fryer? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--meta);">&mdash; Not needed</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">It’s a salad — nothing to air-fry once it’s tossed. You can crisp a topping in one, though: croutons, bacon, or chickpeas in a single layer while you build the rest.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you freeze Gado-Gado? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--meta);">&mdash; Best fresh</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Not really — the vegetables and dressing turn to mush once thawed. Salads are a make-fresh thing.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Gado-Gado ahead of time? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--meta);">&mdash; Best fresh</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Dress it just before serving — the greens wilt and brown once coated. Wash, cut, and chill the components ahead, then toss at the last minute.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Gado-Gado gluten-free? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — nothing in this recipe as written contains gluten. As always, glance at the labels on any packaged items (broth, sauces, chocolate), since brands vary.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Gado-Gado vegan? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Vegetarian, not vegan</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">It’s vegetarian but not vegan as written — it has egg. Make it vegan: a flax or aquafaba egg for the egg.</p></details>
-  </div>
-
-  <div class="sechead">Part One</div>
-  <div class="sectitle">The Ingredients &mdash; and where to get them</div>
-  <div class="scaler" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-family:var(--fm);">
+  <section class="card">
+    <div class="cardlabel">The Ingredients &mdash; and where to get them</div>
+    <div class="scaler" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-family:var(--fm);">
     <span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--meta);">Cook for</span>
     <input type="range" min="1" max="8" value="4" step="1" aria-label="number of servings" style="accent-color:var(--gold);flex:1;min-width:120px;max-width:230px;">
     <b id="sv" style="color:var(--gold);font-family:var(--fd);font-size:22px;line-height:1;">4</b>
     <span style="font-size:13.5px;color:var(--soft);">servings</span>
     <button type="button" id="sreset" style="font-family:var(--fm);font-size:11px;color:var(--meta);background:none;border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;">reset</button>
   </div>
-  
+    
   <div class="ing">
     <div><div class="n">Peanuts</div><div class="q">Roasted and ground into the sauce; the base of the whole dish. Fresh peanuts fry up sweeter.</div><div class="amt" data-amt="1.5 cups">1.5 cups</div></div>
     <div class="src"><a class="on" href="/hunt/peanut-butter/">Source it &rarr;</a></div>
@@ -134,6 +118,58 @@
     <div><div class="n">Eggs</div><div class="q">Hard-boiled and halved over the top. Deep-gold pasture yolks look and taste best.</div><div class="amt" data-amt="4">4</div></div>
     <div class="src"><a class="on" href="/hunt/eggs/">Source it &rarr;</a></div>
   </div>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Rundown</div>
+    <div class="rrow">
+      <span class="rk">Greedometer</span>
+      <span class="pips"><span style="color:var(--gold);">●●</span><span style="color:var(--line);">●●●</span></span>
+      <span class="rv">Barely a splurge</span>
+    </div>
+    <div class="rmeta">A light hand — your arteries say thanks.</div>
+    <div class="rline"></div>
+    <div class="rrow">
+      <span class="rk">Effort</span><span class="rv2" style="color:var(--soft);">Some doing</span>
+      <span class="rk" style="margin-left:20px;">Cost</span><span class="rv2" style="color:var(--gold);">$</span>
+      <span class="rmeta" style="margin-top:0;">Pantry-friendly — everyday, inexpensive ingredients.</span>
+    </div>
+    <div class="rline"></div>
+    <div class="rk">Cook it with</div>
+    <div class="badges"><span class="badge">Instant Pot</span><span class="badge">Slow cooker</span><span class="badge">No-cook</span></div>
+    <div class="rline"></div>
+    <div class="rk">Suits</div><div class="badges"><span class="badge suit">Vegetarian</span><span class="badge suit">Gluten-free</span><span class="badge suit">Dairy-free</span></div>
+    <div class="rmeta"><b style="color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-size:10px;">Contains</b> &nbsp;eggs &middot; peanuts &middot; soy</div>
+    <div class="rmeta">Make it vegan: a flax or aquafaba egg for the egg.</div>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Method</div>
+    <ol class="method">
+    <li><b>Make the sauce</b>Grind roasted peanuts with chili, garlic, tamarind, and a little sugar, then loosen with water to a thick coat.</li>
+    <li><b>Fry the protein</b>Fry the tofu and tempeh until golden and crisp, then cut into pieces.</li>
+    <li><b>Blanch the vegetables</b>Blanch the sturdier vegetables crisp-tender and keep the tender ones raw.</li>
+    <li><b>Plate and pour</b>Arrange everything with the egg and fried protein, pour the peanut sauce over, and top with fried shallots and crackers.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Toolkit</div>
+    <p class="tools" style="margin:0;">
+    <a href="https://www.amazon.com/s?k=large%20stone%20mortar%20and%20pestle&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Mortar</a> &middot;
+    <a href="https://www.amazon.com/s?k=frying%20skillet&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Skillet</a> &middot;
+    <a href="https://www.amazon.com/s?k=steamer%20basket&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Steamer</a>
+    </p>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">Straight Answers</div>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Gado-Gado in an air fryer? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--meta);">&mdash; Not needed</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">It’s a salad — nothing to air-fry once it’s tossed. You can crisp a topping in one, though: croutons, bacon, or chickpeas in a single layer while you build the rest.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you freeze Gado-Gado? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--meta);">&mdash; Best fresh</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Not really — the vegetables and dressing turn to mush once thawed. Salads are a make-fresh thing.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Gado-Gado ahead of time? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--meta);">&mdash; Best fresh</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Dress it just before serving — the greens wilt and brown once coated. Wash, cut, and chill the components ahead, then toss at the last minute.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Gado-Gado gluten-free? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — nothing in this recipe as written contains gluten. As always, glance at the labels on any packaged items (broth, sauces, chocolate), since brands vary.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Gado-Gado vegan? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Vegetarian, not vegan</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">It’s vegetarian but not vegan as written — it has egg. Make it vegan: a flax or aquafaba egg for the egg.</p></details>
+  </section>
 
   <!--LISTW-->
   <div style="border-top:1px solid var(--line);margin-top:30px;padding-top:22px;">
@@ -141,26 +177,8 @@
     <span style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-left:12px;">One list, with a link to where to buy each one.</span>
   </div>
   <!--/LISTW-->
-  <div class="sechead">Part Two</div>
-  <div class="sectitle">The Method</div>
-  <ol class="method">
-    <li><b>Make the sauce</b>Grind roasted peanuts with chili, garlic, tamarind, and a little sugar, then loosen with water to a thick coat.</li>
-    <li><b>Fry the protein</b>Fry the tofu and tempeh until golden and crisp, then cut into pieces.</li>
-    <li><b>Blanch the vegetables</b>Blanch the sturdier vegetables crisp-tender and keep the tender ones raw.</li>
-    <li><b>Plate and pour</b>Arrange everything with the egg and fried protein, pour the peanut sauce over, and top with fried shallots and crackers.</li>
-  </ol>
-
-  <div class="sechead">Part Three</div>
-  <div class="sectitle">The Toolkit</div>
-  <p class="tools">
-    <a href="https://www.amazon.com/s?k=large%20stone%20mortar%20and%20pestle&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Mortar</a> &middot;
-    <a href="https://www.amazon.com/s?k=frying%20skillet&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Skillet</a> &middot;
-    <a href="https://www.amazon.com/s?k=steamer%20basket&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Steamer</a>
-  </p>
-
   <div class="xlink">
-    <b>No ads. No life story. Just dinner.</b><br>
-    This is recipe No.721 &mdash; the real method, ingredients first, and exactly where to buy the best version of every one. <a href="/recipes/">See all the recipes &rarr;</a>
+    Recipe No.721 of the collection. <a href="/recipes/">Browse all the recipes &rarr;</a>
   </div>
 
   <p class="disclosure">

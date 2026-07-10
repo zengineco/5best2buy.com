@@ -29,6 +29,18 @@
   .ing .n{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:.3px;color:var(--text);}
   .ing .q{font-family:var(--fm);font-size:13px;color:var(--soft);margin-top:2px;max-width:46ch;line-height:1.55;}
   .ing .amt{font-family:var(--fm);font-size:11.5px;letter-spacing:.5px;color:var(--meta);text-transform:uppercase;margin-top:5px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 14px;}
+  .cardlabel{font-family:var(--fd);font-size:12.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:13px;}
+  .rrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .rk{font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);}
+  .rv{font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);}
+  .rv2{font-family:var(--fd);font-size:15px;font-weight:700;}
+  .pips{letter-spacing:3px;font-size:15px;}
+  .rmeta{font-family:var(--fm);font-size:12px;color:var(--meta);line-height:1.55;margin-top:6px;}
+  .rline{border-top:1px solid var(--line);margin:13px 0;}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+  .badge{font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;}
+  .badge.suit{color:#10203a;background:var(--green);border-color:var(--green);}
   .tt{display:inline-block;margin-left:8px;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;border-radius:20px;padding:2px 8px;vertical-align:middle;}
   .tt-taste{color:#10203a;background:var(--gold);font-weight:700;}
   .tt-rec{color:var(--meta);background:var(--surface);border:1px solid var(--line);}
@@ -68,7 +80,6 @@
   <div class="eyebrow">The Recipe &middot; No.544 &middot; Sugar Cookies</div>
   <h1>Sugar Cookies, and Where to Source It</h1>
   <p class="dek">A sugar cookie is butter, sugar, and vanilla with nowhere to hide, so cheap versions of all three taste flat. The one move that matters is chilling the rolled-out dough until firm before cutting, or the shapes spread and lose their edges.</p>
-  <p class="promise">Ad-free &middot; ingredients first &middot; no 2,000-word story.</p>
   <p class="dateline">Published July 2026 &middot; Sourcing verified 5 Jul 2026</p>
   <div class="facts">
     <div><b>Prep</b>20 min</div>
@@ -77,43 +88,16 @@
     <div><b>Cuisine</b>American</div>
   </div>
 
-  <div class="greed" style="margin:0 0 24px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;">
-    <div style="display:flex;align-items:center;gap:11px;flex-wrap:wrap;">
-      <span style="font-family:var(--fd);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Greedometer</span>
-      <span style="letter-spacing:3px;font-size:15px;"><span style="color:var(--gold);">●●●</span><span style="color:var(--line);">●●</span></span>
-      <span style="font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);">A fair little treat</span>
-      <span style="margin-left:auto;font-family:var(--fm);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--meta);">Level <b style="color:var(--soft);font-family:var(--fd);font-size:14px;letter-spacing:.3px;">Some doing</b></span>
-    </div>
-    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-top:5px;">A reasonable little indulgence.</div>
-  </div>
-  <div class="methods" style="margin:0 0 22px;">
-    <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Cook it with</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;"><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;">Air fryer</span><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;">Sheet pan</span></div>
-  </div>
-  <div class="diet" style="margin:0 0 24px;">
-    <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Suits</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;"><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:#10203a;background:var(--green);border-radius:20px;padding:5px 14px;">Vegetarian</span></div>
-    <div style="font-family:var(--fm);font-size:13px;color:var(--soft);margin-bottom:8px;"><b style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Contains</b> &nbsp;dairy &middot; eggs &middot; gluten</div>
-    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);line-height:1.6;">Make it vegan: use plant milk, oil, or a vegan cheese for the dairy, and a flax or aquafaba egg for the egg.</div><div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);line-height:1.6;">Make it gluten-free: swap in a gluten-free flour blend (check the other labels too).</div>
-  </div>
-  <div class="rfaq" style="margin:0 0 30px;">
-    <div style="font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:2px;">Straight Answers</div>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Sugar Cookies in an air fryer? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — bake it in a small pan or dish that fits the basket, at about 25°F below the recipe temperature. Air fryers run hot and fast, so check it early; no flipping needed.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you freeze Sugar Cookies? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — freeze it well-wrapped, then reheat or toast straight from frozen. Frost or glaze after thawing.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Sugar Cookies ahead of time? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — bake it a day or two ahead; it keeps well-wrapped at room temperature and freezes cleanly. Add any frosting or glaze close to serving.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Sugar Cookies gluten-free? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Not as written</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Not as written — it contains gluten. Make it gluten-free: swap in a gluten-free flour blend (check the other labels too).</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Sugar Cookies vegan? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Vegetarian, not vegan</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">It’s vegetarian but not vegan as written — it has dairy and egg. Make it vegan: use plant milk, oil, or a vegan cheese for the dairy, and a flax or aquafaba egg for the egg.</p></details>
-  </div>
-
-  <div class="sechead">Part One</div>
-  <div class="sectitle">The Ingredients &mdash; and where to get them</div>
-  <div class="scaler" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-family:var(--fm);">
+  <section class="card">
+    <div class="cardlabel">The Ingredients &mdash; and where to get them</div>
+    <div class="scaler" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-family:var(--fm);">
     <span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--meta);">Cook for</span>
     <input type="range" min="1" max="24" value="24" step="1" aria-label="number of cookies" style="accent-color:var(--gold);flex:1;min-width:120px;max-width:230px;">
     <b id="sv" style="color:var(--gold);font-family:var(--fd);font-size:22px;line-height:1;">24</b>
     <span style="font-size:13.5px;color:var(--soft);">cookies</span>
     <button type="button" id="sreset" style="font-family:var(--fm);font-size:11px;color:var(--meta);background:none;border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;">reset</button>
   </div>
-  
+    
   <div class="ing">
     <div><div class="n">All-purpose flour</div><div class="q">The structure; fresh unbleached flour keeps the crumb tender instead of chalky.</div><div class="amt" data-amt="2 1/2 cups">2 1/2 cups</div></div>
     <div class="src"><a class="on" href="/hunt/baking-flour/">Source it &rarr;</a></div>
@@ -134,6 +118,61 @@
     <div><div class="n">Egg</div><div class="q">Binds and enriches; a fresh yolk gives a richer dough.</div><div class="amt" data-amt="1 large">1 large</div></div>
     <div class="src"><a class="on" href="/hunt/eggs/">Source it &rarr;</a></div>
   </div>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Rundown</div>
+    <div class="rrow">
+      <span class="rk">Greedometer</span>
+      <span class="pips"><span style="color:var(--gold);">●●●</span><span style="color:var(--line);">●●</span></span>
+      <span class="rv">A fair little treat</span>
+    </div>
+    <div class="rmeta">A reasonable little indulgence.</div>
+    <div class="rline"></div>
+    <div class="rrow">
+      <span class="rk">Effort</span><span class="rv2" style="color:var(--soft);">Some doing</span>
+      <span class="rk" style="margin-left:20px;">Cost</span><span class="rv2" style="color:var(--gold);">$</span>
+      <span class="rmeta" style="margin-top:0;">Pantry-friendly — everyday, inexpensive ingredients.</span>
+    </div>
+    <div class="rline"></div>
+    <div class="rk">Cook it with</div>
+    <div class="badges"><span class="badge">Air fryer</span><span class="badge">Sheet pan</span></div>
+    <div class="rline"></div>
+    <div class="rk">Suits</div><div class="badges"><span class="badge suit">Vegetarian</span></div>
+    <div class="rmeta"><b style="color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-size:10px;">Contains</b> &nbsp;dairy &middot; eggs &middot; gluten</div>
+    <div class="rmeta">Make it vegan: use plant milk, oil, or a vegan cheese for the dairy, and a flax or aquafaba egg for the egg.</div><div class="rmeta">Make it gluten-free: swap in a gluten-free flour blend (check the other labels too).</div>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Method</div>
+    <ol class="method">
+    <li><b>Cream</b>Beat softened butter and sugar 3-4 minutes until pale and fluffy. This is where the lift comes from.</li>
+    <li><b>Mix</b>Beat in the egg and vanilla, then add flour and 1/2 tsp salt on low just until the dough comes together.</li>
+    <li><b>Chill</b>Divide, flatten into disks, wrap, and chill at least 1 hour until firm. Warm dough spreads and blurs your cutouts.</li>
+    <li><b>Roll</b>Roll to 1/4 inch on a floured surface, cut shapes, and chill the cut cookies 10 minutes before baking.</li>
+    <li><b>Bake</b>Bake at 350F for 9-11 minutes until the edges are just set and barely golden. Pull them before they brown all over.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Toolkit</div>
+    <p class="tools" style="margin:0;">
+    <a href="https://www.amazon.com/s?k=adjustable%20rolling%20pin&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Rolling pin</a> &middot;
+    <a href="https://www.amazon.com/s?k=stainless%20cookie%20cutter%20set&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Cookie cutters</a> &middot;
+    <a href="https://www.amazon.com/s?k=half%20sheet%20pan&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Sheet pans</a> &middot;
+    <a href="https://www.amazon.com/s?k=silicone%20baking%20mat&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Silicone mat</a> &middot;
+    <a href="https://www.amazon.com/s?k=stainless%20bench%20scraper&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Bench scraper</a>
+    </p>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">Straight Answers</div>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Sugar Cookies in an air fryer? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — bake it in a small pan or dish that fits the basket, at about 25°F below the recipe temperature. Air fryers run hot and fast, so check it early; no flipping needed.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you freeze Sugar Cookies? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — freeze it well-wrapped, then reheat or toast straight from frozen. Frost or glaze after thawing.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Sugar Cookies ahead of time? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — bake it a day or two ahead; it keeps well-wrapped at room temperature and freezes cleanly. Add any frosting or glaze close to serving.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Sugar Cookies gluten-free? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Not as written</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Not as written — it contains gluten. Make it gluten-free: swap in a gluten-free flour blend (check the other labels too).</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Sugar Cookies vegan? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Vegetarian, not vegan</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">It’s vegetarian but not vegan as written — it has dairy and egg. Make it vegan: use plant milk, oil, or a vegan cheese for the dairy, and a flax or aquafaba egg for the egg.</p></details>
+  </section>
 
   <!--LISTW-->
   <div style="border-top:1px solid var(--line);margin-top:30px;padding-top:22px;">
@@ -141,29 +180,8 @@
     <span style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-left:12px;">One list, with a link to where to buy each one.</span>
   </div>
   <!--/LISTW-->
-  <div class="sechead">Part Two</div>
-  <div class="sectitle">The Method</div>
-  <ol class="method">
-    <li><b>Cream</b>Beat softened butter and sugar 3-4 minutes until pale and fluffy. This is where the lift comes from.</li>
-    <li><b>Mix</b>Beat in the egg and vanilla, then add flour and 1/2 tsp salt on low just until the dough comes together.</li>
-    <li><b>Chill</b>Divide, flatten into disks, wrap, and chill at least 1 hour until firm. Warm dough spreads and blurs your cutouts.</li>
-    <li><b>Roll</b>Roll to 1/4 inch on a floured surface, cut shapes, and chill the cut cookies 10 minutes before baking.</li>
-    <li><b>Bake</b>Bake at 350F for 9-11 minutes until the edges are just set and barely golden. Pull them before they brown all over.</li>
-  </ol>
-
-  <div class="sechead">Part Three</div>
-  <div class="sectitle">The Toolkit</div>
-  <p class="tools">
-    <a href="https://www.amazon.com/s?k=adjustable%20rolling%20pin&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Rolling pin</a> &middot;
-    <a href="https://www.amazon.com/s?k=stainless%20cookie%20cutter%20set&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Cookie cutters</a> &middot;
-    <a href="https://www.amazon.com/s?k=half%20sheet%20pan&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Sheet pans</a> &middot;
-    <a href="https://www.amazon.com/s?k=silicone%20baking%20mat&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Silicone mat</a> &middot;
-    <a href="https://www.amazon.com/s?k=stainless%20bench%20scraper&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Bench scraper</a>
-  </p>
-
   <div class="xlink">
-    <b>No ads. No life story. Just dinner.</b><br>
-    This is recipe No.544 &mdash; the real method, ingredients first, and exactly where to buy the best version of every one. <a href="/recipes/">See all the recipes &rarr;</a>
+    Recipe No.544 of the collection. <a href="/recipes/">Browse all the recipes &rarr;</a>
   </div>
 
   <p class="disclosure">

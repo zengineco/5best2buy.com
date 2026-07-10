@@ -29,6 +29,18 @@
   .ing .n{font-family:var(--fd);font-size:20px;font-weight:700;letter-spacing:.3px;color:var(--text);}
   .ing .q{font-family:var(--fm);font-size:13px;color:var(--soft);margin-top:2px;max-width:46ch;line-height:1.55;}
   .ing .amt{font-family:var(--fm);font-size:11.5px;letter-spacing:.5px;color:var(--meta);text-transform:uppercase;margin-top:5px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 14px;}
+  .cardlabel{font-family:var(--fd);font-size:12.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:13px;}
+  .rrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .rk{font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);}
+  .rv{font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);}
+  .rv2{font-family:var(--fd);font-size:15px;font-weight:700;}
+  .pips{letter-spacing:3px;font-size:15px;}
+  .rmeta{font-family:var(--fm);font-size:12px;color:var(--meta);line-height:1.55;margin-top:6px;}
+  .rline{border-top:1px solid var(--line);margin:13px 0;}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+  .badge{font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;}
+  .badge.suit{color:#10203a;background:var(--green);border-color:var(--green);}
   .tt{display:inline-block;margin-left:8px;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;border-radius:20px;padding:2px 8px;vertical-align:middle;}
   .tt-taste{color:#10203a;background:var(--gold);font-weight:700;}
   .tt-rec{color:var(--meta);background:var(--surface);border:1px solid var(--line);}
@@ -68,7 +80,6 @@
   <div class="eyebrow">The Recipe &middot; No.398 &middot; Döner Kebab</div>
   <h1>Döner Kebab, and Where to Source It</h1>
   <p class="dek">Real döner is a stacked rotisserie you can't build at home, so the honest home version packs seasoned lamb and beef into a loaf, roasts it, then thin-slices and re-crisps the shavings in a hot pan. Fat content is everything here: use meat that's at least 20% fat or the shavings turn to sawdust. The one move that matters is the double cook — roast the loaf to 160°F, chill it firm, then sear the slices.</p>
-  <p class="promise">Ad-free &middot; ingredients first &middot; no 2,000-word story.</p>
   <p class="dateline">Published July 2026 &middot; Sourcing verified 5 Jul 2026</p>
   <div class="facts">
     <div><b>Prep</b>30 min</div>
@@ -77,43 +88,16 @@
     <div><b>Cuisine</b>Turkish</div>
   </div>
 
-  <div class="greed" style="margin:0 0 24px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;">
-    <div style="display:flex;align-items:center;gap:11px;flex-wrap:wrap;">
-      <span style="font-family:var(--fd);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">Greedometer</span>
-      <span style="letter-spacing:3px;font-size:15px;"><span style="color:var(--gold);">●</span><span style="color:var(--line);">●●●●</span></span>
-      <span style="font-family:var(--fd);font-size:18px;font-weight:700;color:var(--text);">Angel food</span>
-      <span style="margin-left:auto;font-family:var(--fm);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--meta);">Level <b style="color:var(--gold);font-family:var(--fd);font-size:14px;letter-spacing:.3px;">A project</b></span>
-    </div>
-    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-top:5px;">About as virtuous as dinner gets. &middot; <span style="color:var(--soft);">plan ahead — needs marinating, soaking, or rising time on top of the clock</span></div>
-  </div>
-  <div class="methods" style="margin:0 0 22px;">
-    <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Cook it with</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;"><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;">Air fryer</span><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:5px 14px;">Sheet pan</span></div>
-  </div>
-  <div class="diet" style="margin:0 0 24px;">
-    <div style="font-family:var(--fm);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-bottom:9px;">Suits</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;"><span style="font-family:var(--fm);font-size:12.5px;font-weight:600;color:#10203a;background:var(--green);border-radius:20px;padding:5px 14px;">Dairy-free</span></div>
-    <div style="font-family:var(--fm);font-size:13px;color:var(--soft);margin-bottom:8px;"><b style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Contains</b> &nbsp;gluten</div>
-    <div style="font-family:var(--fm);font-size:12.5px;color:var(--meta);line-height:1.6;">Make it gluten-free: swap in gluten-free versions of the wheat items (check the other labels too).</div>
-  </div>
-  <div class="rfaq" style="margin:0 0 30px;">
-    <div style="font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:2px;">Straight Answers</div>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Döner Kebab in an air fryer? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — bake it in a small pan or dish that fits the basket, at about 25°F below the recipe temperature. Air fryers run hot and fast, so check it early; no flipping needed.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you freeze Döner Kebab? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — freeze it well-wrapped, then reheat or toast straight from frozen. Frost or glaze after thawing.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Döner Kebab ahead of time? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — bake it a day or two ahead; it keeps well-wrapped at room temperature and freezes cleanly. Add any frosting or glaze close to serving.</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Döner Kebab gluten-free? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Not as written</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Not as written — it contains gluten. Make it gluten-free: swap in gluten-free versions of the wheat items (check the other labels too).</p></details>
-    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Döner Kebab vegan? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; No</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">No — it contains meat, so it isn’t vegetarian or vegan.</p></details>
-  </div>
-
-  <div class="sechead">Part One</div>
-  <div class="sectitle">The Ingredients &mdash; and where to get them</div>
-  <div class="scaler" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-family:var(--fm);">
+  <section class="card">
+    <div class="cardlabel">The Ingredients &mdash; and where to get them</div>
+    <div class="scaler" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 20px;font-family:var(--fm);">
     <span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--meta);">Cook for</span>
     <input type="range" min="1" max="8" value="6" step="1" aria-label="number of servings" style="accent-color:var(--gold);flex:1;min-width:120px;max-width:230px;">
     <b id="sv" style="color:var(--gold);font-family:var(--fd);font-size:22px;line-height:1;">6</b>
     <span style="font-size:13.5px;color:var(--soft);">servings</span>
     <button type="button" id="sreset" style="font-family:var(--fm);font-size:11px;color:var(--meta);background:none;border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;">reset</button>
   </div>
-  
+    
   <div class="ing">
     <div><div class="n">Ground lamb</div><div class="q">Fatty lamb carries the flavor; leaner grinds give you dry, crumbly shavings.</div><div class="amt" data-amt="1 lb">1 lb</div></div>
     <div class="src"><a class="on" href="/hunt/regenerative-meat/">Source it &rarr;</a></div>
@@ -142,6 +126,61 @@
     <div><div class="n">Garlic</div><div class="q">Grated fine so it melts into the meat.</div><div class="amt" data-amt="4 cloves">4 cloves</div></div>
     <div class="src"><a class="on" href="/hunt/garlic/">Source it &rarr;</a></div>
   </div>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Rundown</div>
+    <div class="rrow">
+      <span class="rk">Greedometer</span>
+      <span class="pips"><span style="color:var(--gold);">●</span><span style="color:var(--line);">●●●●</span></span>
+      <span class="rv">Squeaky clean</span>
+    </div>
+    <div class="rmeta">About as virtuous as dinner gets. &middot; <span style="color:var(--soft);">plan ahead &mdash; needs marinating, soaking, or resting time</span></div>
+    <div class="rline"></div>
+    <div class="rrow">
+      <span class="rk">Effort</span><span class="rv2" style="color:var(--gold);">A project</span>
+      <span class="rk" style="margin-left:20px;">Cost</span><span class="rv2" style="color:var(--gold);">$$$</span>
+      <span class="rmeta" style="margin-top:0;">A splurge — premium protein, seafood, or specialty ingredients.</span>
+    </div>
+    <div class="rline"></div>
+    <div class="rk">Cook it with</div>
+    <div class="badges"><span class="badge">Air fryer</span><span class="badge">Sheet pan</span></div>
+    <div class="rline"></div>
+    <div class="rk">Suits</div><div class="badges"><span class="badge suit">Dairy-free</span></div>
+    <div class="rmeta"><b style="color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-size:10px;">Contains</b> &nbsp;gluten</div>
+    <div class="rmeta">Make it gluten-free: swap in gluten-free versions of the wheat items (check the other labels too).</div>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Method</div>
+    <ol class="method">
+    <li><b>Make the paste</b>Blitz onion, garlic, spices and salt into a paste, then knead into the lamb and beef for 3 full minutes until the mix turns sticky and tacky.</li>
+    <li><b>Pack the loaf</b>Press the meat hard into a loaf pan with no air gaps — density is what lets you slice thin later.</li>
+    <li><b>Roast</b>Bake at 325°F until the center hits 160°F, about 45 minutes, then chill at least 4 hours or overnight until firm.</li>
+    <li><b>Shave and crisp</b>Slice the cold loaf as thin as you can, then sear the shavings in a dry hot pan until the edges brown and curl, 2-3 minutes.</li>
+    <li><b>Build</b>Pile into warm pita with raw onion, tomato and a swipe of yogurt.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">The Toolkit</div>
+    <p class="tools" style="margin:0;">
+    <a href="https://www.amazon.com/s?k=metal%20loaf%20pan&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Loaf pan</a> &middot;
+    <a href="https://www.amazon.com/s?k=instant%20read%20thermometer&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Instant-read thermometer</a> &middot;
+    <a href="https://www.amazon.com/s?k=granton%20slicing%20knife&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Sharp slicing knife</a> &middot;
+    <a href="https://www.amazon.com/s?k=cast%20iron%20skillet%2012%20inch&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Cast-iron skillet</a> &middot;
+    <a href="https://www.amazon.com/s?k=stainless%20box%20grater&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Box grater</a>
+    </p>
+  </section>
+
+  <section class="card">
+    <div class="cardlabel">Straight Answers</div>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Döner Kebab in an air fryer? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — bake it in a small pan or dish that fits the basket, at about 25°F below the recipe temperature. Air fryers run hot and fast, so check it early; no flipping needed.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you freeze Döner Kebab? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — freeze it well-wrapped, then reheat or toast straight from frozen. Frost or glaze after thawing.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Can you make Döner Kebab ahead of time? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--green);">&mdash; Yes</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Yes — bake it a day or two ahead; it keeps well-wrapped at room temperature and freezes cleanly. Add any frosting or glaze close to serving.</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Döner Kebab gluten-free? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; Not as written</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">Not as written — it contains gluten. Make it gluten-free: swap in gluten-free versions of the wheat items (check the other labels too).</p></details>
+    <details style="border-top:1px solid var(--line);padding:13px 0;"><summary style="font-family:var(--fd);font-size:19px;font-weight:700;letter-spacing:.2px;color:var(--text);cursor:pointer;list-style:none;">Is Döner Kebab vegan? <span style="font-size:13px;font-family:var(--fm);font-weight:600;color:var(--gold);">&mdash; No</span></summary><p style="font-family:var(--fm);font-size:14.5px;color:var(--soft);margin:9px 0 2px;line-height:1.65;">No — it contains meat, so it isn’t vegetarian or vegan.</p></details>
+  </section>
 
   <!--LISTW-->
   <div style="border-top:1px solid var(--line);margin-top:30px;padding-top:22px;">
@@ -149,29 +188,8 @@
     <span style="font-family:var(--fm);font-size:12.5px;color:var(--meta);margin-left:12px;">One list, with a link to where to buy each one.</span>
   </div>
   <!--/LISTW-->
-  <div class="sechead">Part Two</div>
-  <div class="sectitle">The Method</div>
-  <ol class="method">
-    <li><b>Make the paste</b>Blitz onion, garlic, spices and salt into a paste, then knead into the lamb and beef for 3 full minutes until the mix turns sticky and tacky.</li>
-    <li><b>Pack the loaf</b>Press the meat hard into a loaf pan with no air gaps — density is what lets you slice thin later.</li>
-    <li><b>Roast</b>Bake at 325°F until the center hits 160°F, about 45 minutes, then chill at least 4 hours or overnight until firm.</li>
-    <li><b>Shave and crisp</b>Slice the cold loaf as thin as you can, then sear the shavings in a dry hot pan until the edges brown and curl, 2-3 minutes.</li>
-    <li><b>Build</b>Pile into warm pita with raw onion, tomato and a swipe of yogurt.</li>
-  </ol>
-
-  <div class="sechead">Part Three</div>
-  <div class="sectitle">The Toolkit</div>
-  <p class="tools">
-    <a href="https://www.amazon.com/s?k=metal%20loaf%20pan&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Loaf pan</a> &middot;
-    <a href="https://www.amazon.com/s?k=instant%20read%20thermometer&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Instant-read thermometer</a> &middot;
-    <a href="https://www.amazon.com/s?k=granton%20slicing%20knife&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Sharp slicing knife</a> &middot;
-    <a href="https://www.amazon.com/s?k=cast%20iron%20skillet%2012%20inch&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Cast-iron skillet</a> &middot;
-    <a href="https://www.amazon.com/s?k=stainless%20box%20grater&amp;tag=5best2buy-20" rel="sponsored nofollow" target="_blank">Box grater</a>
-  </p>
-
   <div class="xlink">
-    <b>No ads. No life story. Just dinner.</b><br>
-    This is recipe No.398 &mdash; the real method, ingredients first, and exactly where to buy the best version of every one. <a href="/recipes/">See all the recipes &rarr;</a>
+    Recipe No.398 of the collection. <a href="/recipes/">Browse all the recipes &rarr;</a>
   </div>
 
   <p class="disclosure">
