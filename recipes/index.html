@@ -81,6 +81,7 @@ function render(){
 q.addEventListener('input',render);cui.addEventListener('change',render);tm.addEventListener('change',render);qk.addEventListener('change',render);
 document.querySelectorAll('.chip:not(.con)').forEach(ch=>ch.addEventListener('click',()=>{document.querySelectorAll('.chip:not(.con)').forEach(x=>x.classList.remove('on'));ch.classList.add('on');cat=ch.dataset.cat;render();}));
 document.querySelectorAll('.chip.con').forEach(ch=>ch.addEventListener('click',()=>{document.querySelectorAll('.chip.con').forEach(x=>x.classList.remove('on'));ch.classList.add('on');diff=ch.dataset.diff;render();}));
+var _q=new URLSearchParams(location.search).get('q');if(_q){q.value=_q;}
 render();
 </script>
 <script type="text/javascript" src="https://s.skimresources.com/js/305454X1793659.skimlinks.js"></script>

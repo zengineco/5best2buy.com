@@ -58,3 +58,4 @@ Allow: /
 # /llms.txt        — curated guide to our best pages (llms.txt standard)
 # /llms-full.txt   — the site's core text in one file, for wholesale ingestion
 Sitemap: https://www.5best2buy.com/sitemap.xml
+Sitemap: https://www.5best2buy.com/sitemap-images.xml
