@@ -8298,4 +8298,9 @@
 <url><loc>https://www.5best2buy.com/late-night/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.5best2buy.com/halal/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.5best2buy.com/kosher/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://www.5best2buy.com/search/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
