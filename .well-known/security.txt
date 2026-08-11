@@ -1,4 +1,4 @@
-# Worth The Hunt (5best2buy.com) — security contact
+# 5best2buy (5best2buy.com) — security contact
 Contact: mailto:hello@5best2buy.com
 Preferred-Languages: en
 Canonical: https://www.5best2buy.com/.well-known/security.txt
