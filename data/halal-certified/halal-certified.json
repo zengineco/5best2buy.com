@@ -1,0 +1,178 @@
+{
+ "name": "Halal-Certified Independent US Food Makers",
+ "version": "1.0",
+ "published": "2026-08-12",
+ "license": "CC BY 4.0",
+ "source": "https://www.5best2buy.com/data/halal-certified/",
+ "records": 21,
+ "data": [
+  {
+   "maker": "Boxed Halal",
+   "certifier": "HFSAA",
+   "city": "Chicago",
+   "state": "Illinois",
+   "categories": "Halal Jerky & Snacks Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
+   "url": "https://boxedhalal.com/"
+  },
+  {
+   "maker": "Cabot Creamery",
+   "certifier": "IFANCA",
+   "city": "",
+   "state": "",
+   "categories": "Halal Cheese & Dairy Worth the Hunt",
+   "url": "https://cabotcreamery.com/"
+  },
+  {
+   "maker": "Crain of California",
+   "certifier": "Islamic Services of America (ISA)",
+   "city": "Los Molinos",
+   "state": "California",
+   "categories": "Halal Walnuts & Nuts Worth the Hunt",
+   "url": "https://crainofcalifornia.com/"
+  },
+  {
+   "maker": "Crescent Foods",
+   "certifier": "IFANCA",
+   "city": "Chicago",
+   "state": "Illinois",
+   "categories": "Halal Chicken & Poultry Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
+   "url": "https://shopcrescentfoods.com/"
+  },
+  {
+   "maker": "Halal Pastures",
+   "certifier": "Halal Advocates of America",
+   "city": "Rock Tavern",
+   "state": "New York",
+   "categories": "Halal Beef & Lamb Worth the Hunt; Halal Chicken & Poultry Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
+   "url": "https://www.halalpastures.com/"
+  },
+  {
+   "maker": "J&M Halal Meals",
+   "certifier": "IFANCA",
+   "city": "",
+   "state": "",
+   "categories": "Halal Frozen & Prepared Meals Worth the Hunt",
+   "url": "https://www.halalcertified.com/"
+  },
+  {
+   "maker": "Karoun Dairies",
+   "certifier": "Islamic Services of America (ISA)",
+   "city": "Turlock",
+   "state": "California",
+   "categories": "Halal Cheese & Dairy Worth the Hunt",
+   "url": "https://www.karouncheese.com/"
+  },
+  {
+   "maker": "Midamar",
+   "certifier": "Islamic Services of America (ISA)",
+   "city": "Cedar Rapids",
+   "state": "Iowa",
+   "categories": "Halal Jerky & Snacks Worth the Hunt; Halal Beef & Lamb Worth the Hunt; Halal Chicken & Poultry Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
+   "url": "https://www.midamarhalal.com/"
+  },
+  {
+   "maker": "Noor Vitamins",
+   "certifier": "IFANCA",
+   "city": "",
+   "state": "",
+   "categories": "Halal Vitamins & Supplements Worth the Hunt",
+   "url": "https://www.noorvitamins.com/"
+  },
+  {
+   "maker": "One Stop Halal",
+   "certifier": "IFANCA",
+   "city": "Los Angeles",
+   "state": "California",
+   "categories": "Halal Seafood Worth the Hunt",
+   "url": "https://onestophalal.com/"
+  },
+  {
+   "maker": "PF Bakeries",
+   "certifier": "HFSAA",
+   "city": "San Diego",
+   "state": "California",
+   "categories": "Halal Bread & Flatbread Worth the Hunt",
+   "url": "https://www.pfbakeries.com/"
+  },
+  {
+   "maker": "Primavera Walnuts",
+   "certifier": "HFSAA",
+   "city": "Linden",
+   "state": "California",
+   "categories": "Halal Walnuts & Nuts Worth the Hunt",
+   "url": "https://primaverawalnuts.com/"
+  },
+  {
+   "maker": "Samson's Kitchen",
+   "certifier": "Islamic Services of America (ISA)",
+   "city": "",
+   "state": "",
+   "categories": "Halal Pantry & Spices Worth the Hunt",
+   "url": "https://samsonskitchen.com/"
+  },
+  {
+   "maker": "Sharifa Halal Snacks",
+   "certifier": "Halal Transactions of Omaha",
+   "city": "Detroit",
+   "state": "Michigan",
+   "categories": "Halal Jerky & Snacks Worth the Hunt",
+   "url": "https://sharifahalalsnacks.com/"
+  },
+  {
+   "maker": "Shifaa Nutrition",
+   "certifier": "Islamic Services of America (ISA)",
+   "city": "",
+   "state": "",
+   "categories": "Halal Vitamins & Supplements Worth the Hunt",
+   "url": "https://shifaanutrition.com/"
+  },
+  {
+   "maker": "Simply Halal",
+   "certifier": "Islamic Services of America (ISA)",
+   "city": "Dearborn Heights",
+   "state": "Michigan",
+   "categories": "Halal Pantry & Spices Worth the Hunt",
+   "url": "https://simplyhalal.co/"
+  },
+  {
+   "maker": "Skinny Crust",
+   "certifier": "HFSAA",
+   "city": "East Dundee",
+   "state": "Illinois",
+   "categories": "Halal Bread & Flatbread Worth the Hunt",
+   "url": "https://www.skinnycrust.us/"
+  },
+  {
+   "maker": "Supreme Beef Jerky",
+   "certifier": "Halal Transactions of Omaha",
+   "city": "Placentia",
+   "state": "California",
+   "categories": "Halal Jerky & Snacks Worth the Hunt",
+   "url": "https://supremebeefjerky.com/"
+  },
+  {
+   "maker": "TruBeef Organic",
+   "certifier": "Halal Advocates of America",
+   "city": "San Diego",
+   "state": "California",
+   "categories": "Halal Beef & Lamb Worth the Hunt",
+   "url": "https://truorganicbeef.com/"
+  },
+  {
+   "maker": "Zaytun Vitamins",
+   "certifier": "Islamic Services of America (ISA)",
+   "city": "",
+   "state": "",
+   "categories": "Halal Vitamins & Supplements Worth the Hunt",
+   "url": "https://www.zaytunvitamins.com/"
+  },
+  {
+   "maker": "Ziyad",
+   "certifier": "IFANCA",
+   "city": "Cicero",
+   "state": "Illinois",
+   "categories": "Halal Pantry & Spices Worth the Hunt; Halal Sweets & Candy Worth the Hunt",
+   "url": "https://www.ziyadbrothers.com/"
+  }
+ ]
+}

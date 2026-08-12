@@ -1,0 +1,266 @@
+{
+ "name": "Kosher-Certified Independent US Food Makers",
+ "version": "1.0",
+ "published": "2026-08-12",
+ "license": "CC BY 4.0",
+ "source": "https://www.5best2buy.com/data/kosher-certified/",
+ "records": 32,
+ "data": [
+  {
+   "maker": "Asher's Chocolate Co.",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Souderton",
+   "state": "Pennsylvania",
+   "categories": "Kosher Sweets & Chocolate Worth the Hunt",
+   "url": "https://ashers.com/"
+  },
+  {
+   "maker": "Bariani Olive Oil",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Yolo County",
+   "state": "California",
+   "categories": "Kosher Olive Oil & Vinegar Worth the Hunt",
+   "url": "https://barianioliveoil.com/"
+  },
+  {
+   "maker": "Bee Inspired Goods",
+   "certifier": "Star-K",
+   "city": "Owings Mills",
+   "state": "Maryland",
+   "categories": "Kosher Pantry & Matzo Worth the Hunt; Kosher Coffee, Spice & Pantry Specialty Worth the Hunt",
+   "url": "https://beeinspiredgoods.com/"
+  },
+  {
+   "maker": "Blake Hill Preserves",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Windsor",
+   "state": "Vermont",
+   "categories": "Kosher Honey, Preserves & Jam Worth the Hunt",
+   "url": "https://blakehillpreserves.com/"
+  },
+  {
+   "maker": "Burlap & Barrel",
+   "certifier": "Orthodox Union (OU)",
+   "city": "New York",
+   "state": "New York",
+   "categories": "Kosher Coffee, Spice & Pantry Specialty Worth the Hunt",
+   "url": "https://www.burlapandbarrel.com/"
+  },
+  {
+   "maker": "Fischer Bros. & Leslie",
+   "certifier": "Orthodox Union (OU)",
+   "city": "New York",
+   "state": "New York",
+   "categories": "Kosher Prepared & Deli Meals Worth the Hunt",
+   "url": "https://www.fischerbros.com/"
+  },
+  {
+   "maker": "Graeter's",
+   "certifier": "Star-K",
+   "city": "Cincinnati",
+   "state": "Ohio",
+   "categories": "Kosher Ice Cream & Frozen Worth the Hunt",
+   "url": "https://www.graeters.com/pages/kosher-ice-cream"
+  },
+  {
+   "maker": "Grandy Organics",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Hiram",
+   "state": "Maine",
+   "categories": "Kosher Granola & Snacks Worth the Hunt",
+   "url": "https://www.grandyorganics.com/"
+  },
+  {
+   "maker": "Grow & Behold",
+   "certifier": "Star-K",
+   "city": "Brooklyn",
+   "state": "New York",
+   "categories": "Kosher Meat & Deli Worth the Hunt",
+   "url": "https://www.growandbehold.com/"
+  },
+  {
+   "maker": "Guittard Chocolate Company",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Burlingame",
+   "state": "California",
+   "categories": "Kosher Baking: Chocolate, Vanilla & Flour Worth the Hunt",
+   "url": "https://guittard.com/"
+  },
+  {
+   "maker": "Harney & Sons",
+   "certifier": "Kosher Supervision of America (KSA)",
+   "city": "Millerton",
+   "state": "New York",
+   "categories": "Kosher Tea Worth the Hunt",
+   "url": "https://www.harney.com/"
+  },
+  {
+   "maker": "KOL Foods",
+   "certifier": "Star-K",
+   "city": "Washington",
+   "state": "District of Columbia",
+   "categories": "Kosher Meat & Deli Worth the Hunt",
+   "url": "https://kolfoods.com/"
+  },
+  {
+   "maker": "Li-Lac Chocolates",
+   "certifier": "Orthodox Union (OU)",
+   "city": "New York",
+   "state": "New York",
+   "categories": "Kosher Sweets & Chocolate Worth the Hunt",
+   "url": "https://www.li-lacchocolates.com/pages/kosher-certified"
+  },
+  {
+   "maker": "Living Tree Community Foods",
+   "certifier": "Local Vaad",
+   "city": "Berkeley",
+   "state": "California",
+   "categories": "Kosher Olive Oil & Vinegar Worth the Hunt",
+   "url": "https://www.livingtreecommunityfoods.com/"
+  },
+  {
+   "maker": "Mendy's Kosher Delicatessen",
+   "certifier": "Orthodox Union (OU)",
+   "city": "New York",
+   "state": "New York",
+   "categories": "Kosher Prepared & Deli Meals Worth the Hunt",
+   "url": "https://www.mendysdeli.com/"
+  },
+  {
+   "maker": "Nielsen-Massey Vanillas",
+   "certifier": "Chicago Rabbinical Council (cRc)",
+   "city": "Waukegan",
+   "state": "Illinois",
+   "categories": "Kosher Baking: Chocolate, Vanilla & Flour Worth the Hunt",
+   "url": "https://nielsenmassey.com/"
+  },
+  {
+   "maker": "Nuts.com",
+   "certifier": "OK Kosher",
+   "city": "Cranford",
+   "state": "New Jersey",
+   "categories": "Kosher Nuts & Dried Fruit Worth the Hunt",
+   "url": "https://nuts.com/"
+  },
+  {
+   "maker": "Oh! Nuts",
+   "certifier": "OK Kosher",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Nuts & Dried Fruit Worth the Hunt",
+   "url": "https://ohnuts.com/collections/halva"
+  },
+  {
+   "maker": "Oneg Bakery",
+   "certifier": "Chicago Rabbinical Council (cRc)",
+   "city": "Brooklyn",
+   "state": "New York",
+   "categories": "Kosher Challah & Bakery Worth the Hunt",
+   "url": "https://www.onegbakery.com/"
+  },
+  {
+   "maker": "Path Coffee Roasters",
+   "certifier": "Star-K",
+   "city": "Port Chester",
+   "state": "New York",
+   "categories": "Kosher Coffee, Spice & Pantry Specialty Worth the Hunt",
+   "url": "https://pathcoffees.com/"
+  },
+  {
+   "maker": "Pereg Natural Foods",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Clifton",
+   "state": "New Jersey",
+   "categories": "Kosher Grains, Quinoa & Couscous Worth the Hunt",
+   "url": "https://www.pereg-gourmet.com/"
+  },
+  {
+   "maker": "Seed + Mill",
+   "certifier": "Star-K",
+   "city": "New York",
+   "state": "New York",
+   "categories": "Kosher Sweets & Chocolate Worth the Hunt",
+   "url": "https://www.seedandmill.com/"
+  },
+  {
+   "maker": "Soupergirl",
+   "certifier": "Star-K",
+   "city": "Washington",
+   "state": "District of Columbia",
+   "categories": "Kosher Soup & Broth Worth the Hunt",
+   "url": "https://thesoupergirl.com/"
+  },
+  {
+   "maker": "Streit's",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Orangeburg",
+   "state": "New York",
+   "categories": "Kosher Pantry & Matzo Worth the Hunt",
+   "url": "https://www.streitsmatzos.com/"
+  },
+  {
+   "maker": "Struesli",
+   "certifier": "Kof-K",
+   "city": "Newtown",
+   "state": "Connecticut",
+   "categories": "Kosher Granola & Snacks Worth the Hunt",
+   "url": "https://struesli.com/"
+  },
+  {
+   "maker": "Tabatchnick Fine Foods",
+   "certifier": "Star-K",
+   "city": "Somerset",
+   "state": "New Jersey",
+   "categories": "Kosher Soup & Broth Worth the Hunt",
+   "url": "https://www.tabatchnick.com/"
+  },
+  {
+   "maker": "Teeny Tiny Spice Co.",
+   "certifier": "Star-K",
+   "city": "Harrisonburg",
+   "state": "Virginia",
+   "categories": "Kosher Coffee, Spice & Pantry Specialty Worth the Hunt",
+   "url": "https://www.teenytinyspice.com/"
+  },
+  {
+   "maker": "The Cheese Guy",
+   "certifier": "Chicago Rabbinical Council (cRc)",
+   "city": "Yonkers",
+   "state": "New York",
+   "categories": "Kosher Dairy & Cheese Worth the Hunt",
+   "url": "https://thecheeseguy.com/"
+  },
+  {
+   "maker": "The Velvet Chocolatier",
+   "certifier": "Star-K",
+   "city": "Stevenson",
+   "state": "Maryland",
+   "categories": "Kosher Sweets & Chocolate Worth the Hunt",
+   "url": "https://thevelvetchocolatier.com/chocolate/kosher-chocolate/"
+  },
+  {
+   "maker": "Traina Home Grown",
+   "certifier": "Local Vaad",
+   "city": "Patterson",
+   "state": "California",
+   "categories": "Kosher Nuts & Dried Fruit Worth the Hunt",
+   "url": "https://www.trainahomegrown.com/shop/sun-dried-fruit/tomatoes/california-sun-dried-tomatoes/"
+  },
+  {
+   "maker": "Verena Street Coffee Co.",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Dubuque",
+   "state": "Iowa",
+   "categories": "Kosher Coffee, Spice & Pantry Specialty Worth the Hunt",
+   "url": "https://www.verenastreet.com/"
+  },
+  {
+   "maker": "Zaro's Family Bakery",
+   "certifier": "OK Kosher",
+   "city": "Bronx",
+   "state": "New York",
+   "categories": "Kosher Challah & Bakery Worth the Hunt",
+   "url": "https://www.zaro.com/"
+  }
+ ]
+}
