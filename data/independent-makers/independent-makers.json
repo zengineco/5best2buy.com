@@ -4,7 +4,7 @@
  "published": "2026-08-12",
  "license": "CC BY 4.0",
  "source": "https://www.5best2buy.com/data/independent-makers/",
- "records": 1433,
+ "records": 1456,
  "data": [
   {
    "maker": "123Dough",
@@ -82,6 +82,13 @@
    "state": "",
    "categories": "Chow-Chow & Southern Relish Worth the Hunt; Relish & Chow-Chow Worth the Hunt",
    "url": "https://www.abbottfarmsonline.com/"
+  },
+  {
+   "maker": "Abeles & Heymann",
+   "city": "Hillside",
+   "state": "New Jersey",
+   "categories": "Kosher Salami, Hot Dogs & Knishes Worth the Hunt",
+   "url": "https://abeles-heymann.com/"
   },
   {
    "maker": "Achatz Handmade Pie Co.",
@@ -460,6 +467,13 @@
    "state": "",
    "categories": "Naan Worth the Hunt",
    "url": "https://atoriasfamilybakery.com/collections/naan"
+  },
+  {
+   "maker": "Aufschnitt Meats",
+   "city": "Baltimore",
+   "state": "Maryland",
+   "categories": "Kosher Jerky & Meat Snacks Worth the Hunt",
+   "url": "https://www.aufschnittmeats.com/"
   },
   {
    "maker": "Aura Bora",
@@ -1631,6 +1645,13 @@
    "url": "https://www.chilemonster.com/"
   },
   {
+   "maker": "Chocolove",
+   "city": "Boulder",
+   "state": "Colorado",
+   "categories": "Kosher Chocolate Bars Worth the Hunt",
+   "url": "https://www.chocolove.com/"
+  },
+  {
    "maker": "Chomps",
    "city": "",
    "state": "",
@@ -1643,6 +1664,13 @@
    "state": "California",
    "categories": "Ranch & Buttermilk Dressing Worth the Hunt",
    "url": "https://www.chosenfoods.com/"
+  },
+  {
+   "maker": "Chutzpah Coffee Co.",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Coffee Roasters Worth the Hunt",
+   "url": "https://chutzpahcoffeeco.com/"
   },
   {
    "maker": "Circle of Drink",
@@ -1726,7 +1754,7 @@
    "city": "",
    "state": "",
    "categories": "Natural Food Coloring Worth the Hunt",
-   "url": "https://www.amazon.com/Color-Garden-Natural-Colors-Multi/dp/B00LWH9VZA?tag=5best2buy-20"
+   "url": "https://www.amazon.com/Color-Garden-Natural-Colors-Multi/dp/B00LWH9VZA"
   },
   {
    "maker": "Colorado Fresh Fruit Co.",
@@ -1740,7 +1768,7 @@
    "city": "",
    "state": "",
    "categories": "Natural Food Coloring Worth the Hunt",
-   "url": "https://www.amazon.com/stores/COLORKITCHEN/page/615A5E68-712F-4383-ABEF-E3D8CCD09AF8?tag=5best2buy-20"
+   "url": "https://www.amazon.com/stores/COLORKITCHEN/page/615A5E68-712F-4383-ABEF-E3D8CCD09AF8"
   },
   {
    "maker": "Community Coffee",
@@ -1820,6 +1848,13 @@
    "url": "https://counterculturecoffee.com/"
   },
   {
+   "maker": "Covenant Wines",
+   "city": "Berkeley",
+   "state": "California",
+   "categories": "Kosher Wine Worth the Hunt",
+   "url": "https://covenantwines.com/"
+  },
+  {
    "maker": "Cowgirl Creamery",
    "city": "Point Reyes",
    "state": "California",
@@ -1893,8 +1928,8 @@
    "maker": "Crown Maple",
    "city": "Dover Plains",
    "state": "New York",
-   "categories": "Unrefined Sugar Worth the Hunt",
-   "url": "https://crownmaple.com/"
+   "categories": "Kosher Maple Syrup Worth the Hunt; Unrefined Sugar Worth the Hunt",
+   "url": "https://crownmaple.store/"
   },
   {
    "maker": "Cruze Farm",
@@ -2049,6 +2084,13 @@
    "state": "",
    "categories": "Fresh Cranberries Worth the Hunt",
    "url": "https://www.decasfarms.com/"
+  },
+  {
+   "maker": "Del Campo Tortillas",
+   "city": "Lakewood",
+   "state": "New Jersey",
+   "categories": "Kosher Chips, Pretzels & Crackers Worth the Hunt",
+   "url": "http://www.delcampotortillas.com"
   },
   {
    "maker": "DeLallo",
@@ -2989,6 +3031,13 @@
    "url": "https://www.fullcircleghee.com/"
   },
   {
+   "maker": "Gabila's Knishes",
+   "city": "Copiague",
+   "state": "New York",
+   "categories": "Kosher Salami, Hot Dogs & Knishes Worth the Hunt",
+   "url": "https://www.gabilas.com/"
+  },
+  {
    "maker": "Gables Delight",
    "city": "Miami",
    "state": "Florida",
@@ -3416,6 +3465,20 @@
    "url": "https://www.gustusvitae.com/"
   },
   {
+   "maker": "Hagafen Cellars",
+   "city": "Napa",
+   "state": "California",
+   "categories": "Kosher Wine Worth the Hunt",
+   "url": "https://www.hagafen.com/"
+  },
+  {
+   "maker": "Hajdu Wines",
+   "city": "Berkeley",
+   "state": "California",
+   "categories": "Kosher Wine Worth the Hunt",
+   "url": "https://www.hajduwines.com/"
+  },
+  {
    "maker": "Halal Pastures",
    "city": "Rock Tavern",
    "state": "New York",
@@ -3745,6 +3808,13 @@
    "url": "https://www.holmquisthazelnuts.com/"
   },
   {
+   "maker": "Holy Jerky",
+   "city": "Five Towns",
+   "state": "New York",
+   "categories": "Kosher Jerky & Meat Snacks Worth the Hunt",
+   "url": "https://holyjerky.com/"
+  },
+  {
    "maker": "Holy Schmitt's Horseradish",
    "city": "Long Island",
    "state": "New York",
@@ -3953,6 +4023,13 @@
    "state": "South Carolina",
    "categories": "Conserves & Brandied Fruit Worth the Hunt; Tonic & Craft Mixers Worth the Hunt",
    "url": "https://www.jackrudycocktailco.com/"
+  },
+  {
+   "maker": "Jack's Gourmet",
+   "city": "Brooklyn",
+   "state": "New York",
+   "categories": "Kosher Salami, Hot Dogs & Knishes Worth the Hunt",
+   "url": "https://www.jacksgourmet.com/"
   },
   {
    "maker": "Jackson's",
@@ -4459,6 +4536,13 @@
    "url": "https://kosterina.com/"
   },
   {
+   "maker": "KOVAL Distillery",
+   "city": "Chicago",
+   "state": "Illinois",
+   "categories": "Kosher Spirits & Liqueurs Worth the Hunt",
+   "url": "https://www.koval-distillery.com/"
+  },
+  {
    "maker": "Kozlik's Canadian Mustard",
    "city": "",
    "state": "",
@@ -4513,6 +4597,13 @@
    "state": "New Hampshire",
    "categories": "Chocolate Truffles Worth the Hunt",
    "url": "https://www.burdickchocolate.com/"
+  },
+  {
+   "maker": "L'Chaim Meats",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Jerky & Meat Snacks Worth the Hunt",
+   "url": "https://lchaimmeats.com/"
   },
   {
    "maker": "La Boîte",
@@ -4576,6 +4667,13 @@
    "state": "",
    "categories": "Premium Parrot & Bird Food Worth the Hunt",
    "url": "https://lafeber.com/"
+  },
+  {
+   "maker": "Lake Champlain Chocolates",
+   "city": "Burlington",
+   "state": "Vermont",
+   "categories": "Kosher Chocolate Bars Worth the Hunt",
+   "url": "https://www.lakechamplainchocolates.com/"
   },
   {
    "maker": "LakeWolf Creamery",
@@ -5432,6 +5530,13 @@
    "url": "https://montanaglutenfree.com/"
   },
   {
+   "maker": "Montauk Beverage Works",
+   "city": "Riverhead",
+   "state": "New York",
+   "categories": "Kosher Juice & Iced Tea Worth the Hunt",
+   "url": "https://www.montaukbev.com/"
+  },
+  {
    "maker": "Moose Lake Wild Rice",
    "city": "Deer River",
    "state": "Minnesota",
@@ -6017,7 +6122,7 @@
    "city": "",
    "state": "",
    "categories": "Stir-Fry & All-Purpose Sauces Worth the Hunt",
-   "url": "https://www.amazon.com/Chinese-Omsom-Marinade-Gluten-Free-Presevatives/dp/B08YSCWRVD?tag=5best2buy-20"
+   "url": "https://www.amazon.com/Chinese-Omsom-Marinade-Gluten-Free-Presevatives/dp/B08YSCWRVD"
   },
   {
    "maker": "On Our Own Homestead",
@@ -6398,6 +6503,13 @@
    "url": "https://pigeoncoveferments.com/products/simply-kraut-online"
   },
   {
+   "maker": "Pik-Nik Foods",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Chips, Pretzels & Crackers Worth the Hunt",
+   "url": "http://pik-nik.com/"
+  },
+  {
    "maker": "Pilsudski Mustard",
    "city": "Reading",
    "state": "Pennsylvania",
@@ -6542,7 +6654,7 @@
    "city": "Portland",
    "state": "Oregon",
    "categories": "Cordials & Drink Syrups Worth the Hunt",
-   "url": "https://www.amazon.com/Portland-Syrups-Rose-Cordial-Syrup/dp/B08ML8334X?tag=5best2buy-20"
+   "url": "https://www.amazon.com/Portland-Syrups-Rose-Cordial-Syrup/dp/B08ML8334X"
   },
   {
    "maker": "Portlandia Foods",
@@ -6930,6 +7042,13 @@
    "url": "https://redclayhotsauce.com/products/southern-chili-crisp"
   },
   {
+   "maker": "Red Jacket Orchards",
+   "city": "Geneva",
+   "state": "New York",
+   "categories": "Kosher Juice & Iced Tea Worth the Hunt",
+   "url": "https://www.redjacketorchards.com/"
+  },
+  {
    "maker": "Red Lake Nation Foods",
    "city": "Red Lake",
    "state": "Minnesota",
@@ -7126,6 +7245,13 @@
    "url": "https://www.rumispice.com/"
   },
   {
+   "maker": "Runamok",
+   "city": "Cambridge",
+   "state": "Vermont",
+   "categories": "Kosher Maple Syrup Worth the Hunt",
+   "url": "https://runamokmaple.com/"
+  },
+  {
    "maker": "Runamok Maple",
    "city": "Fairfield",
    "state": "Vermont",
@@ -7200,7 +7326,7 @@
    "city": "",
    "state": "",
    "categories": "Plantain & Cassava Chips Worth the Hunt",
-   "url": "https://www.amazon.com/stores/Samai/PlantainChips/page/B6AD3A24-F93A-4F05-95D7-3E8CE154792B?tag=5best2buy-20"
+   "url": "https://www.amazon.com/stores/Samai/PlantainChips/page/B6AD3A24-F93A-4F05-95D7-3E8CE154792B"
   },
   {
    "maker": "Samson's Kitchen",
@@ -7889,6 +8015,13 @@
    "url": "https://mayasaritempeh.com/"
   },
   {
+   "maker": "Specialty Java",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Coffee Roasters Worth the Hunt",
+   "url": "https://www.specialtyjava.com/"
+  },
+  {
    "maker": "Spicewalla",
    "city": "Asheville",
    "state": "North Carolina",
@@ -8162,6 +8295,13 @@
    "url": "https://store.sukhis.com/products/mango-chutney"
   },
   {
+   "maker": "Sukkah Hill Spirits",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Spirits & Liqueurs Worth the Hunt",
+   "url": "https://sukkahhill.com/"
+  },
+  {
    "maker": "Sukli",
    "city": "",
    "state": "",
@@ -8376,7 +8516,7 @@
    "city": "",
    "state": "",
    "categories": "Onions & Shallots Worth the Hunt",
-   "url": "https://www.amazon.com/Taste-Spice-Fresh-Crispy-Onions/dp/B07TQRXNFK?tag=5best2buy-20"
+   "url": "https://www.amazon.com/Taste-Spice-Fresh-Crispy-Onions/dp/B07TQRXNFK"
   },
   {
    "maker": "Taylor Farm and Ranch",
@@ -8396,7 +8536,7 @@
    "maker": "Taza Chocolate",
    "city": "Somerville",
    "state": "Massachusetts",
-   "categories": "Baking Chocolate Worth the Hunt; 5 Bean-to-Bar Chocolate Makers Worth the Hunt; Best Mexican Chocolate Worth the Hunt",
+   "categories": "Baking Chocolate Worth the Hunt; 5 Bean-to-Bar Chocolate Makers Worth the Hunt; Kosher Chocolate Bars Worth the Hunt; Best Mexican Chocolate Worth the Hunt",
    "url": "https://www.tazachocolate.com/"
   },
   {
@@ -8580,6 +8720,13 @@
    "state": "",
    "categories": "Best Dried Chiles Worth the Hunt",
    "url": "https://www.thechileguy.com/"
+  },
+  {
+   "maker": "The Chosen Bean",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Coffee Roasters Worth the Hunt",
+   "url": "https://www.thechosenbean.com/"
   },
   {
    "maker": "The Coconut Cult",
@@ -9314,7 +9461,7 @@
    "city": "",
    "state": "",
    "categories": "Furikake Worth the Hunt",
-   "url": "https://www.amazon.com/Umino-Furikake-Multi-Purpose-Seasoning-Authentic/dp/B0FW6TR74K?tag=5best2buy-20"
+   "url": "https://www.amazon.com/Umino-Furikake-Multi-Purpose-Seasoning-Authentic/dp/B0FW6TR74K"
   },
   {
    "maker": "Uncle Matt's Organic",
@@ -9336,6 +9483,13 @@
    "state": "New Jersey",
    "categories": "Longganisa & Filipino Sausage Worth the Hunt",
    "url": "https://unionporkstore.com/"
+  },
+  {
+   "maker": "Unique Snacks",
+   "city": "Reading",
+   "state": "Pennsylvania",
+   "categories": "Kosher Chips, Pretzels & Crackers Worth the Hunt",
+   "url": "https://www.uniquesnacks.com/"
   },
   {
    "maker": "United Dumplings",
@@ -9468,7 +9622,7 @@
    "city": "Flint Hill",
    "state": "Virginia",
    "categories": "Mango Chutney Worth the Hunt",
-   "url": "https://www.amazon.com/VIRGINIA-CHUTNEY-COMPANY-Mango-Chutney/dp/B00AFE7P1S?tag=5best2buy-20"
+   "url": "https://www.amazon.com/VIRGINIA-CHUTNEY-COMPANY-Mango-Chutney/dp/B00AFE7P1S"
   },
   {
    "maker": "Vista Hermosa",
@@ -9924,6 +10078,13 @@
    "state": "California",
    "categories": "Yuzu & Japanese Citrus Worth the Hunt",
    "url": "https://www.theyuzu.co/"
+  },
+  {
+   "maker": "Z Crackers",
+   "city": "Brooklyn",
+   "state": "New York",
+   "categories": "Kosher Chips, Pretzels & Crackers Worth the Hunt",
+   "url": "http://www.zcrackers.com"
   },
   {
    "maker": "Z&Z",

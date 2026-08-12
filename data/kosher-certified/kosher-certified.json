@@ -4,8 +4,16 @@
  "published": "2026-08-12",
  "license": "CC BY 4.0",
  "source": "https://www.5best2buy.com/data/kosher-certified/",
- "records": 32,
+ "records": 56,
  "data": [
+  {
+   "maker": "Abeles & Heymann",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Hillside",
+   "state": "New Jersey",
+   "categories": "Kosher Salami, Hot Dogs & Knishes Worth the Hunt",
+   "url": "https://abeles-heymann.com/"
+  },
   {
    "maker": "Asher's Chocolate Co.",
    "certifier": "Orthodox Union (OU)",
@@ -13,6 +21,14 @@
    "state": "Pennsylvania",
    "categories": "Kosher Sweets & Chocolate Worth the Hunt",
    "url": "https://ashers.com/"
+  },
+  {
+   "maker": "Aufschnitt Meats",
+   "certifier": "Star-K",
+   "city": "Baltimore",
+   "state": "Maryland",
+   "categories": "Kosher Jerky & Meat Snacks Worth the Hunt",
+   "url": "https://www.aufschnittmeats.com/"
   },
   {
    "maker": "Bariani Olive Oil",
@@ -47,12 +63,52 @@
    "url": "https://www.burlapandbarrel.com/"
   },
   {
+   "maker": "Chocolove",
+   "certifier": "Local Vaad",
+   "city": "Boulder",
+   "state": "Colorado",
+   "categories": "Kosher Chocolate Bars Worth the Hunt",
+   "url": "https://www.chocolove.com/"
+  },
+  {
+   "maker": "Chutzpah Coffee Co.",
+   "certifier": "Star-K",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Coffee Roasters Worth the Hunt",
+   "url": "https://chutzpahcoffeeco.com/"
+  },
+  {
+   "maker": "Covenant Wines",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Berkeley",
+   "state": "California",
+   "categories": "Kosher Wine Worth the Hunt",
+   "url": "https://covenantwines.com/"
+  },
+  {
+   "maker": "Del Campo Tortillas",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Lakewood",
+   "state": "New Jersey",
+   "categories": "Kosher Chips, Pretzels & Crackers Worth the Hunt",
+   "url": "http://www.delcampotortillas.com"
+  },
+  {
    "maker": "Fischer Bros. & Leslie",
    "certifier": "Orthodox Union (OU)",
    "city": "New York",
    "state": "New York",
    "categories": "Kosher Prepared & Deli Meals Worth the Hunt",
    "url": "https://www.fischerbros.com/"
+  },
+  {
+   "maker": "Gabila's Knishes",
+   "certifier": "Kof-K",
+   "city": "Copiague",
+   "state": "New York",
+   "categories": "Kosher Salami, Hot Dogs & Knishes Worth the Hunt",
+   "url": "https://www.gabilas.com/"
   },
   {
    "maker": "Graeter's",
@@ -87,6 +143,22 @@
    "url": "https://guittard.com/"
   },
   {
+   "maker": "Hagafen Cellars",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Napa",
+   "state": "California",
+   "categories": "Kosher Wine Worth the Hunt",
+   "url": "https://www.hagafen.com/"
+  },
+  {
+   "maker": "Hajdu Wines",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Berkeley",
+   "state": "California",
+   "categories": "Kosher Wine Worth the Hunt",
+   "url": "https://www.hajduwines.com/"
+  },
+  {
    "maker": "Harney & Sons",
    "certifier": "Kosher Supervision of America (KSA)",
    "city": "Millerton",
@@ -95,12 +167,52 @@
    "url": "https://www.harney.com/"
   },
   {
+   "maker": "Holy Jerky",
+   "certifier": "Local Vaad",
+   "city": "Five Towns",
+   "state": "New York",
+   "categories": "Kosher Jerky & Meat Snacks Worth the Hunt",
+   "url": "https://holyjerky.com/"
+  },
+  {
+   "maker": "Jack's Gourmet",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Brooklyn",
+   "state": "New York",
+   "categories": "Kosher Salami, Hot Dogs & Knishes Worth the Hunt",
+   "url": "https://www.jacksgourmet.com/"
+  },
+  {
    "maker": "KOL Foods",
    "certifier": "Star-K",
    "city": "Washington",
    "state": "District of Columbia",
    "categories": "Kosher Meat & Deli Worth the Hunt",
    "url": "https://kolfoods.com/"
+  },
+  {
+   "maker": "KOVAL Distillery",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Chicago",
+   "state": "Illinois",
+   "categories": "Kosher Spirits & Liqueurs Worth the Hunt",
+   "url": "https://www.koval-distillery.com/"
+  },
+  {
+   "maker": "L'Chaim Meats",
+   "certifier": "Orthodox Union (OU)",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Jerky & Meat Snacks Worth the Hunt",
+   "url": "https://lchaimmeats.com/"
+  },
+  {
+   "maker": "Lake Champlain Chocolates",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Burlington",
+   "state": "Vermont",
+   "categories": "Kosher Chocolate Bars Worth the Hunt",
+   "url": "https://www.lakechamplainchocolates.com/"
   },
   {
    "maker": "Li-Lac Chocolates",
@@ -125,6 +237,14 @@
    "state": "New York",
    "categories": "Kosher Prepared & Deli Meals Worth the Hunt",
    "url": "https://www.mendysdeli.com/"
+  },
+  {
+   "maker": "Montauk Beverage Works",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Riverhead",
+   "state": "New York",
+   "categories": "Kosher Juice & Iced Tea Worth the Hunt",
+   "url": "https://www.montaukbev.com/"
   },
   {
    "maker": "Nielsen-Massey Vanillas",
@@ -175,6 +295,30 @@
    "url": "https://www.pereg-gourmet.com/"
   },
   {
+   "maker": "Pik-Nik Foods",
+   "certifier": "Orthodox Union (OU)",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Chips, Pretzels & Crackers Worth the Hunt",
+   "url": "http://pik-nik.com/"
+  },
+  {
+   "maker": "Red Jacket Orchards",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Geneva",
+   "state": "New York",
+   "categories": "Kosher Juice & Iced Tea Worth the Hunt",
+   "url": "https://www.redjacketorchards.com/"
+  },
+  {
+   "maker": "Runamok",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Cambridge",
+   "state": "Vermont",
+   "categories": "Kosher Maple Syrup Worth the Hunt",
+   "url": "https://runamokmaple.com/"
+  },
+  {
    "maker": "Seed + Mill",
    "certifier": "Star-K",
    "city": "New York",
@@ -189,6 +333,14 @@
    "state": "District of Columbia",
    "categories": "Kosher Soup & Broth Worth the Hunt",
    "url": "https://thesoupergirl.com/"
+  },
+  {
+   "maker": "Specialty Java",
+   "certifier": "Chicago Rabbinical Council (cRc)",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Coffee Roasters Worth the Hunt",
+   "url": "https://www.specialtyjava.com/"
   },
   {
    "maker": "Streit's",
@@ -207,12 +359,28 @@
    "url": "https://struesli.com/"
   },
   {
+   "maker": "Sukkah Hill Spirits",
+   "certifier": "Star-K",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Spirits & Liqueurs Worth the Hunt",
+   "url": "https://sukkahhill.com/"
+  },
+  {
    "maker": "Tabatchnick Fine Foods",
    "certifier": "Star-K",
    "city": "Somerset",
    "state": "New Jersey",
    "categories": "Kosher Soup & Broth Worth the Hunt",
    "url": "https://www.tabatchnick.com/"
+  },
+  {
+   "maker": "Taza Chocolate",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Somerville",
+   "state": "Massachusetts",
+   "categories": "Kosher Chocolate Bars Worth the Hunt",
+   "url": "https://www.tazachocolate.com/"
   },
   {
    "maker": "Teeny Tiny Spice Co.",
@@ -231,6 +399,14 @@
    "url": "https://thecheeseguy.com/"
   },
   {
+   "maker": "The Chosen Bean",
+   "certifier": "Orthodox Union (OU)",
+   "city": "",
+   "state": "",
+   "categories": "Kosher Coffee Roasters Worth the Hunt",
+   "url": "https://www.thechosenbean.com/"
+  },
+  {
    "maker": "The Velvet Chocolatier",
    "certifier": "Star-K",
    "city": "Stevenson",
@@ -247,12 +423,28 @@
    "url": "https://www.trainahomegrown.com/shop/sun-dried-fruit/tomatoes/california-sun-dried-tomatoes/"
   },
   {
+   "maker": "Unique Snacks",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Reading",
+   "state": "Pennsylvania",
+   "categories": "Kosher Chips, Pretzels & Crackers Worth the Hunt",
+   "url": "https://www.uniquesnacks.com/"
+  },
+  {
    "maker": "Verena Street Coffee Co.",
    "certifier": "Orthodox Union (OU)",
    "city": "Dubuque",
    "state": "Iowa",
    "categories": "Kosher Coffee, Spice & Pantry Specialty Worth the Hunt",
    "url": "https://www.verenastreet.com/"
+  },
+  {
+   "maker": "Z Crackers",
+   "certifier": "Orthodox Union (OU)",
+   "city": "Brooklyn",
+   "state": "New York",
+   "categories": "Kosher Chips, Pretzels & Crackers Worth the Hunt",
+   "url": "http://www.zcrackers.com"
   },
   {
    "maker": "Zaro's Family Bakery",
