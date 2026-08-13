@@ -4,7 +4,7 @@
  "published": "2026-08-12",
  "license": "CC BY 4.0",
  "source": "https://www.5best2buy.com/data/kosher-certified/",
- "records": 56,
+ "records": 58,
  "data": [
   {
    "maker": "Abeles & Heymann",
@@ -55,6 +55,14 @@
    "url": "https://blakehillpreserves.com/"
   },
   {
+   "maker": "Bloom Honey",
+   "certifier": "EarthKosher",
+   "city": "Westlake Village",
+   "state": "California",
+   "categories": "Kosher Honey, Preserves & Jam Worth the Hunt",
+   "url": "https://www.bloomhoney.com/"
+  },
+  {
    "maker": "Burlap & Barrel",
    "certifier": "Orthodox Union (OU)",
    "city": "New York",
@@ -64,7 +72,7 @@
   },
   {
    "maker": "Chocolove",
-   "certifier": "Local Vaad",
+   "certifier": "Scroll-K (Vaad HaKashrus of Denver)",
    "city": "Boulder",
    "state": "Colorado",
    "categories": "Kosher Chocolate Bars Worth the Hunt",
@@ -85,6 +93,14 @@
    "state": "California",
    "categories": "Kosher Wine Worth the Hunt",
    "url": "https://covenantwines.com/"
+  },
+  {
+   "maker": "Crown Maple",
+   "certifier": "EarthKosher",
+   "city": "Dover Plains",
+   "state": "New York",
+   "categories": "Kosher Maple Syrup Worth the Hunt",
+   "url": "https://crownmaple.store/"
   },
   {
    "maker": "Del Campo Tortillas",
@@ -168,7 +184,7 @@
   },
   {
    "maker": "Holy Jerky",
-   "certifier": "Local Vaad",
+   "certifier": "Vaad Hakashrus of the Five Towns and Far Rockaway",
    "city": "Five Towns",
    "state": "New York",
    "categories": "Kosher Jerky & Meat Snacks Worth the Hunt",
@@ -176,7 +192,7 @@
   },
   {
    "maker": "Jack's Gourmet",
-   "certifier": "Orthodox Union (OU)",
+   "certifier": "New Square Kashrus Council",
    "city": "Brooklyn",
    "state": "New York",
    "categories": "Kosher Salami, Hot Dogs & Knishes Worth the Hunt",
@@ -384,7 +400,7 @@
   },
   {
    "maker": "Teeny Tiny Spice Co.",
-   "certifier": "Star-K",
+   "certifier": "EarthKosher",
    "city": "Harrisonburg",
    "state": "Virginia",
    "categories": "Kosher Coffee, Spice & Pantry Specialty Worth the Hunt",
@@ -400,7 +416,7 @@
   },
   {
    "maker": "The Chosen Bean",
-   "certifier": "Orthodox Union (OU)",
+   "certifier": "Orthodox Rabbinical Board (ORB)",
    "city": "",
    "state": "",
    "categories": "Kosher Coffee Roasters Worth the Hunt",
