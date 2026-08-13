@@ -4,7 +4,7 @@
  "published": "2026-08-12",
  "license": "CC BY 4.0",
  "source": "https://www.5best2buy.com/data/independent-makers/",
- "records": 1468,
+ "records": 1467,
  "data": [
   {
    "maker": "123Dough",
@@ -2413,13 +2413,6 @@
    "state": "Nebraska",
    "categories": "Gelato Worth the Hunt",
    "url": "https://ecreamery.com/"
-  },
-  {
-   "maker": "Edelweiss Creamery",
-   "city": "Monticello",
-   "state": "Wisconsin",
-   "categories": "Gouda & Aged Dutch-Style Worth the Hunt; Swiss & Alpine Cheese Worth the Hunt",
-   "url": "https://edelweisscheeseshop.com/"
   },
   {
    "maker": "Eden Foods",
