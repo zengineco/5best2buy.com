@@ -4,7 +4,7 @@
  "published": "2026-08-12",
  "license": "CC BY 4.0",
  "source": "https://www.5best2buy.com/data/independent-makers/",
- "records": 1456,
+ "records": 1468,
  "data": [
   {
    "maker": "123Dough",
@@ -885,7 +885,7 @@
    "maker": "BillyDoe Meats",
    "city": "",
    "state": "",
-   "categories": "Goat Worth the Hunt; Halal Beef & Lamb Worth the Hunt",
+   "categories": "Goat Worth the Hunt; Halal Beef Bacon & Breakfast Meats Worth the Hunt; Halal Beef & Lamb Worth the Hunt",
    "url": "https://billydoemeats.com/"
   },
   {
@@ -1088,7 +1088,7 @@
    "maker": "Boxed Halal",
    "city": "Chicago",
    "state": "Illinois",
-   "categories": "Halal Jerky & Snacks Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
+   "categories": "Halal Beef Bacon & Breakfast Meats Worth the Hunt; Halal Jerky & Snacks Worth the Hunt; Halal Broth & Prepared Worth the Hunt; Halal Wagyu & Premium Steak Worth the Hunt",
    "url": "https://boxedhalal.com/"
   },
   {
@@ -1279,6 +1279,13 @@
    "state": "South Carolina",
    "categories": "5 Finishing Salt Makers Worth the Hunt",
    "url": "https://www.bullsbaysaltworks.com/"
+  },
+  {
+   "maker": "Bulls I Halal",
+   "city": "Fremont",
+   "state": "California",
+   "categories": "Halal Wagyu & Premium Steak Worth the Hunt",
+   "url": "https://bulls-i-halal.com/"
   },
   {
    "maker": "Bungkus Bagus",
@@ -1587,6 +1594,13 @@
    "state": "Wisconsin",
    "categories": "Cheese Spreads & Fondue Worth the Hunt",
    "url": "https://www.cheesebros.com/"
+  },
+  {
+   "maker": "Chef Paul Prudhomme's Magic Seasoning Blends",
+   "city": "New Orleans",
+   "state": "Louisiana",
+   "categories": "Halal Seasonings, Sauces & Condiments Worth the Hunt",
+   "url": "https://www.magicseasoningblends.com/"
   },
   {
    "maker": "ChefShop.com",
@@ -2084,6 +2098,13 @@
    "state": "",
    "categories": "Fresh Cranberries Worth the Hunt",
    "url": "https://www.decasfarms.com/"
+  },
+  {
+   "maker": "Deen Halal",
+   "city": "Souderton",
+   "state": "Pennsylvania",
+   "categories": "Halal Beef Bacon & Breakfast Meats Worth the Hunt",
+   "url": "https://deen-halal.com/"
   },
   {
    "maker": "Del Campo Tortillas",
@@ -3339,6 +3360,13 @@
    "url": "https://greensbabka.com/"
   },
   {
+   "maker": "Greener Pastures Chicken",
+   "city": "Elgin",
+   "state": "Texas",
+   "categories": "Halal + Organic: Double-Certified Worth the Hunt",
+   "url": "https://greenerpastureschicken.com/"
+  },
+  {
    "maker": "Grimaud Farms",
    "city": "",
    "state": "",
@@ -3479,18 +3507,32 @@
    "url": "https://www.hajduwines.com/"
   },
   {
+   "maker": "Halal Foundry",
+   "city": "Los Angeles",
+   "state": "California",
+   "categories": "Halal Bulk Boxes & Beef Shares Worth the Hunt",
+   "url": "https://halalfoundry.com/"
+  },
+  {
    "maker": "Halal Pastures",
    "city": "Rock Tavern",
    "state": "New York",
-   "categories": "Halal Beef & Lamb Worth the Hunt; Halal Chicken & Poultry Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
+   "categories": "Halal Beef & Lamb Worth the Hunt; Halal + Organic: Double-Certified Worth the Hunt; Halal Chicken & Poultry Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
    "url": "https://www.halalpastures.com/"
   },
   {
    "maker": "Halal-N-Tayyib Meats",
    "city": "Macon",
    "state": "Georgia",
-   "categories": "Halal Beef & Lamb Worth the Hunt; Halal Chicken & Poultry Worth the Hunt",
+   "categories": "Halal Bulk Boxes & Beef Shares Worth the Hunt; Halal Beef & Lamb Worth the Hunt; Halal + Organic: Double-Certified Worth the Hunt; Halal Raw Pet Food Worth the Hunt; Halal Chicken & Poultry Worth the Hunt",
    "url": "https://www.halal-n-tayyibmeatshares.com/"
+  },
+  {
+   "maker": "Halalables Meal Kit",
+   "city": "",
+   "state": "",
+   "categories": "Halal Meal Prep & Chef-Made Meals Worth the Hunt",
+   "url": "https://halalable.com/"
   },
   {
    "maker": "Half Moon Bay Wasabi",
@@ -4518,7 +4560,7 @@
    "maker": "Kontos Foods",
    "city": "Paterson",
    "state": "New Jersey",
-   "categories": "Phyllo & Filo Dough Worth the Hunt",
+   "categories": "Halal Pizza, Lahmacun & Flatbread Worth the Hunt; Phyllo & Filo Dough Worth the Hunt",
    "url": "https://kontos.com/"
   },
   {
@@ -4746,6 +4788,13 @@
    "url": "https://le-goute.com/"
   },
   {
+   "maker": "Lekker Kitchen",
+   "city": "Santa Ana",
+   "state": "California",
+   "categories": "Halal Meal Prep & Chef-Made Meals Worth the Hunt; Halal Seasonings, Sauces & Condiments Worth the Hunt",
+   "url": "https://lekkerkitchen.com/"
+  },
+  {
    "maker": "LesserEvil",
    "city": "",
    "state": "",
@@ -4765,6 +4814,13 @@
    "state": "New York",
    "categories": "Kosher Sweets & Chocolate Worth the Hunt",
    "url": "https://www.li-lacchocolates.com/pages/kosher-certified"
+  },
+  {
+   "maker": "Li'l Hala Foods",
+   "city": "Monroe Township",
+   "state": "New Jersey",
+   "categories": "Halal Baby & Toddler Food Worth the Hunt",
+   "url": "https://lilhalafoods.com/"
   },
   {
    "maker": "Liber & Co.",
@@ -5395,13 +5451,6 @@
    "state": "New York",
    "categories": "Vodka & Pink Sauce Worth the Hunt",
    "url": "https://www.michaelsofbrooklyn.com/products/vodka-sauce"
-  },
-  {
-   "maker": "Midamar",
-   "city": "Cedar Rapids",
-   "state": "Iowa",
-   "categories": "Halal Jerky & Snacks Worth the Hunt; Halal Beef & Lamb Worth the Hunt; Halal Chicken & Poultry Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
-   "url": "https://www.midamarhalal.com/"
   },
   {
    "maker": "Mighty Cap Mushrooms",
@@ -6156,7 +6205,7 @@
    "maker": "One Stop Halal",
    "city": "Los Angeles",
    "state": "California",
-   "categories": "Halal Seafood Worth the Hunt",
+   "categories": "Halal Beef Bacon & Breakfast Meats Worth the Hunt; Halal Raw Pet Food Worth the Hunt; Halal Pizza, Lahmacun & Flatbread Worth the Hunt; Halal Seafood Worth the Hunt; Halal Wagyu & Premium Steak Worth the Hunt",
    "url": "https://onestophalal.com/"
   },
   {
@@ -6767,6 +6816,13 @@
    "state": "California",
    "categories": "Escabeche & Pickled Jalapenos Worth the Hunt",
    "url": "https://properspickle.com/"
+  },
+  {
+   "maker": "Pryme Meals",
+   "city": "Chicago",
+   "state": "Illinois",
+   "categories": "Halal Meal Prep & Chef-Made Meals Worth the Hunt",
+   "url": "https://www.prymemeal.com/"
   },
   {
    "maker": "Purcell Mountain Farms",
@@ -7497,6 +7553,13 @@
    "url": "https://www.seasnax.com/"
   },
   {
+   "maker": "Seasonal Sips",
+   "city": "",
+   "state": "",
+   "categories": "Halal + Organic: Double-Certified Worth the Hunt",
+   "url": "https://seasonalsips.com/"
+  },
+  {
    "maker": "Secolari",
    "city": "Ellicott City",
    "state": "Maryland",
@@ -7738,7 +7801,7 @@
    "maker": "Skinny Crust",
    "city": "East Dundee",
    "state": "Illinois",
-   "categories": "Halal Bread & Flatbread Worth the Hunt",
+   "categories": "Halal Bread & Flatbread Worth the Hunt; Halal Pizza, Lahmacun & Flatbread Worth the Hunt",
    "url": "https://www.skinnycrust.us/"
   },
   {
@@ -8449,6 +8512,13 @@
    "url": "https://swissvillallc.com/product-category/dairy/grass-fed-butter/goat-butter/"
   },
   {
+   "maker": "TABASCO (McIlhenny Company)",
+   "city": "Avery Island",
+   "state": "Louisiana",
+   "categories": "Halal Seasonings, Sauces & Condiments Worth the Hunt",
+   "url": "https://www.tabasco.com/"
+  },
+  {
    "maker": "Tabatchnick Fine Foods",
    "city": "Somerset",
    "state": "New Jersey",
@@ -9112,6 +9182,13 @@
    "state": "New York",
    "categories": "Cashews Worth the Hunt; Pumpkin Seeds & Pepitas Worth the Hunt",
    "url": "https://www.tierrafarm.com/"
+  },
+  {
+   "maker": "Tillamook County Creamery Association",
+   "city": "Tillamook",
+   "state": "Oregon",
+   "categories": "Halal Ice Cream Worth the Hunt",
+   "url": "https://www.tillamook.com/"
   },
   {
    "maker": "Timeless Natural Food",
@@ -10043,6 +10120,13 @@
    "state": "",
    "categories": "Fonio Worth the Hunt",
    "url": "https://yolele.com/"
+  },
+  {
+   "maker": "YSG Halal",
+   "city": "Fremont",
+   "state": "California",
+   "categories": "Halal Meal Prep & Chef-Made Meals Worth the Hunt",
+   "url": "https://ysghalal.com/"
   },
   {
    "maker": "Yumé Boshi",

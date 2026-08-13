@@ -4,15 +4,23 @@
  "published": "2026-08-12",
  "license": "CC BY 4.0",
  "source": "https://www.5best2buy.com/data/halal-certified/",
- "records": 21,
+ "records": 33,
  "data": [
   {
    "maker": "Boxed Halal",
    "certifier": "HFSAA",
    "city": "Chicago",
    "state": "Illinois",
-   "categories": "Halal Jerky & Snacks Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
+   "categories": "Halal Beef Bacon & Breakfast Meats Worth the Hunt; Halal Jerky & Snacks Worth the Hunt; Halal Broth & Prepared Worth the Hunt; Halal Wagyu & Premium Steak Worth the Hunt",
    "url": "https://boxedhalal.com/"
+  },
+  {
+   "maker": "Bulls I Halal",
+   "certifier": "HFSAA",
+   "city": "Fremont",
+   "state": "California",
+   "categories": "Halal Wagyu & Premium Steak Worth the Hunt",
+   "url": "https://bulls-i-halal.com/"
   },
   {
    "maker": "Cabot Creamery",
@@ -21,6 +29,14 @@
    "state": "",
    "categories": "Halal Cheese & Dairy Worth the Hunt",
    "url": "https://cabotcreamery.com/"
+  },
+  {
+   "maker": "Chef Paul Prudhomme's Magic Seasoning Blends",
+   "certifier": "Islamic Services of America (ISA)",
+   "city": "New Orleans",
+   "state": "Louisiana",
+   "categories": "Halal Seasonings, Sauces & Condiments Worth the Hunt",
+   "url": "https://www.magicseasoningblends.com/"
   },
   {
    "maker": "Crain of California",
@@ -39,11 +55,35 @@
    "url": "https://shopcrescentfoods.com/"
   },
   {
+   "maker": "Deen Halal",
+   "certifier": "Halal Transactions of Omaha",
+   "city": "Souderton",
+   "state": "Pennsylvania",
+   "categories": "Halal Beef Bacon & Breakfast Meats Worth the Hunt",
+   "url": "https://deen-halal.com/"
+  },
+  {
+   "maker": "Greener Pastures Chicken",
+   "certifier": "HFSAA",
+   "city": "Elgin",
+   "state": "Texas",
+   "categories": "Halal + Organic: Double-Certified Worth the Hunt",
+   "url": "https://greenerpastureschicken.com/"
+  },
+  {
+   "maker": "Halal Foundry",
+   "certifier": "HFSAA",
+   "city": "Los Angeles",
+   "state": "California",
+   "categories": "Halal Bulk Boxes & Beef Shares Worth the Hunt",
+   "url": "https://halalfoundry.com/"
+  },
+  {
    "maker": "Halal Pastures",
    "certifier": "Halal Advocates of America",
    "city": "Rock Tavern",
    "state": "New York",
-   "categories": "Halal Beef & Lamb Worth the Hunt; Halal Chicken & Poultry Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
+   "categories": "Halal Beef & Lamb Worth the Hunt; Halal + Organic: Double-Certified Worth the Hunt; Halal Chicken & Poultry Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
    "url": "https://www.halalpastures.com/"
   },
   {
@@ -63,12 +103,28 @@
    "url": "https://www.karouncheese.com/"
   },
   {
-   "maker": "Midamar",
-   "certifier": "Islamic Services of America (ISA)",
-   "city": "Cedar Rapids",
-   "state": "Iowa",
-   "categories": "Halal Jerky & Snacks Worth the Hunt; Halal Beef & Lamb Worth the Hunt; Halal Chicken & Poultry Worth the Hunt; Halal Broth & Prepared Worth the Hunt",
-   "url": "https://www.midamarhalal.com/"
+   "maker": "Kontos Foods",
+   "certifier": "IFANCA",
+   "city": "Paterson",
+   "state": "New Jersey",
+   "categories": "Halal Pizza, Lahmacun & Flatbread Worth the Hunt",
+   "url": "https://kontos.com/"
+  },
+  {
+   "maker": "Lekker Kitchen",
+   "certifier": "HFSAA",
+   "city": "Santa Ana",
+   "state": "California",
+   "categories": "Halal Meal Prep & Chef-Made Meals Worth the Hunt; Halal Seasonings, Sauces & Condiments Worth the Hunt",
+   "url": "https://lekkerkitchen.com/"
+  },
+  {
+   "maker": "Li'l Hala Foods",
+   "certifier": "HFSAA",
+   "city": "Monroe Township",
+   "state": "New Jersey",
+   "categories": "Halal Baby & Toddler Food Worth the Hunt",
+   "url": "https://lilhalafoods.com/"
   },
   {
    "maker": "Noor Vitamins",
@@ -80,10 +136,10 @@
   },
   {
    "maker": "One Stop Halal",
-   "certifier": "IFANCA",
+   "certifier": "HFSAA",
    "city": "Los Angeles",
    "state": "California",
-   "categories": "Halal Seafood Worth the Hunt",
+   "categories": "Halal Beef Bacon & Breakfast Meats Worth the Hunt; Halal Raw Pet Food Worth the Hunt; Halal Pizza, Lahmacun & Flatbread Worth the Hunt; Halal Seafood Worth the Hunt; Halal Wagyu & Premium Steak Worth the Hunt",
    "url": "https://onestophalal.com/"
   },
   {
@@ -103,12 +159,28 @@
    "url": "https://primaverawalnuts.com/"
   },
   {
+   "maker": "Pryme Meals",
+   "certifier": "HFSAA",
+   "city": "Chicago",
+   "state": "Illinois",
+   "categories": "Halal Meal Prep & Chef-Made Meals Worth the Hunt",
+   "url": "https://www.prymemeal.com/"
+  },
+  {
    "maker": "Samson's Kitchen",
    "certifier": "Islamic Services of America (ISA)",
    "city": "",
    "state": "",
    "categories": "Halal Pantry & Spices Worth the Hunt",
    "url": "https://samsonskitchen.com/"
+  },
+  {
+   "maker": "Seasonal Sips",
+   "certifier": "HFSAA",
+   "city": "",
+   "state": "",
+   "categories": "Halal + Organic: Double-Certified Worth the Hunt",
+   "url": "https://seasonalsips.com/"
   },
   {
    "maker": "Sharifa Halal Snacks",
@@ -139,7 +211,7 @@
    "certifier": "HFSAA",
    "city": "East Dundee",
    "state": "Illinois",
-   "categories": "Halal Bread & Flatbread Worth the Hunt",
+   "categories": "Halal Bread & Flatbread Worth the Hunt; Halal Pizza, Lahmacun & Flatbread Worth the Hunt",
    "url": "https://www.skinnycrust.us/"
   },
   {
@@ -151,12 +223,36 @@
    "url": "https://supremebeefjerky.com/"
   },
   {
+   "maker": "TABASCO (McIlhenny Company)",
+   "certifier": "IFANCA",
+   "city": "Avery Island",
+   "state": "Louisiana",
+   "categories": "Halal Seasonings, Sauces & Condiments Worth the Hunt",
+   "url": "https://www.tabasco.com/"
+  },
+  {
+   "maker": "Tillamook County Creamery Association",
+   "certifier": "IFANCA",
+   "city": "Tillamook",
+   "state": "Oregon",
+   "categories": "Halal Ice Cream Worth the Hunt",
+   "url": "https://www.tillamook.com/"
+  },
+  {
    "maker": "TruBeef Organic",
    "certifier": "Halal Advocates of America",
    "city": "San Diego",
    "state": "California",
    "categories": "Halal Beef & Lamb Worth the Hunt",
    "url": "https://truorganicbeef.com/"
+  },
+  {
+   "maker": "YSG Halal",
+   "certifier": "HFSAA",
+   "city": "Fremont",
+   "state": "California",
+   "categories": "Halal Meal Prep & Chef-Made Meals Worth the Hunt",
+   "url": "https://ysghalal.com/"
   },
   {
    "maker": "Zaytun Vitamins",
