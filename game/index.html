@@ -29,7 +29,7 @@
   body{background:var(--navy);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.6;font-size:17px;}
   .wrap{max-width:560px;margin:0 auto;padding:18px 18px 70px;}
   a{color:var(--blue);text-decoration:none;}
-  nav.crumb{font-family:var(--fm);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--meta);}
+  nav.crumb{font-family:var(--fm);font-size:12.5px;letter-spacing:1px;text-transform:uppercase;color:var(--meta);}
   nav.crumb a{color:var(--meta);} nav.crumb a:hover{color:var(--gold);}
   header{text-align:center;padding:10px 0 4px;}
   header img{width:74px;height:auto;margin:0 auto 8px;display:block;}
@@ -38,8 +38,8 @@
   .scorebar{display:flex;justify-content:center;gap:26px;margin:22px 0 16px;font-family:var(--fm);}
   .scorebar div{text-align:center;}
   .scorebar .n{font-family:var(--fd);font-weight:700;font-size:34px;line-height:1;color:var(--gold);}
-  .scorebar .l{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-top:4px;}
-  .prompt{font-family:var(--fm);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--meta);text-align:center;margin-bottom:6px;}
+  .scorebar .l{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--meta);margin-top:4px;}
+  .prompt{font-family:var(--fm);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--meta);text-align:center;margin-bottom:6px;}
   .brand{font-family:var(--fd);font-weight:700;font-size:clamp(34px,8vw,56px);letter-spacing:.3px;text-align:center;color:var(--text);line-height:1.05;margin-bottom:22px;min-height:1.1em;}
   .opts{display:grid;gap:10px;}
   .opt{font-family:var(--fm);font-size:16px;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:15px 16px;text-align:left;cursor:pointer;transition:border-color .12s,background .12s;line-height:1.3;}
@@ -59,10 +59,10 @@
   .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px;}
   .pack{background:var(--surface);border:1px solid rgba(95,227,154,.3);border-radius:12px;padding:16px 16px 14px;margin-top:22px;}
   .pack .h{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--text);}
-  .pack .s{font-size:13.5px;color:var(--soft);margin:3px 0 11px;}
+  .pack .s{font-size:15px;color:var(--soft);margin:3px 0 11px;}
   .pack form{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;}
   .pack input{flex:1;min-width:170px;font-family:var(--fm);font-size:15px;padding:11px 13px;border-radius:8px;border:1px solid var(--line);background:var(--navy);color:var(--text);}
-  .foot{font-family:var(--fm);font-size:11px;color:var(--meta);text-align:center;margin-top:30px;line-height:1.8;border-top:1px solid var(--line);padding-top:16px;}
+  .foot{font-family:var(--fm);font-size:15px;color:var(--meta);text-align:center;margin-top:30px;line-height:1.8;border-top:1px solid var(--line);padding-top:16px;}
   .foot a{color:var(--meta);} .foot a:hover{color:var(--gold);}
 </style>
 </head>
@@ -72,12 +72,12 @@
 #thead .brand{font-family:'Rajdhani','Arial Narrow',sans-serif;font-weight:700;font-size:19px;letter-spacing:.4px;color:#eef2f8;text-decoration:none;white-space:nowrap;}
 #thead .brand b{color:#f0c560;}
 #thead .tn{display:flex;gap:13px;align-items:center;}
-#thead .tn a{color:#c8d3e6;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap;}
+#thead .tn a{color:#c8d3e6;text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap;}
 #thead .tn a:hover{color:#f0c560;}
 #thead form{display:flex;flex:1;min-width:150px;margin-left:auto;max-width:330px;}
-#thead input{flex:1;min-width:0;font-size:14px;padding:8px 12px;border:1px solid rgba(120,150,190,.3);border-right:none;border-radius:8px 0 0 8px;background:#121e30;color:#eef2f8;font-family:inherit;}
+#thead input{flex:1;min-width:0;font-size:15px;padding:8px 12px;border:1px solid rgba(120,150,190,.3);border-right:none;border-radius:8px 0 0 8px;background:#121e30;color:#eef2f8;font-family:inherit;}
 #thead input:focus{outline:none;border-color:#5fe39a;}
-#thead button{border:1px solid #5fe39a;background:#5fe39a;color:#08160d;font-weight:700;font-size:13px;padding:0 14px;border-radius:0 8px 8px 0;cursor:pointer;}
+#thead button{border:1px solid #5fe39a;background:#5fe39a;color:#08160d;font-weight:700;font-size:15px;padding:0 14px;border-radius:0 8px 8px 0;cursor:pointer;}
 @media(max-width:600px){#thead{gap:7px 10px;}#thead .tn{order:3;gap:11px;}#thead form{order:2;max-width:none;margin-left:0;}}
 </style>
 <header id="thead">
@@ -221,10 +221,10 @@ start();
 <!--BNAV--><style>
 body{padding-bottom:58px!important;}
 #bnav{position:fixed;left:0;right:0;bottom:0;z-index:9000;display:flex;background:rgba(13,20,33,.975);border-top:1px solid rgba(120,150,190,.28);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;}
-#bnav a{flex:1;text-align:center;padding:8px 2px 7px;color:#c8d3e6;text-decoration:none;font-size:10px;letter-spacing:.2px;line-height:1.3;min-width:0;}
+#bnav a{flex:1;text-align:center;padding:8px 2px 7px;color:#c8d3e6;text-decoration:none;font-size:15px;letter-spacing:.2px;line-height:1.3;min-width:0;}
 #bnav a:hover{color:#f0c560;background:rgba(255,255,255,.04);}
 #bnav a b{display:block;font-size:18px;line-height:1;margin-bottom:3px;font-weight:400;}
-@media(max-width:380px){#bnav a{font-size:9px;}}
+@media(max-width:380px){#bnav a{font-size:15px;}}
 .floating-cart,#floatingCart,[data-list-cart]{bottom:70px!important;}
 </style><nav id="bnav" aria-label="Site navigation"><a href="/"><b>🏠</b>Home</a><a href="/shelves/"><b>🗂️</b>Shelves</a><a href="/recipes/"><b>🍽️</b>Recipes</a><a href="/what-to-eat/"><b>🎲</b>What to Eat</a><a href="/who-owns/"><b>🐙</b>Who Owns</a><a href="/list/"><b>🛒</b>List</a></nav>
 <script type="text/javascript" src="https://s.skimresources.com/js/305454X1793659.skimlinks.js"></script>
