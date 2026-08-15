@@ -1,0 +1,76 @@
+name: Cloudflare purge
+
+# Cloudflare will not cache HTML by default -- every page returns
+# cf-cache-status: DYNAMIC, which is why the zone sits at a 0.42% hit ratio.
+# The fix is a Cache Rule with a long edge TTL, and a long edge TTL is only safe
+# if something invalidates it on deploy. That something is this file.
+#
+# ORDER MATTERS: this workflow must be merged and its secrets set BEFORE the
+# Cache Rule is switched on. A long TTL with no purge means a push stays
+# invisible until the TTL expires.
+#
+# If the secrets are absent the job reports that and exits 0 rather than failing
+# the push -- a missing purge is only dangerous once caching is actually on, and
+# a red X on every commit trains you to ignore red Xs.
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+concurrency:
+  group: cf-purge
+  cancel-in-progress: false
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge the zone
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+        run: |
+          if [ -z "$CF_API_TOKEN" ] || [ -z "$CF_ZONE_ID" ]; then
+            echo "::notice::CF_API_TOKEN / CF_ZONE_ID not set -- skipping purge."
+            echo "Set both before enabling the HTML Cache Rule, or deploys will appear stale."
+            exit 0
+          fi
+
+          # Purge everything rather than by-URL: the free plan caps by-URL purges
+          # at 30 per request, a build routinely touches more than that through
+          # the crosslink and sitemap regenerators, and a partial purge that
+          # looks successful is worse than a blunt one that is.
+          CODE=$(curl -sS -o /tmp/purge.json -w '%{http_code}' --max-time 45 \
+            -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}')
+
+          echo "HTTP $CODE"
+          cat /tmp/purge.json
+
+          # Cloudflare answers 200 with {"success":false} on a permissions or
+          # zone-id mistake, so the status code alone does not mean it worked.
+          if [ "$CODE" != "200" ] || ! grep -q '"success":true' /tmp/purge.json; then
+            echo "::error::Purge did not succeed. Cached HTML is now stale until the edge TTL expires."
+            exit 1
+          fi
+          echo "purged."
+
+      - name: Confirm the edge actually refetched
+        if: success()
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: |
+          if [ -z "$CF_API_TOKEN" ]; then echo "skipped"; exit 0; fi
+          # A purge that reports success but leaves a HIT behind has not worked.
+          # Ask for a page and require that the edge treats it as uncached.
+          sleep 5
+          S=$(curl -sS -D - -o /dev/null --max-time 25 "https://www.5best2buy.com/" \
+              | grep -i '^cf-cache-status' | tr -d '\r' | awk '{print $2}')
+          echo "cf-cache-status after purge: ${S:-unknown}"
+          case "$S" in
+            HIT) echo "::error::Still serving a cached copy after purge."; exit 1 ;;
+            *)   echo "ok -- edge is not holding a stale copy." ;;
+          esac
