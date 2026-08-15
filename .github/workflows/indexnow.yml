@@ -1,0 +1,124 @@
+name: IndexNow
+
+# Tell Bing, Yandex, Seznam and Naver what changed, on every push.
+# (Bing feeds DuckDuckGo, Ecosia and ChatGPT search, so this is not a niche ping.)
+#
+# Submits only the URLs whose files actually changed in the push. IndexNow is
+# built for change notification, and firing all 2,384 URLs on every commit is
+# both wasteful and a worse signal. A manual run can still submit everything.
+#
+# The key file lives at the repo root and is served from the domain, which is how
+# IndexNow verifies ownership. If it ever 404s, submissions silently stop
+# counting, so this job checks it first and fails loudly rather than pretending.
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      full:
+        description: 'Submit every URL in sitemap.xml instead of just what changed'
+        type: boolean
+        default: false
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # need the previous commit to diff against
+
+      - name: Verify the IndexNow key is actually served
+        run: |
+          KEY=6c844f2513a620bf7868e9edda6d60c3
+          CODE=$(curl -s -o /tmp/key.txt -w '%{http_code}' -L --max-time 20 \
+            "https://www.5best2buy.com/$KEY.txt")
+          echo "key file -> HTTP $CODE"
+          if [ "$CODE" != "200" ]; then
+            echo "::error::IndexNow key file is not being served. Submissions would be ignored."
+            exit 1
+          fi
+          if ! grep -q "$KEY" /tmp/key.txt; then
+            echo "::error::Key file served but does not contain the key."
+            exit 1
+          fi
+
+      - name: Work out which URLs changed
+        id: urls
+        run: |
+          KEY=6c844f2513a620bf7868e9edda6d60c3
+          FULL="${{ github.event.inputs.full }}"
+
+          if [ "$FULL" = "true" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=full" >> "$GITHUB_OUTPUT"
+            grep -oE '<loc>[^<]+</loc>' sitemap.xml | sed 's|<loc>||;s|</loc>||' > /tmp/urls.txt
+          else
+            # changed index.html files -> their public URLs
+            git diff --name-only --diff-filter=ACMR HEAD^ HEAD -- '*.html' > /tmp/changed.txt || true
+            : > /tmp/urls.txt
+            while read -r f; do
+              case "$f" in
+                index.html) echo "https://www.5best2buy.com/" >> /tmp/urls.txt ;;
+                */index.html) echo "https://www.5best2buy.com/${f%index.html}" >> /tmp/urls.txt ;;
+              esac
+            done < /tmp/changed.txt
+            # a sitemap-only change means the set moved; fall back to everything
+            if [ ! -s /tmp/urls.txt ] && git diff --name-only HEAD^ HEAD | grep -q '^sitemap.xml$'; then
+              grep -oE '<loc>[^<]+</loc>' sitemap.xml | sed 's|<loc>||;s|</loc>||' > /tmp/urls.txt
+              echo "mode=sitemap-fallback" >> "$GITHUB_OUTPUT"
+            else
+              echo "mode=changed" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+          # IndexNow accepts 10,000 per request; stay well under
+          sort -u /tmp/urls.txt | head -9000 > /tmp/urls.uniq && mv /tmp/urls.uniq /tmp/urls.txt
+          COUNT=$(wc -l < /tmp/urls.txt | tr -d ' ')
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "submitting $COUNT url(s)"
+
+      - name: Submit to IndexNow
+        if: steps.urls.outputs.count != '0'
+        run: |
+          KEY=6c844f2513a620bf7868e9edda6d60c3
+          node -e '
+            const fs = require("fs");
+            const urls = fs.readFileSync("/tmp/urls.txt", "utf8").split("\n").filter(Boolean);
+            fs.writeFileSync("/tmp/payload.json", JSON.stringify({
+              host: "www.5best2buy.com",
+              key: process.env.KEY,
+              keyLocation: "https://www.5best2buy.com/" + process.env.KEY + ".txt",
+              urlList: urls
+            }));
+            console.log("payload: " + urls.length + " urls");
+          '
+          for ep in https://api.indexnow.org/indexnow https://www.bing.com/indexnow; do
+            CODE=$(curl -s -o /tmp/resp.txt -w '%{http_code}' -X POST "$ep" \
+              -H 'Content-Type: application/json; charset=utf-8' \
+              --data-binary @/tmp/payload.json --max-time 60)
+            echo "$ep -> HTTP $CODE"
+            if [ "$CODE" = "200" ] || [ "$CODE" = "202" ]; then
+              echo "submitted ok via $ep"
+              exit 0
+            fi
+            cat /tmp/resp.txt || true
+          done
+          echo "::error::Every IndexNow endpoint refused the submission."
+          exit 1
+        env:
+          KEY: 6c844f2513a620bf7868e9edda6d60c3
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### IndexNow"
+            echo ""
+            echo "- mode: \`${{ steps.urls.outputs.mode }}\`"
+            echo "- urls submitted: **${{ steps.urls.outputs.count }}**"
+          } >> "$GITHUB_STEP_SUMMARY"

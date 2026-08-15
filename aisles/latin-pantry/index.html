@@ -111,5 +111,37 @@
   <footer><nav style="margin-bottom:10px;letter-spacing:1px;text-transform:uppercase;font-size:12.5px;"><a href="/recipes/">Recipes</a> &middot; <a href="/what-can-i-make/">What Can I Make?</a> &middot; <a href="/what-to-eat/">What to Eat?</a> &middot; <a href="/traditional-nut-roll/">Nut Roll Guide</a> &middot; <a href="/kitchen-fundamentals/">Kitchen Fundamentals</a> &middot; <a href="/shelves/">All Shelves</a> &middot; <a href="/list/">My List</a> &middot; <a href="/who-owns/">Who Owns Your Food?</a> &middot; <a href="/games/">Games</a> &middot; <a href="/gifts/">Gift Guide</a> &middot; <a href="/independent/">Still Independent</a><br><a href="/how-we-hunt/">How We Hunt</a> &middot; <a href="/about/">About</a> &middot; <a href="/contact/">Contact</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/disclosure/">Affiliate Disclosure</a></nav>Some links on this site are affiliate links — if you buy through one, 5best2buy may earn a small commission at no extra cost to you. It never costs the maker anything, and it never decides who makes a list. The list is the list.<br>Published June 2026 &middot; Last updated 6 July 2026 &middot; © 2026 5best2buy.com</footer><script src="/list.js" defer></script>
 </div>
 <script src="https://www.dwin2.com/pub.2961345.min.js" type="text/javascript" defer></script>
+<!--CLKTRK--><script>
+(function(){
+  function host(h){try{var u=new URL(h.replace(/&amp;/g,'&'));
+    var p=['ued','url','u','murl','destination','dest','r'];
+    for(var i=0;i<3;i++){var inner=null;
+      for(var j=0;j<p.length;j++){var v=u.searchParams.get(p[j]);
+        if(v&&/^https?%3A|^https?:/i.test(v)){inner=decodeURIComponent(v);break;}}
+      if(!inner)break; u=new URL(inner);}
+    return u.hostname.replace(/^www\./,'');}catch(e){return '';}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="http"]');
+    if(!a)return;
+    var d=host(a.getAttribute('href')||'');
+    if(!d||d.indexOf('5best2buy.com')>-1)return;
+    var card=a.closest('.find'), nm=card&&card.querySelector('h2');
+    if(typeof gtag!=='function')return;
+    // select_item is the standard ecommerce event and reports without setup,
+    // but it cannot be marked as a key event in a way that reads clearly. Fire a
+    // plainly-named one alongside it so "did anyone click a buy link" is one
+    // toggle in the GA4 UI rather than an interpretation.
+    gtag('event','affiliate_click',{
+      destination:d, maker:(nm?nm.textContent:d).slice(0,90),
+      shelf:location.pathname, link_kind:a.className||'link'
+    });
+    gtag('event','select_item',{
+      item_list_id:location.pathname,
+      items:[{item_id:d,item_name:(nm?nm.textContent:d).slice(0,90),
+              item_category:a.className||'link',affiliation:d}]
+    });
+  },{passive:true});
+})();
+</script><!--/CLKTRK-->
 </body>
 </html>
