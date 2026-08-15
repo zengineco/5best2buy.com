@@ -1,0 +1,101 @@
+name: Affiliate integrity
+
+# Amazon is the only outbound layer on this site that actually earns: 4,940
+# links, 57% of all outbound. An untagged one is a click that pays nothing, and
+# it fails silently -- the page looks perfect.
+#
+# This has now gone wrong twice, both times invisibly:
+#   1. a guard tested /[?&]tag=/ against markup written &amp;tag=, matched
+#      nothing, and double-tagged 4,924 links that were already correct
+#   2. eight shelves shipped after the last tagging pass and nobody re-ran it
+#
+# Both are the same class: a check that cannot see the defect reports success.
+# So this gate counts, and asserts an exact number rather than "no failures
+# found" -- if the count of links and the count of correctly-tagged links ever
+# disagree, the build stops.
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  amazon-tags:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Every Amazon link carries exactly one associate tag
+        run: |
+          node -e '
+            const fs = require("fs"), path = require("path");
+            const TAG = "5best2buy-20";
+            function walk(d, o = []) {
+              for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+                if (e.name === ".git" || e.name === "node_modules") continue;
+                const p = path.join(d, e.name);
+                if (e.isDirectory()) walk(p, o);
+                else if (e.name.endsWith(".html")) o.push(p);
+              }
+              return o;
+            }
+            let total = 0, ok = 0;
+            const bad = [];
+            for (const f of walk(".")) {
+              const h = fs.readFileSync(f, "utf8");
+              for (const m of h.matchAll(/href="(https?:\/\/(?:www\.)?amazon\.[^"]*)"/g)) {
+                total++;
+                // count tag params on the NORMALISED url -- the raw markup uses
+                // &amp; as the separator, which is what defeated the last guard
+                const url = m[1].replace(/&amp;/g, "&");
+                const tags = (url.match(/[?&]tag=/g) || []).length;
+                const right = new URL(url).searchParams.getAll("tag");
+                if (tags === 1 && right.length === 1 && right[0] === TAG) { ok++; continue; }
+                bad.push(f.replace(/^\.[\\/]/, "") + "  tags=" + tags + "  " + m[1].slice(0, 110));
+              }
+            }
+            console.log("amazon links: " + total + "   correctly tagged: " + ok);
+            if (bad.length) {
+              console.log("\n::error::" + bad.length + " Amazon link(s) are not carrying exactly one " + TAG + " tag.");
+              bad.slice(0, 40).forEach(b => console.log("  " + b));
+              if (bad.length > 40) console.log("  ... and " + (bad.length - 40) + " more");
+              console.log("\nFix: node fix-untagged-amazon.js  (normalises, idempotent)");
+              process.exit(1);
+            }
+            if (total === 0) {
+              console.log("::error::Found zero Amazon links. The matcher is broken, not the site.");
+              process.exit(1);
+            }
+            console.log("all " + total + " links correct.");
+          '
+
+      - name: Only one auto-affiliate rewriter per page
+        run: |
+          node -e '
+            const fs = require("fs"), path = require("path");
+            function walk(d, o = []) {
+              for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+                if (e.name === ".git" || e.name === "node_modules") continue;
+                const p = path.join(d, e.name);
+                if (e.isDirectory()) walk(p, o);
+                else if (e.name.endsWith(".html")) o.push(p);
+              }
+              return o;
+            }
+            // Two rewriters on one page race to convert the same anchor. Whichever
+            // wins, the other network may still claim the click, and that is the
+            // kind of dispute that ends a publisher account rather than a payout.
+            const both = [];
+            for (const f of walk(".")) {
+              const h = fs.readFileSync(f, "utf8");
+              if (h.includes("dwin2.com/pub.2961345") && h.includes("skimresources.com"))
+                both.push(f.replace(/^\.[\\/]/, ""));
+            }
+            console.log("pages running two auto-affiliate rewriters: " + both.length);
+            if (both.length) {
+              console.log("::warning::" + both.length + " page(s) run Awin and Skimlinks together.");
+              both.slice(0, 15).forEach(b => console.log("  " + b));
+              if (both.length > 15) console.log("  ... and " + (both.length - 15) + " more");
+            }
+          '
