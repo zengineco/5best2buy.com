@@ -66,6 +66,7 @@ footer{border-top:1px solid var(--line);padding-top:18px;margin-top:40px;font-si
   <nav class="tn" aria-label="Primary"><a href="/recipes/">Recipes</a><a href="/cuts/">Cuts</a><a href="/swap/">Swaps</a><a href="/shelves/">Shelves</a><a href="/states/">States</a><a href="/soda/">Soda</a><a href="/mocktails/">Mocktails</a><a href="/who-owns/">Who Owns</a></nav>
   <form action="/search/" method="get" role="search"><input type="search" name="q" placeholder="Search recipes, shelves, makers…" aria-label="Search the site" /><button type="submit">Go</button></form>
 </header>
+
 <div class="wrap">
   <div class="crumb"><a href="/">5best2buy.com</a> &rsaquo; <a href="/data/">Datasets</a> &rsaquo; Halal-Certified Independent US Food Makers</div>
   <h1>Halal-Certified Independent US Food Makers</h1>
@@ -114,6 +115,7 @@ footer{border-top:1px solid var(--line);padding-top:18px;margin-top:40px;font-si
   </tbody></table></div>
   <footer><a href="/data/">Datasets</a> &middot; <a href="/states/">States</a> &middot; <a href="/shelves/">All shelves</a> &middot; <a href="/how-we-hunt/">How We Hunt</a> &middot; <a href="/contact/">Contact</a><br>&copy; 2026 5best2buy.com</footer>
 </div>
+
 <!--CLKTRK--><script>
 (function(){
   function host(h){try{var u=new URL(h.replace(/&amp;/g,'&'));
@@ -130,6 +132,14 @@ footer{border-top:1px solid var(--line);padding-top:18px;margin-top:40px;font-si
     if(!d||d.indexOf('5best2buy.com')>-1)return;
     var card=a.closest('.find'), nm=card&&card.querySelector('h2');
     if(typeof gtag!=='function')return;
+    // select_item is the standard ecommerce event and reports without setup,
+    // but it cannot be marked as a key event in a way that reads clearly. Fire a
+    // plainly-named one alongside it so "did anyone click a buy link" is one
+    // toggle in the GA4 UI rather than an interpretation.
+    gtag('event','affiliate_click',{
+      destination:d, maker:(nm?nm.textContent:d).slice(0,90),
+      shelf:location.pathname, link_kind:a.className||'link'
+    });
     gtag('event','select_item',{
       item_list_id:location.pathname,
       items:[{item_id:d,item_name:(nm?nm.textContent:d).slice(0,90),

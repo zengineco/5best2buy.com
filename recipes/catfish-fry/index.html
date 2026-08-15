@@ -127,6 +127,7 @@
 
 
 
+
   <nav style="font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:12.5px;letter-spacing:.5px;text-transform:uppercase;color:#9aabc4;" aria-label="Breadcrumb"><a href="/" style="color:#9aabc4;text-decoration:none;">5best2buy.com</a> &rsaquo; <a href="/recipes/" style="color:#9aabc4;text-decoration:none;">Recipes</a> &rsaquo; Fried Catfish</nav>
   <div class="eyebrow">The Recipe &middot; No.355 &middot; Fried Catfish</div>
   <h1>Fried Catfish, and where to source it</h1>
@@ -276,6 +277,7 @@ body{padding-bottom:58px!important;}
 .floating-cart,#floatingCart,[data-list-cart]{bottom:70px!important;}
 </style><nav id="bnav" aria-label="Site navigation"><a href="/"><b>🏠</b>Home</a><a href="/shelves/"><b>🗂️</b>Shelves</a><a href="/recipes/"><b>🍽️</b>Recipes</a><a href="/what-to-eat/"><b>🎲</b>What to Eat</a><a href="/who-owns/"><b>🐙</b>Who Owns</a><a href="/list/"><b>🛒</b>List</a></nav>
   <script src="/list.js" defer></script>
+
 <!--CLKTRK--><script>
 (function(){
   function host(h){try{var u=new URL(h.replace(/&amp;/g,'&'));
@@ -292,6 +294,14 @@ body{padding-bottom:58px!important;}
     if(!d||d.indexOf('5best2buy.com')>-1)return;
     var card=a.closest('.find'), nm=card&&card.querySelector('h2');
     if(typeof gtag!=='function')return;
+    // select_item is the standard ecommerce event and reports without setup,
+    // but it cannot be marked as a key event in a way that reads clearly. Fire a
+    // plainly-named one alongside it so "did anyone click a buy link" is one
+    // toggle in the GA4 UI rather than an interpretation.
+    gtag('event','affiliate_click',{
+      destination:d, maker:(nm?nm.textContent:d).slice(0,90),
+      shelf:location.pathname, link_kind:a.className||'link'
+    });
     gtag('event','select_item',{
       item_list_id:location.pathname,
       items:[{item_id:d,item_name:(nm?nm.textContent:d).slice(0,90),

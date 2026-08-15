@@ -83,6 +83,7 @@
 
 
 
+
   <nav class="crumb"><a href="/">5best2buy.com</a> &rsaquo; How We Hunt</nav>
   <div class="eyebrow">5best2buy &middot; Our Standards</div>
   <h1>How We Hunt</h1>
@@ -151,6 +152,8 @@ body{padding-bottom:58px!important;}
 </style><nav id="bnav" aria-label="Site navigation"><a href="/"><b>🏠</b>Home</a><a href="/shelves/"><b>🗂️</b>Shelves</a><a href="/recipes/"><b>🍽️</b>Recipes</a><a href="/what-to-eat/"><b>🎲</b>What to Eat</a><a href="/who-owns/"><b>🐙</b>Who Owns</a><a href="/list/"><b>🛒</b>List</a></nav>
 <script type="text/javascript" src="https://s.skimresources.com/js/305454X1793659.skimlinks.js"></script>
 <script src="https://www.dwin2.com/pub.2961345.min.js" type="text/javascript" defer></script>
+
+<!--XWIRE--><p style="font-size:15px;line-height:1.75;color:#9aabc4;background:rgba(18,30,48,.55);border-left:2px solid #5fe39a;border-radius:0 8px 8px 0;padding:11px 15px;margin:22px 0 0;">Two things that come out of this process and stand on their own: the makers sorted by <a href="/states/" style="color:#5fb0ef;">the state they work in</a>, and the whole list published as <a href="/data/" style="color:#5fb0ef;">open, citable datasets</a> &mdash; including which authority certifies each halal and kosher maker, which almost nobody records.</p><!--/XWIRE-->
 <!--CLKTRK--><script>
 (function(){
   function host(h){try{var u=new URL(h.replace(/&amp;/g,'&'));
@@ -167,6 +170,14 @@ body{padding-bottom:58px!important;}
     if(!d||d.indexOf('5best2buy.com')>-1)return;
     var card=a.closest('.find'), nm=card&&card.querySelector('h2');
     if(typeof gtag!=='function')return;
+    // select_item is the standard ecommerce event and reports without setup,
+    // but it cannot be marked as a key event in a way that reads clearly. Fire a
+    // plainly-named one alongside it so "did anyone click a buy link" is one
+    // toggle in the GA4 UI rather than an interpretation.
+    gtag('event','affiliate_click',{
+      destination:d, maker:(nm?nm.textContent:d).slice(0,90),
+      shelf:location.pathname, link_kind:a.className||'link'
+    });
     gtag('event','select_item',{
       item_list_id:location.pathname,
       items:[{item_id:d,item_name:(nm?nm.textContent:d).slice(0,90),
@@ -175,6 +186,5 @@ body{padding-bottom:58px!important;}
   },{passive:true});
 })();
 </script><!--/CLKTRK-->
-<!--XWIRE--><p style="font-size:15px;line-height:1.75;color:#9aabc4;background:rgba(18,30,48,.55);border-left:2px solid #5fe39a;border-radius:0 8px 8px 0;padding:11px 15px;margin:22px 0 0;">Two things that come out of this process and stand on their own: the makers sorted by <a href="/states/" style="color:#5fb0ef;">the state they work in</a>, and the whole list published as <a href="/data/" style="color:#5fb0ef;">open, citable datasets</a> &mdash; including which authority certifies each halal and kosher maker, which almost nobody records.</p><!--/XWIRE-->
 </body>
 </html>
