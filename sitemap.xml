@@ -235,6 +235,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/bacon/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/beef-cheek/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/beef-liver/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -253,6 +265,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/beef-tongue/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/bison/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -265,7 +283,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/bottarga/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/brisket/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/caviar/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -284,6 +314,18 @@
   </url>
   <url>
     <loc>https://www.5best2buy.com/cuts/chicken-leg-quarter/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/chicken-liver/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/chicken-tenderloin/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -319,6 +361,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/coppa/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/country-ham/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/country-style-ribs/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -331,7 +385,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/deli-meat/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/duck-breast/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/duck-confit/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/duck-leg/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -343,7 +415,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/flat-iron/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/fresh-ham/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/fresh-sausage/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -385,7 +469,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/hot-dogs/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/lamb-leg/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/lamb-loin-chop/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/lamb-neck/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -409,7 +511,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/mortadella/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/mussels/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/nduja/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -433,6 +547,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/pate/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/picanha/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/picnic-shoulder/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -440,6 +566,12 @@
   </url>
   <url>
     <loc>https://www.5best2buy.com/cuts/pork-belly/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/pork-cheek/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -475,6 +607,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/prosciutto/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/rack-of-lamb/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -487,7 +625,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/rillettes/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/salmon/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/saltfish/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/saucisson-sec/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -523,7 +679,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/smoked-fish/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/spare-ribs/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/squid/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -559,6 +727,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.5best2buy.com/cuts/turkey-thigh/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.5best2buy.com/cuts/veal-shank/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -572,6 +746,12 @@
   </url>
   <url>
     <loc>https://www.5best2buy.com/cuts/whole-chicken/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.5best2buy.com/cuts/whole-turkey/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
