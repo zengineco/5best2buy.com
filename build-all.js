@@ -49,6 +49,7 @@ const STAGES = [
   ['inject-cut-links.js',       'cut links', ['--apply']],
   ['inject-click-tracking.js',  'GA4 affiliate_click tracking'],
   ['inject-itemlist.js',        'ItemList structured data', ['--apply']],
+  ['inject-data-link.js',       'open-data footer link (CC BY)'],
   // ---- normalise + gate ----
   ['strip-skimlinks.js',        'enforce one rewriter per page', ['--apply']],
   ['fix-untagged-amazon.js',    'exactly one associate tag per Amazon link'],
