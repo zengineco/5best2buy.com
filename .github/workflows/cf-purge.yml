@@ -13,16 +13,21 @@ name: Cloudflare purge
 # the push -- a missing purge is only dangerous once caching is actually on, and
 # a red X on every commit trains you to ignore red Xs.
 
-# Triggered by the Pages deployment FINISHING, not by the push.
+# Runs on push, then WAITS for this commit's Pages deployment to report success
+# before purging.
 #
-# Originally this ran on push, which races the deploy and loses: GitHub Pages
-# builds asynchronously, so the purge fired while the old files were still being
-# served, and Cloudflare immediately re-cached the stale copy. The site then held
-# pre-deploy content for the full edge TTL while every log said "purged.".
+# Two earlier attempts were both wrong. Purging on push raced the deploy and lost
+# — GitHub Pages builds asynchronously, so Cloudflare re-cached the pre-deploy
+# files and held them for the full edge TTL while the log said "purged."
+# Switching to workflow_run on "pages build and deployment" was worse: that is
+# GitHub's implicit workflow, it does not reliably emit a workflow_run event, and
+# the purge simply never fired.
+#
+# Polling the deployment API is the only version that is actually tied to the
+# thing we are waiting for.
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
+  push:
+    branches: [main, master]
   workflow_dispatch:
 
 concurrency:
@@ -32,9 +37,32 @@ concurrency:
 jobs:
   purge:
     runs-on: ubuntu-latest
-    # don't purge behind a deploy that failed
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     steps:
+      - name: Wait for this commit's Pages deployment to go live
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ github.sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          # Poll the deployment statuses for this exact SHA. Purging before the
+          # origin serves the new files is the whole bug this replaces.
+          for i in $(seq 1 60); do
+            ID=$(gh api "repos/$REPO/deployments?sha=$SHA&per_page=1" --jq '.[0].id' 2>/dev/null || echo "")
+            if [ -n "$ID" ] && [ "$ID" != "null" ]; then
+              STATE=$(gh api "repos/$REPO/deployments/$ID/statuses?per_page=1" --jq '.[0].state' 2>/dev/null || echo "")
+              echo "attempt $i: deployment $ID state=$STATE"
+              case "$STATE" in
+                success)  echo "deployment live"; exit 0 ;;
+                failure|error) echo "::error::Pages deployment $STATE — not purging."; exit 1 ;;
+              esac
+            else
+              echo "attempt $i: no deployment recorded for $SHA yet"
+            fi
+            sleep 10
+          done
+          echo "::warning::Timed out waiting for the Pages deployment. Purging anyway; re-run this workflow if the site looks stale."
+
       - name: Purge the zone
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
