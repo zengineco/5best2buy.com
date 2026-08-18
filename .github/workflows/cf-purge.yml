@@ -13,9 +13,16 @@ name: Cloudflare purge
 # the push -- a missing purge is only dangerous once caching is actually on, and
 # a red X on every commit trains you to ignore red Xs.
 
+# Triggered by the Pages deployment FINISHING, not by the push.
+#
+# Originally this ran on push, which races the deploy and loses: GitHub Pages
+# builds asynchronously, so the purge fired while the old files were still being
+# served, and Cloudflare immediately re-cached the stale copy. The site then held
+# pre-deploy content for the full edge TTL while every log said "purged.".
 on:
-  push:
-    branches: [main, master]
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
   workflow_dispatch:
 
 concurrency:
@@ -25,6 +32,8 @@ concurrency:
 jobs:
   purge:
     runs-on: ubuntu-latest
+    # don't purge behind a deploy that failed
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Purge the zone
         env:
