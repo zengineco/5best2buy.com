@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: Independent US Food Makers
+message: If you use this dataset, please cite it.
+type: dataset
+authors:
+  - given-names: Vince
+    family-names: Gonzalez
+    orcid: https://orcid.org/0009-0005-3640-014X
+license: CC-BY-4.0
+url: https://www.5best2buy.com/data/
+repository-code: https://github.com/zengineco/independent-us-food-makers
+keywords:
+  - food
+  - small business
+  - United States
+  - artisan producers
+  - halal certification
+  - kosher certification

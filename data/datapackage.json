@@ -1,0 +1,127 @@
+{
+  "name": "independent-us-food-makers",
+  "title": "Independent US Food Makers",
+  "description": "Independent United States food producers listed on 5best2buy, including the named certifying body for makers carrying halal or kosher certification. Compiled by hand; no producer pays for inclusion.",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Vince Gonzalez",
+      "path": "https://www.5best2buy.com/",
+      "role": "author"
+    }
+  ],
+  "homepage": "https://www.5best2buy.com/data/",
+  "version": "1.0.0",
+  "resources": [
+    {
+      "name": "independent-makers",
+      "path": "independent-makers/independent-makers.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Independent US food makers, with city, state, categories and website.",
+      "rowCount": 1467,
+      "schema": {
+        "fields": [
+          {
+            "name": "maker",
+            "type": "string"
+          },
+          {
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "name": "state",
+            "type": "string"
+          },
+          {
+            "name": "categories",
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "halal-certified",
+      "path": "halal-certified/halal-certified.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Makers carrying halal certification, with the named certifying body.",
+      "rowCount": 33,
+      "schema": {
+        "fields": [
+          {
+            "name": "maker",
+            "type": "string"
+          },
+          {
+            "name": "certifier",
+            "type": "string"
+          },
+          {
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "name": "state",
+            "type": "string"
+          },
+          {
+            "name": "categories",
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "kosher-certified",
+      "path": "kosher-certified/kosher-certified.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "description": "Makers carrying kosher certification, with the named certifying body.",
+      "rowCount": 58,
+      "schema": {
+        "fields": [
+          {
+            "name": "maker",
+            "type": "string"
+          },
+          {
+            "name": "certifier",
+            "type": "string"
+          },
+          {
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "name": "state",
+            "type": "string"
+          },
+          {
+            "name": "categories",
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
