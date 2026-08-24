@@ -29,6 +29,7 @@ const STAGES = [
   ['generate-cuisine-hubs.js',  'cuisine hubs'],
   ['generate-vertical-hubs.js', 'vertical hubs'],
   ['generate-cuts.js',          'butcher cut pages from cut-content/'],
+  ['generate-data-tables.js',   '/data/ — citable datasets + Dataset JSON-LD'],
   ['generate-method-pages.js',  'method pages + recipe strip'],
   ['generate-pantry.js',        'pantry search index'],
   ['generate-search.js',        'site search'],

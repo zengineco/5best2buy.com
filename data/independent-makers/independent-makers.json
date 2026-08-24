@@ -4,7 +4,7 @@
  "published": "2026-08-12",
  "license": "CC BY 4.0",
  "source": "https://www.5best2buy.com/data/independent-makers/",
- "records": 1467,
+ "records": 1471,
  "data": [
   {
    "maker": "123Dough",
@@ -2611,6 +2611,13 @@
    "url": "https://farmtopeople.com/shop/produce"
   },
   {
+   "maker": "FarmerDave",
+   "city": "",
+   "state": "",
+   "categories": "Best Chinchilla Food Worth the Hunt; Best Guinea Pig Food Worth the Hunt",
+   "url": "https://www.farmerdavepetsupply.com/20-lb-timothy-hay-pellets"
+  },
+  {
    "maker": "Farmers Chile Market",
    "city": "Albuquerque",
    "state": "New Mexico",
@@ -5145,13 +5152,6 @@
    "url": "https://www.mangalitsaestates.com/"
   },
   {
-   "maker": "Manna Pro",
-   "city": "",
-   "state": "",
-   "categories": "Best Goat Feed & Minerals Worth the Hunt",
-   "url": "https://www.mannapro.com/goat-sheep/supplements/goat-mineral"
-  },
-  {
    "maker": "Maple Valley Cooperative",
    "city": "Cashton",
    "state": "Wisconsin",
@@ -5351,8 +5351,8 @@
    "maker": "Mazuri",
    "city": "",
    "state": "",
-   "categories": "Best Chinchilla Food Worth the Hunt; Best Duck Feed Worth the Hunt; Best Guinea Pig Food Worth the Hunt; Turtle & Tortoise Food Worth the Hunt",
-   "url": "https://mazuri.com/products/mazuri-chinchilla-diets"
+   "categories": "Best Duck Feed Worth the Hunt; Turtle & Tortoise Food Worth the Hunt",
+   "url": "https://mazuri.com/collections/waterfowl"
   },
   {
    "maker": "McCrea's Candies",
@@ -6006,13 +6006,6 @@
    "url": "https://www.nutiva.com/"
   },
   {
-   "maker": "Nutrena",
-   "city": "",
-   "state": "",
-   "categories": "Best Horse Feed Worth the Hunt",
-   "url": "https://www.nutrenaworld.com/"
-  },
-  {
    "maker": "Nutristore",
    "city": "",
    "state": "",
@@ -6496,6 +6489,13 @@
    "url": "https://www.peterluger.com/"
   },
   {
+   "maker": "Peterson Organic Feeds",
+   "city": "Mountain Grove",
+   "state": "Missouri",
+   "categories": "Best Goat Feed & Minerals Worth the Hunt",
+   "url": "https://www.petersonorganicfeeds.com/"
+  },
+  {
    "maker": "PF Bakeries",
    "city": "San Diego",
    "state": "California",
@@ -6734,6 +6734,13 @@
    "url": "https://www.potterscrackers.com/"
   },
   {
+   "maker": "Poulin Grain",
+   "city": "",
+   "state": "",
+   "categories": "Best Goat Feed & Minerals Worth the Hunt",
+   "url": "https://www.poulingrain.com/products/227/goat-mineral"
+  },
+  {
    "maker": "Prairie Fruits Farm & Creamery",
    "city": "Champaign",
    "state": "Illinois",
@@ -6753,6 +6760,13 @@
    "state": "",
    "categories": "Shrimp Worth the Hunt",
    "url": "https://www.premiercatch.com/"
+  },
+  {
+   "maker": "Premier1Supplies",
+   "city": "Washington",
+   "state": "Iowa",
+   "categories": "Best Goat Feed & Minerals Worth the Hunt",
+   "url": "https://www.premier1supplies.com/p/goat-trace-mineral-premix"
   },
   {
    "maker": "Pressed",
@@ -6844,13 +6858,6 @@
    "state": "Colorado",
    "categories": "The Glass Case — 5 Certified-Organic Makers",
    "url": "https://purelyelizabeth.com/"
-  },
-  {
-   "maker": "Purina",
-   "city": "",
-   "state": "",
-   "categories": "Best Goat Feed & Minerals Worth the Hunt",
-   "url": "https://www.purinamills.com/goat-feed"
   },
   {
    "maker": "Purity Coffee",
@@ -7124,6 +7131,13 @@
    "state": "Massachusetts",
    "categories": "Cod & White Fish Worth the Hunt",
    "url": "https://shop.redsbest.com"
+  },
+  {
+   "maker": "Redmond Agriculture",
+   "city": "Redmond",
+   "state": "Utah",
+   "categories": "Best Goat Feed & Minerals Worth the Hunt",
+   "url": "https://agriculture.redmond.com/products/goat-mineral"
   },
   {
    "maker": "Regalis Foods",
@@ -7600,6 +7614,13 @@
    "state": "Minnesota",
    "categories": "Teff Worth the Hunt",
    "url": "https://selamfoods.com/"
+  },
+  {
+   "maker": "Seminole Feed",
+   "city": "Ocala",
+   "state": "Florida",
+   "categories": "Best Horse Feed Worth the Hunt",
+   "url": "https://seminolefeed.com/"
   },
   {
    "maker": "SenAgro",
@@ -9532,6 +9553,13 @@
    "state": "",
    "categories": "Furikake Worth the Hunt",
    "url": "https://www.amazon.com/Umino-Furikake-Multi-Purpose-Seasoning-Authentic/dp/B0FW6TR74K"
+  },
+  {
+   "maker": "Unbeetable Feeds",
+   "city": "",
+   "state": "",
+   "categories": "Best Horse Feed Worth the Hunt",
+   "url": "https://unbeetablefeeds.com/"
   },
   {
    "maker": "Uncle Matt's Organic",
