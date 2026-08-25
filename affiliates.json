@@ -1,0 +1,37 @@
+{
+  "_README": [
+    "Roster of live affiliate relationships. Kept for OUR reference -- which",
+    "programs are approved, on which network, and where they sit on the site.",
+    "",
+    "The on-page disclosure no longer reads from this file. It is one fixed line",
+    "on every shelf that is true in every state, so it cannot go stale when the",
+    "roster changes or when Awin Convert-a-Link rewrites links at runtime.",
+    "",
+    "publisherId 2961345. Awin deep links:",
+    "awin1.com/cread.php?awinmid=<advertiser>&awinaffid=2961345&clickref=<shelf>&ued=<encoded url>"
+  ],
+  "publisherId": "2961345",
+  "makers": [
+    {
+      "host": "teavivre.com",
+      "name": "TeaVivre",
+      "network": "Awin",
+      "live": true,
+      "note": "awinmid 88687, 12% / 45-day cookie. Wired on /hunt/tea/."
+    },
+    {
+      "host": "framani.com",
+      "name": "Fra' Mani",
+      "network": "Awin",
+      "live": false,
+      "note": "APPROVED via Awin 2026-08-12 but NOT WIRED. Needs the Fra Mani awinmid from Awin Link Builder, then three deep links: /hunt/mortadella-cooked/ -> framani.com/products/classic-mortadella, /hunt/pepperoni/ and /hunt/saucisson/ -> framani.com. live:true means the tracking link is on the shelf, not that the advertiser approved us."
+    },
+    {
+      "host": "amadeusvanillabeans.com",
+      "name": "Amadeus Vanilla Beans",
+      "network": "Direct (in-house, no platform)",
+      "live": true,
+      "note": "Cassie Roblin (CEO) BUILT this programme after our outreach — first one on the site that exists because a maker made one. Link: https://amadeusvanillabeans.com/?utm_source=5best2buy&utm_medium=affiliate ; the same tag appends to any page URL and still counts. Terms: 10% of product subtotal on everything a NEW customer buys in their first year, counted from the first order placed through the link; 30-day window from click to that first order; paid monthly by PayPal once the balance passes $50; still earns when the reader uses a mailing-list discount or a sale. Full terms https://amadeusvanillabeans.com/affiliates/ . Wired on /hunt/vanilla-extract/. OUTSTANDING: Vince must reply to Cassie with the PayPal address for payouts — nothing pays out until he does. live:true means the tracking link is on the shelf."
+    }
+  ]
+}
